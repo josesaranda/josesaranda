@@ -1,0 +1,27 @@
+---
+import Experience from "../components/Experience.astro";
+import Greeting from "../components/Greeting.astro";
+import Social from "../components/Social.astro";
+import Technologies from "../components/Technologies.astro";
+import Theme from "../components/Theme.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="josesaranda | Welcome">
+  <main>
+    <Theme />
+    <Greeting />
+    <Technologies />
+    <Experience />
+    <Social />
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px;
+    position: relative;
+  }
+</style>
