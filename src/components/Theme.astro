@@ -11,6 +11,8 @@
     isDark
       ? document.body.classList.add("dark")
       : document.body.classList.remove("dark");
+
+    document.getElementById("love")!.innerHTML = isDark ? "💚" : "💜";
   }
 
   let preferredDarkMode =
