@@ -27,11 +27,3 @@ import Layout from "../layouts/Layout.astro";
     position: relative;
   }
 </style>
-<script>
-  const audioElement = new Audio("/ding.wav");
-  document.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("mouseover", () => {
-      audioElement.play();
-    });
-  });
-</script>
