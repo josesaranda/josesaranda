@@ -1,8 +1,8 @@
-name: build and deploy
+name: build
 
 on:
   push:
-    branches: [main]
+    branches: ["!main"]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,12 +19,3 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build --if-present
-
-      - name: deploy
-        uses: garygrossgarten/github-action-scp@release
-        with:
-          local: ${{ secrets.DIST_LOCAL }}
-          remote: ${{ secrets.DIST_REMOTE }}
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.PASSWORD }}
