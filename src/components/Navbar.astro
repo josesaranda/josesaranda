@@ -1,0 +1,139 @@
+<div class="navbar-container">
+  <div>
+    <a id="languageButton"></a>
+    <button id="themeButton"></button>
+  </div>
+</div>
+<script>
+  const language = window.location.pathname === "/es" ? "es" : "en";
+  const languageButton = document.getElementById("languageButton");
+  languageButton!.innerHTML = language === "en" ? "🇺🇸" : "🇪🇸";
+  languageButton!.setAttribute("href", language === "en" ? "/es" : "/");
+
+  const themeButton = document.getElementById("themeButton");
+
+  function setMode(isDark: boolean) {
+    themeButton!.innerHTML = `<span>${isDark ? "🌞" : "🌙"}</span>`;
+    isDark
+      ? document.body.classList.add("dark")
+      : document.body.classList.remove("dark");
+
+    document.getElementById("love")!.innerHTML = isDark ? "💚" : "💜";
+  }
+
+  let preferredDarkMode =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  setMode(preferredDarkMode);
+
+  themeButton?.addEventListener("click", () => {
+    preferredDarkMode = !preferredDarkMode;
+    setMode(preferredDarkMode);
+  });
+
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (event) => {
+      preferredDarkMode = event.matches;
+      setMode(preferredDarkMode);
+    });
+</script>
+
+<style>
+  .navbar-container {
+    position: fixed;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .navbar-container div {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 10px;
+  }
+
+  #themeButton {
+    margin-right: 20px;
+    background: var(--bg-secondary);
+    border: 0;
+    cursor: pointer;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 0px 20px 0px var(--c-secondary);
+    -moz-box-shadow: 0px 0px 20px 0px var(--c-secondary);
+    box-shadow: 0px 0px 20px 0px var(--c-secondary);
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #languageButton {
+    margin-right: 10px;
+    background: var(--bg-primary);
+    color: var(--c-secondary) !important;
+    border: 0;
+    cursor: pointer;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 0px 20px 0px var(--c-secondary);
+    -moz-box-shadow: 0px 0px 20px 0px var(--c-secondary);
+    box-shadow: 0px 0px 20px 0px var(--c-secondary);
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transform: scale(1);
+  }
+
+  @media (max-width: 768px) {
+    #themeButton {
+      font-size: 16px;
+      width: 42px;
+      height: 42px;
+      margin-right: 28px;
+      margin-bottom: 10px;
+    }
+
+    #languageButton {
+      font-size: 20px;
+      width: 42px;
+      height: 42px;
+      margin-right: 28px;
+    }
+
+    .navbar-container div {
+      flex-direction: column-reverse;
+      justify-content: end;
+      align-items: end;
+    }
+  }
+</style>
+<style is:global>
+  body {
+    --c-primary: #000;
+    --c-secondary: #7b6ab8;
+    --bg-primary: #fff;
+    --bg-secondary: #000;
+
+    color: var(--c-primary);
+    background: var(--bg-primary);
+    transition: 0.5s all;
+  }
+
+  body.dark {
+    --c-primary: #fff;
+    --c-secondary: #70a2a0;
+    --bg-primary: #111011;
+    --bg-secondary: #fff;
+  }
+</style>

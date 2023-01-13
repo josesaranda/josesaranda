@@ -1,4 +1,12 @@
-<footer>Made with &nbsp;<span id="love">💜</span>&nbsp; from scratch</footer>
+---
+import { Trans } from "astro-i18next/components";
+---
+
+<footer>
+  <Trans i18nKey="footer.title">
+    Made with <span id="love">💜</span> from scratch
+  </Trans>
+</footer>
 <style>
   footer {
     display: flex;

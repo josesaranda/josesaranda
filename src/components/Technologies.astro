@@ -1,4 +1,6 @@
 ---
+import { t } from "i18next";
+
 const technologies = [
   {
     href: "https://developer.mozilla.org/en/docs/Web/JavaScript",
@@ -152,7 +154,7 @@ const technologies = [
 ---
 
 <section>
-  <h3><span class="emoji">🧑🏻‍💻</span> Technologies? Yes. These ones.</h3>
+  <h3><span class="emoji">🧑🏻‍💻</span> {t("technologies.title")}</h3>
   <div class="technologies">
     {
       technologies.map(({ href, name }) => (
