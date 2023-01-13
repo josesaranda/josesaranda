@@ -1,15 +1,16 @@
+---
+import { t } from "i18next";
+---
+
 <div class="navbar-container">
   <div>
-    <a id="languageButton"></a>
+    <a class="language-button" href={t("site.language.redirect-route")}
+      >{t("site.language.flag")}</a
+    >
     <button id="themeButton"></button>
   </div>
 </div>
 <script>
-  const language = window.location.pathname.includes("/es") ? "es" : "en";
-  const languageButton = document.getElementById("languageButton");
-  languageButton!.innerHTML = language === "en" ? "🇺🇸" : "🇪🇸";
-  languageButton!.setAttribute("href", language === "en" ? "/es" : "/");
-
   const themeButton = document.getElementById("themeButton");
 
   function setMode(isDark: boolean) {
@@ -46,6 +47,7 @@
     max-width: 1200px;
     width: 100%;
     margin: auto;
+    top: 70px;
   }
 
   .navbar-container div {
@@ -74,7 +76,7 @@
     align-items: center;
   }
 
-  #languageButton {
+  a.language-button {
     margin-right: 10px;
     background: var(--bg-primary);
     color: var(--c-secondary) !important;
@@ -92,6 +94,9 @@
     align-items: center;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  a.language-button:hover {
     transform: scale(1);
   }
 
@@ -104,7 +109,7 @@
       margin-bottom: 10px;
     }
 
-    #languageButton {
+    a.language-button {
       font-size: 20px;
       width: 42px;
       height: 42px;
