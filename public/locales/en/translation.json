@@ -1,0 +1,55 @@
+{
+  "site": {
+    "title": "josesaranda | Welcome",
+    "description": "Jose Sánchez Aranda webpage, a portfolio and CV"
+  },
+  "greeting": {
+    "title": "Hi! 👋🏽",
+    "name": "Jose Sánchez Aranda",
+    "picture": "Profile picture",
+    "position": "Software Engineer - Frontend Engineer",
+    "paragraph1": "Currently, I'm working at <0>Fortris</0>, a fintech company whose main product is a crypto asset management system, where I'm part of the Frontend team!",
+    "paragraph2": "Technologies like Angular, Nx, NestJS, and GraphQL are part of my daily bases. But I'm happy to say that I've worked with many frontend technologies such as React, NextJS, Loopback, Ionic, and Electron.",
+    "paragraph3": "I am always keen to learn different technologies and improve as a software engineer. As an example, this web is made with <0>Astro</0>. Have you heard about <1>Astro</1> before? Have a look at the <2>source code</2> of this project."
+  },
+  "technologies": {
+    "title": "Technologies? Yes. These ones."
+  },
+  "experience": {
+    "title": "Experience? A bit...",
+    "paragraph1": "I've been involved in many projects with different technologies throughout my career as a software engineer. See below my working experience.",
+    "experiences": {
+      "fortris": {
+        "title": "Frontend Engineer at <a href='https://fortris.com' target='_blank'>Fortris</a>",
+        "dates": "Oct. 2021 - actually",
+        "description": "Working with Angular, Nx, NestJS and much more. Developing the best crypto asset management system in the market. Playing with dashboards and Data Analytics team."
+      },
+      "shapelets": {
+        "title": "Software Engineer at <a href='https://shapelets.io' target='_blank'>Shapelets</a>",
+        "dates": "May. 2019 - Oct. 2021",
+        "description": "Frontend everywhere. Creating amazing data visualizations user interfaces using React, Mobx, Vega, Typescript and so on."
+      },
+      "sombradoble": {
+        "title": "Software Engineer at <a href='https://sombradoble.es' target='_blank'>Sombradoble</a>",
+        "dates": "Sept. 2016 - Apr. 2019",
+        "description": "There I worked with these technologies: NodeJS, Express, EJS, Loopback, MySQL, MongoDB, Angular, AngularMaterial, Bootstrap, HTML, CSS, Javascript and Typescript. I took care of requirements, architecture, execution and maintenance."
+      },
+      "nowait": {
+        "title": "CTO/Founder at Nowait",
+        "dates": "2015 - 2017",
+        "description": "Founder of NoWait startup. At NoWait we developed our own product \"noesperescolas.com\", a platform for managing copyshops' orders in a quick and secure way."
+      },
+      "sombradoble-intern": {
+        "title": "Intern at <a href='https://sombradoble.es' target='_blank'>Sombradoble</a>",
+        "dates": "Apr. 2016 - Jul. 2016",
+        "description": "In this stage at Sombradoble we develop an hybrid mobile app called MyLeaf. This app was made using Ionic Framework. MyLeaf allowed patients with chronic and rare diseases to monitorice their day by day and analyze the evolution they had along the time having a more knowledge about their medicaments ingest, activities they did and food they ate. All of these features was hosted in a server app developed with NodeJS getting data from a SQLServer database."
+      }
+    }
+  },
+  "social": {
+    "title": "Social networks? Yup, here I am!"
+  },
+  "footer": {
+    "title": "Made with <0>💜</0> from scratch"
+  }
+}

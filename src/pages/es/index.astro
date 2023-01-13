@@ -1,0 +1,32 @@
+---
+import { changeLanguage } from "i18next";
+import Experience from "../../components/Experience.astro";
+import Footer from "../../components/Footer.astro";
+import Greeting from "../../components/Greeting.astro";
+import Social from "../../components/Social.astro";
+import Technologies from "../../components/Technologies.astro";
+import Navbar from "../../components/Navbar.astro";
+import Layout from "../../layouts/Layout.astro";
+
+changeLanguage("es");
+---
+
+<Layout>
+  <main>
+    <Navbar />
+    <Greeting />
+    <Technologies />
+    <Experience />
+    <Social />
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px;
+    position: relative;
+  }
+</style>

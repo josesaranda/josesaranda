@@ -1,72 +1,32 @@
-<h3><span class="emoji">🔬</span> Experience? A bit...</h3>
+---
+import { t } from "i18next";
+const experiences = [
+  "fortris",
+  "shapelets",
+  "sombradoble",
+  "nowait",
+  "sombradoble-intern",
+];
+---
+
+<h3><span class="emoji">🔬</span> {t("experience.title")}</h3>
 <p>
-  I've been involved in many projects with different technologies throughout my
-  career as a software engineer. See below my working experience.
+  {t("experience.paragraph1")}
 </p>
 <section class="experience">
-  <div>
-    <h4>
-      Frontend Engineer at <a href="https://fortris.com" target="_blank"
-        >Fortris</a
-      >
-    </h4>
-    <h5 class="dates">Oct. 2021 - actually</h5>
-    <p>
-      Working with Angular, Nx, NestJS and much more. Developing the best crypto
-      asset managment system in the market. Playing with dashboards and Data
-      Analytics team.
-    </p>
-  </div>
-  <div>
-    <h4>
-      Software Engineer at <a href="https://shapelets.io" target="_blank"
-        >Shapelets</a
-      >
-    </h4>
-    <h5 class="dates">May. 2019 - Oct. 2021</h5>
-    <p>
-      Frontend everywhere. Creating amazings data visualisations user interfaces
-      using React, Mobx, Vega, Typescript and so on.
-    </p>
-  </div>
-  <div>
-    <h4>
-      Software Engineer at <a href="https://sombradoble.es" target="_blank"
-        >Sombradoble</a
-      >
-    </h4>
-    <h5 class="dates">Sept. 2016 - Apr. 2019</h5>
-    <p>
-      There I worked with these technologies: NodeJS, Express, EJS, Loopback,
-      MySQL, MongoDB, Angular, AngularMaterial, Bootstrap, HTML, CSS, Javascript
-      and Typescript. I took care of requirements, architecture, execution and
-      maintenance.
-    </p>
-  </div>
-  <div>
-    <h4>CTO/Founder at Nowait</h4>
-    <h5 class="dates">2015 - 2017</h5>
-    <p>
-      Founder of NoWait startup. At NoWait we developed our own product
-      "noesperescolas.com", a platform for managaing copyshops orders in a quick
-      and secure way.
-    </p>
-  </div>
-  <div>
-    <h4>
-      Intern at <a href="https://sombradoble.es" target="_blank">Sombradoble</a>
-    </h4>
-    <h5 class="dates">Apr 2016 - Jul 2016</h5>
-    <p>
-      In this stage at Sombradoble we develop an hybrid mobile app called
-      MyLeaf. This app was made using Ionic Framework. MyLeaf allowed patients
-      with chronic and rare diseases to monitorice their day by day and analyze
-      the evolution they had along the time having a more knowledge about their
-      medicaments ingest, activities they did and food they ate. All of these
-      features was hosted in a server app developed with NodeJS getting data
-      from a SQLServer database.
-    </p>
-  </div>
+  {
+    experiences.map((experience) => {
+      return (
+        <div>
+          <h4 set:html={t(`experience.experiences.${experience}.title`)} />
+          <h5 class="dates">
+            {t(`experience.experiences.${experience}.dates`)}
+          </h5>
+          <p>{t(`experience.experiences.${experience}.description`)}</p>
+        </div>
+      );
+    })
+  }
 </section>
 <style>
   .experience div {

@@ -1,0 +1,55 @@
+{
+  "site": {
+    "title": "josesaranda | Bienvenido/a",
+    "description": "Mi nombre es Jose Sánchez Aranda y esta es mi web personal"
+  },
+  "greeting": {
+    "title": "¡Hola! 👋🏽",
+    "name": "Jose Sánchez Aranda",
+    "picture": "Imagen de perfil",
+    "position": "Ingeniero de software - Desarrollador Frontend",
+    "paragraph1": "Actualmente trabajo en <0>Fortris</0>, una empresa de soluciones financieras cuyo producto principal es un sistema gestor de criptomonedas, ¡aquí formo parte del equipo de Frontend!",
+    "paragraph2": "Tecnologias cómo Angular, Nx, NestJS, y GraphQL son parte de mi día a día. Pero me enorgullece decir que también he trabajado con otras muchas tecnologías de Frontend como React, NextJS, Loopback, Ionic, y Electron.",
+    "paragraph3": "Siempre estoy aprendiendo diferentes tecnologías y mejorando como ingeniero de software. Como ejemplo, esta web está hecha con <0>Astro</0>. ¿Conocías <1>Astro</1>? Echa un vistazo al <2>código</2> de este proyecto."
+  },
+  "technologies": {
+    "title": "¿Tecnologías? Si. Estas."
+  },
+  "experience": {
+    "title": "¿Experiencia? Un poco...",
+    "paragraph1": "He estado envuelto en muchos proyectos con diferentes tecnologías a lo largo de mi carrera como ingeniero de software. Mira más abajo mi experiencia.",
+    "experiences": {
+      "fortris": {
+        "title": "Ingeniero Frontend en <a href='https://fortris.com' target='_blank'>Fortris</a>",
+        "dates": "Oct. 2021 - actualidad",
+        "description": "Trabajando con Angular, Nx, NestJS y muchas otras tecnologías. Desarrollando la mejor plataforma de gestión de criptomonedas del mercado. Jugando y creando y el equipo de análisis de datos."
+      },
+      "shapelets": {
+        "title": "Ingeniero de software en <a href='https://shapelets.io' target='_blank'>Shapelets</a>",
+        "dates": "Mayo 2019 - Oct. 2021",
+        "description": "Frontend en todos los sitios. Creando inmejorables interfaces de usuario para visualización de datos usando React, Mobx, Vega, Typescript y más."
+      },
+      "sombradoble": {
+        "title": "Ingeniero de software en <a href='https://sombradoble.es' target='_blank'>Sombradoble</a>",
+        "dates": "Sept. 2016 - Abril 2019",
+        "description": "Allí trabajé con las siguientes tecnologías: NodeJS, Express, EJS, Loopback, MySQL, MongoDB, Angular, AngularMaterial, Bootstrap, HTML, CSS, Javascript and Typescript. Me hice cargo de los requisitos, arquitectura, ejecución y mantenimiento."
+      },
+      "nowait": {
+        "title": "CTO/Fundador en Nowait",
+        "dates": "2015 - 2017",
+        "description": "Fundador de la startup Nowait. En Nowait creamos nuestro propio producto llamado \"noesperescolas.com\", una plataforma para gestionar los pedidos, de usuarios, encargados a copisterias de forma rápida y segura."
+      },
+      "sombradoble-intern": {
+        "title": "Becario en <a href='https://sombradoble.es' target='_blank'>Sombradoble</a>",
+        "dates": "Apr. 2016 - Jul. 2016",
+        "description": "En esta etapa, en Sombradoble, desarrollamos una aplicación móvil híbrida llamada MyLeaf. Esta aplicación fue construida usando el framework de Ionic. MyLeaf permitía a pacientes, con enfermedades raras y crónicas, monitorizar su día a día y analizar la evolución que tenían a lo largo del tiempo, teniendo más conocimiento sobre su ingesta de medicamentos, actividades que hacían y alimentos que comían. Todas estas funciones se alojaban en un servidor desarrollado con NodeJS, que obtenia datos de una base de datos SQLServer."
+      }
+    }
+  },
+  "social": {
+    "title": "¿Redes sociales? Si, ¡aquí estoy!"
+  },
+  "footer": {
+    "title": "Hecho con <0>💜</0> desde cero"
+  }
+}

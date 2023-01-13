@@ -1,37 +1,47 @@
+---
+import { Trans } from "astro-i18next/components";
+import { t } from "i18next";
+---
+
 <section>
   <header class="header">
-    <img src="/images/profile.jpeg" alt="Profile picture" />
+    <img src="/images/profile.jpeg" alt={t("greeting.picture")} />
     <div class="greeting">
-      <h1>Hi! 👋🏽</h1>
-      <h2>Jose Sánchez Aranda</h2>
-      <h3>Software Engineer - Frontend Engineer</h3>
+      <h1>{t("greeting.title")}</h1>
+      <h2>{t("greeting.name")}</h2>
+      <h3>{t("greeting.position")}</h3>
     </div>
   </header>
   <p>
-    Currently, I'm working at <a href="https://fortris.com" target="_blank"
-      >Fortris</a
-    >, a fintech company whose main product is a crypto asset managment system,
-    where I'm part of the Frontend team!
+    <Trans i18nKey="greeting.paragraph1">
+      Currently, I'm working at <a href="https://fortris.com" target="_blank"
+        >Fortris</a
+      >, a fintech company whose main product is a crypto asset management
+      system, where I'm part of the Frontend team!
+    </Trans>
   </p>
   <p>
-    Technologies like Angular, Nx, NestJS, and GraphQL are part of my daily
-    bases. But I'm happy to say that I've worked with many frontend technologies
-    such as React, NextJS, Loopback, Ionic, and Electron.
+    <Trans i18nKey="greeting.paragraph2">
+      Technologies like Angular, Nx, NestJS, and GraphQL are part of my daily
+      bases. But I'm happy to say that I've worked with many frontend
+      technologies such as React, NextJS, Loopback, Ionic, and Electron.
+    </Trans>
   </p>
   <p>
-    I am always keen to learn different technologies and improve as a software
-    engineer. As an example, this web is made with <a
-      href="https://astro.build/"
-      target="_blank">Astro</a
-    >. Have you heard about <a href="https://astro.build/" target="_blank"
-      >Astro</a
-    > before? Have a look at the <a
-      href="https://github.com/josesaranda/josesaranda"
-      target="_blank">source code</a
-    > of this project.
+    <Trans i18nKey="greeting.paragraph3">
+      I am always keen to learn different technologies and improve as a software
+      engineer. As an example, this web is made with <a
+        href="https://astro.build/"
+        target="_blank">Astro</a
+      >. Have you heard about <a href="https://astro.build/" target="_blank"
+        >Astro</a
+      > before? Have a look at the <a
+        href="https://github.com/josesaranda/josesaranda"
+        target="_blank">source code</a
+      > of this project.
+    </Trans>
   </p>
 </section>
-
 <style>
   header {
     display: flex;
@@ -43,6 +53,12 @@
     margin-top: 16px;
   }
 
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  }
+
   img {
     width: 200px;
     border-radius: 10px;
@@ -51,11 +67,5 @@
     -webkit-box-shadow: 0px 0px 20px 0px var(--c-secondary);
     -moz-box-shadow: 0px 0px 20px 0px var(--c-secondary);
     box-shadow: 0px 0px 20px 0px var(--c-secondary);
-  }
-
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-    }
   }
 </style>
