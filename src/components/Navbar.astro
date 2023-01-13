@@ -5,7 +5,7 @@
   </div>
 </div>
 <script>
-  const language = window.location.pathname === "/es" ? "es" : "en";
+  const language = window.location.pathname.includes("/es") ? "es" : "en";
   const languageButton = document.getElementById("languageButton");
   languageButton!.innerHTML = language === "en" ? "🇺🇸" : "🇪🇸";
   languageButton!.setAttribute("href", language === "en" ? "/es" : "/");
