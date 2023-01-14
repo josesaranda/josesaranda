@@ -1,5 +1,6 @@
 ---
 import { t } from "i18next";
+import { ThemeButton } from "./ThemeButton/ThemeButton";
 ---
 
 <div class="navbar-container">
@@ -7,39 +8,9 @@ import { t } from "i18next";
     <a class="language-button" href={t("site.language.redirect-route")}
       >{t("site.language.flag")}</a
     >
-    <button id="themeButton"></button>
+    <ThemeButton client:load />
   </div>
 </div>
-<script>
-  const themeButton = document.getElementById("themeButton");
-
-  function setMode(isDark: boolean) {
-    themeButton!.innerHTML = `<span>${isDark ? "🌞" : "🌙"}</span>`;
-    isDark
-      ? document.body.classList.add("dark")
-      : document.body.classList.remove("dark");
-
-    document.getElementById("love")!.innerHTML = isDark ? "💚" : "💜";
-  }
-
-  let preferredDarkMode =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  setMode(preferredDarkMode);
-
-  themeButton?.addEventListener("click", () => {
-    preferredDarkMode = !preferredDarkMode;
-    setMode(preferredDarkMode);
-  });
-
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (event) => {
-      preferredDarkMode = event.matches;
-      setMode(preferredDarkMode);
-    });
-</script>
 
 <style>
   .navbar-container {
@@ -57,23 +28,6 @@ import { t } from "i18next";
     align-items: center;
     flex-direction: row;
     padding-right: 10px;
-  }
-
-  #themeButton {
-    margin-right: 20px;
-    background: var(--bg-secondary);
-    border: 0;
-    cursor: pointer;
-    border-radius: 100%;
-    -webkit-box-shadow: 0px 0px 20px 0px var(--c-secondary);
-    -moz-box-shadow: 0px 0px 20px 0px var(--c-secondary);
-    box-shadow: 0px 0px 20px 0px var(--c-secondary);
-    font-size: 24px;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   a.language-button {
@@ -101,14 +55,6 @@ import { t } from "i18next";
   }
 
   @media (max-width: 768px) {
-    #themeButton {
-      font-size: 16px;
-      width: 42px;
-      height: 42px;
-      margin-right: 28px;
-      margin-bottom: 10px;
-    }
-
     a.language-button {
       font-size: 20px;
       width: 42px;
