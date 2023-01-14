@@ -1,0 +1,20 @@
+body {
+  --c-primary: #000;
+  --c-secondary: #7b6ab8;
+  --bg-primary: #fff;
+  --bg-secondary: #000;
+
+  --font-0: 20px;
+  --font-1: 24px;
+  --font-2: 28px;
+  --font-3: 36px;
+  --font-4: 48px;
+  --font-5: 50px;
+}
+
+body.dark {
+  --c-primary: #fff;
+  --c-secondary: #70a2a0;
+  --bg-primary: #111011;
+  --bg-secondary: #fff;
+}
