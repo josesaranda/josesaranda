@@ -9,6 +9,12 @@ export const ThemeButton = () => {
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches;
     setIsDark(preferredDarkMode);
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        setIsDark(event.matches);
+      });
   }, []);
 
   useEffect(() => {
