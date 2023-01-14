@@ -45,7 +45,7 @@
       },
       "sombradoble-intern": {
         "title": "Becario en <a href='https://sombradoble.es' target='_blank'>Sombradoble</a>",
-        "dates": "Apr. 2016 - Jul. 2016",
+        "dates": "Abril 2016 - Julio 2016",
         "description": "En esta etapa, en Sombradoble, desarrollamos una aplicación móvil híbrida llamada MyLeaf. Esta aplicación fue construida usando el framework de Ionic. MyLeaf permitía a pacientes, con enfermedades raras y crónicas, monitorizar su día a día y analizar la evolución que tenían a lo largo del tiempo, teniendo más conocimiento sobre su ingesta de medicamentos, actividades que hacían y alimentos que comían. Todas estas funciones se alojaban en un servidor desarrollado con NodeJS, que obtenia datos de una base de datos SQLServer."
       }
     }
