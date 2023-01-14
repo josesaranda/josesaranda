@@ -1,6 +1,8 @@
 ---
 import i18next, { t } from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
+import "./variables.css";
+import "./main.css";
 ---
 
 <!DOCTYPE html>
@@ -15,78 +17,5 @@ import { HeadHrefLangs } from "astro-i18next/components";
   </head>
   <body>
     <slot />
-  </body><style is:global>
-    html {
-      font-family: system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    h1 {
-      font-size: 50px;
-    }
-
-    h2 {
-      font-size: 50px;
-      margin-bottom: 5px;
-    }
-
-    h3 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    h4 {
-      font-size: 24px;
-      margin-bottom: 4px;
-    }
-
-    h5 {
-      font-size: 22px;
-      margin-top: 0px;
-      margin-bottom: 6px;
-    }
-
-    a {
-      color: var(--c-primary);
-    }
-
-    a:hover {
-      transform: scale(1.25);
-      transition: 0.3s;
-      color: var(--c-secondary);
-    }
-
-    p {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 20px;
-      line-height: 32px;
-    }
-
-    section {
-      margin-top: 50px;
-      margin-bottom: 50px;
-    }
-
-    span.emoji {
-      font-size: 48px;
-      vertical-align: middle;
-    }
-
-    span.emoji.small {
-      font-size: 36px;
-    }
-
-    @media (max-width: 768px) {
-      span.emoji.small {
-        font-size: 28px;
-      }
-    }
-  </style>
+  </body>
 </html>
