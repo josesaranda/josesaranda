@@ -18,20 +18,25 @@ import { ThemeButton } from "./ThemeButton/ThemeButton";
     max-width: 1200px;
     width: 100%;
     margin: auto;
-    top: 70px;
+    top: var(--spacing-7);
   }
 
   .navbar-container div {
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: end;
     align-items: center;
     flex-direction: row;
-    padding-right: 10px;
+    padding-right: var(--spacing-2);
   }
 
   a.language-button {
-    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: var(--spacing-2);
     background: var(--bg-primary);
     color: var(--c-secondary) !important;
     border: 0;
@@ -40,14 +45,9 @@ import { ThemeButton } from "./ThemeButton/ThemeButton";
     -webkit-box-shadow: 0px 0px 20px 0px var(--c-secondary);
     -moz-box-shadow: 0px 0px 20px 0px var(--c-secondary);
     box-shadow: 0px 0px 20px 0px var(--c-secondary);
-    font-size: 24px;
+    font-size: var(--font-1);
     width: 48px;
     height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    text-transform: uppercase;
   }
 
   a.language-button:hover {
@@ -56,10 +56,10 @@ import { ThemeButton } from "./ThemeButton/ThemeButton";
 
   @media (max-width: 768px) {
     a.language-button {
-      font-size: 20px;
       width: 42px;
       height: 42px;
-      margin-right: 28px;
+      font-size: var(--font-0);
+      margin-right: var(--spacing-7);
     }
 
     .navbar-container div {

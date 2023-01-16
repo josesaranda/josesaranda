@@ -13,11 +13,18 @@ body {
   transition: 0.5s all;
 }
 
+main {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  padding: var(--spacing-3);
+}
+
 /* fonts */
 
 p {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-2);
   font-size: var(--font-0);
   line-height: 32px;
 }
@@ -28,23 +35,23 @@ h1 {
 
 h2 {
   font-size: var(--font-5);
-  margin-bottom: 5px;
+  margin-bottom: var(--spacing-0);
 }
 
 h3 {
   font-size: var(--font-2);
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-1);
 }
 
 h4 {
   font-size: var(--font-1);
-  margin-bottom: 4px;
+  margin-bottom: var(--spacing-0);
 }
 
 h5 {
   font-size: var(--font-0);
   margin-top: 0px;
-  margin-bottom: 6px;
+  margin-bottom: var(--spacing-0);
 }
 
 /* links */
@@ -62,8 +69,8 @@ a:hover {
 /* others */
 
 section {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: var(--spacing-8);
+  margin-bottom: var(--spacing-8);
 }
 
 span.emoji {
