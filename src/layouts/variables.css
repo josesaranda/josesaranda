@@ -1,4 +1,4 @@
-body {
+:root {
   --c-primary: #000;
   --c-secondary: #7b6ab8;
   --bg-primary: #fff;
@@ -10,9 +10,19 @@ body {
   --font-3: 36px;
   --font-4: 48px;
   --font-5: 50px;
+
+  --spacing-0: 4px;
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 20px;
+  --spacing-5: 24px;
+  --spacing-6: 28px;
+  --spacing-7: 32px;
+  --spacing-8: 50px;
 }
 
-body.dark {
+:root .dark {
   --c-primary: #fff;
   --c-secondary: #70a2a0;
   --bg-primary: #111011;
