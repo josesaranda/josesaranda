@@ -6,10 +6,18 @@ export const ThemeButton = () => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    const preferredDarkMode =
-      window.localStorage.getItem(THEME_TOKEN) === "dark" ||
-      (window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
+    let preferredDarkMode;
+    if (window.localStorage.getItem(THEME_TOKEN) !== null) {
+      preferredDarkMode = window.localStorage.getItem(THEME_TOKEN) === "dark";
+    } else {
+      preferredDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+      window.localStorage.setItem(
+        THEME_TOKEN,
+        preferredDarkMode ? "dark" : "light"
+      );
+    }
     setIsDark(preferredDarkMode);
 
     window
