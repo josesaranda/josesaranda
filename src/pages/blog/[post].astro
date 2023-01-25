@@ -1,0 +1,31 @@
+---
+import Footer from "../../components/Footer.astro";
+import Navbar from "../../components/Navbar/Navbar.astro";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob("../../posts/*.md");
+  return posts.map((post) => {
+    return {
+      params: {
+        post: post.frontmatter.slug,
+      },
+      props: {
+        content: post.compiledContent(),
+        language: post.frontmatter.language,
+      },
+    };
+  });
+}
+const { content } = Astro.props;
+---
+
+<Layout>
+  <main>
+    <Navbar showLanguageButton={false} />
+    <div class="post">
+      <div set:html={content} />
+    </div>
+    <Footer />
+  </main>
+</Layout>

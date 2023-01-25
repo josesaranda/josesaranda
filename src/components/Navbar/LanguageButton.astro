@@ -1,35 +1,21 @@
 ---
 import { t } from "i18next";
-import { ThemeButton } from "./ThemeButton/ThemeButton";
+const { redirect } = Astro.props;
 ---
 
-<div class="navbar-container">
-  <div>
-    <a class="language-button" href={t("site.language.redirect-route")}
-      >{t("site.language.flag")}</a
-    >
-    <ThemeButton client:load />
-  </div>
-</div>
+<a id="language-button" class="language-button" href={redirect}
+  >{t("site.language.flag")}</a
+>
+<script>
+  const homeLink = document.getElementById("home")!;
+  const blogLink = document.getElementById("blog")!;
 
+  const isSpanish = document.location.pathname.startsWith("/es");
+
+  homeLink.setAttribute("href", isSpanish ? "/es" : "/");
+  blogLink.setAttribute("href", isSpanish ? "/es/blog" : "/blog");
+</script>
 <style>
-  .navbar-container {
-    position: fixed;
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-    top: var(--spacing-7);
-  }
-
-  .navbar-container div {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    flex-direction: row;
-    padding-right: var(--spacing-2);
-  }
-
   a.language-button {
     display: flex;
     justify-content: center;
@@ -41,7 +27,7 @@ import { ThemeButton } from "./ThemeButton/ThemeButton";
     color: var(--c-secondary) !important;
     border: 0;
     cursor: pointer;
-    border-radius: 100%;
+    border-radius: 10px;
     -webkit-box-shadow: 0px 0px 20px 0px var(--c-secondary);
     -moz-box-shadow: 0px 0px 20px 0px var(--c-secondary);
     box-shadow: 0px 0px 20px 0px var(--c-secondary);
@@ -60,12 +46,7 @@ import { ThemeButton } from "./ThemeButton/ThemeButton";
       height: 42px;
       font-size: var(--font-0);
       margin-right: var(--spacing-7);
-    }
-
-    .navbar-container div {
-      flex-direction: column-reverse;
-      justify-content: end;
-      align-items: end;
+      margin-bottom: var(--spacing-1);
     }
   }
 </style>

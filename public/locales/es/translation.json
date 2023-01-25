@@ -5,6 +5,10 @@
     "language": {
       "flag": "🇪🇸",
       "redirect-route": "/"
+    },
+    "menu": {
+      "home": "Inicio",
+      "blog": "Blog"
     }
   },
   "greeting": {
