@@ -1,0 +1,35 @@
+---
+import { t, changeLanguage } from "i18next";
+import Card from "../../components/Card.astro";
+import Footer from "../../components/Footer.astro";
+import Navbar from "../../components/Navbar/Navbar.astro";
+import Social from "../../components/Social.astro";
+import Layout from "../../layouts/Layout.astro";
+
+changeLanguage("en");
+
+const posts = await Astro.glob("../../posts/*.md");
+---
+
+<Layout>
+  <main>
+    <Navbar redirect={t("site.language.redirect-route") + "/blog"} />
+    <h1>Blog</h1>
+    <h3>Pretty interesting things</h3>
+    <section class="blog">
+      {
+        posts.map((post) => {
+          return (
+            <Card
+              title={post.frontmatter.title}
+              slug={post.frontmatter.slug}
+              language={post.frontmatter.language}
+            />
+          );
+        })
+      }
+    </section>
+    <Social />
+    <Footer />
+  </main>
+</Layout>
