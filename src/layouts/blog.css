@@ -16,10 +16,26 @@
 /* Post */
 
 .post h1 {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .post h2 {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   font-size: 30px;
+}
+
+.post ul {
+  margin-bottom: 16px;
+  margin-left: 32px;
+}
+
+.post ul li {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.post pre.astro-code {
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
 }

@@ -3,6 +3,7 @@ import { t, changeLanguage } from "i18next";
 import Card from "../../components/Card.astro";
 import Footer from "../../components/Footer.astro";
 import Navbar from "../../components/Navbar/Navbar.astro";
+import Social from "../../components/Social.astro";
 import Layout from "../../layouts/Layout.astro";
 
 changeLanguage("en");
@@ -28,6 +29,7 @@ const posts = await Astro.glob("../../posts/*.md");
         })
       }
     </section>
+    <Social />
     <Footer />
   </main>
 </Layout>

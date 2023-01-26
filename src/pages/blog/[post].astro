@@ -1,6 +1,7 @@
 ---
 import Footer from "../../components/Footer.astro";
 import Navbar from "../../components/Navbar/Navbar.astro";
+import Social from "../../components/Social.astro";
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
@@ -11,21 +12,26 @@ export async function getStaticPaths() {
         post: post.frontmatter.slug,
       },
       props: {
-        content: post.compiledContent(),
-        language: post.frontmatter.language,
+        post,
       },
     };
   });
 }
-const { content } = Astro.props;
+const { post } = Astro.props;
+const { Content } = post;
 ---
 
-<Layout>
+<Layout
+  title={"josesaranda | " + post.frontmatter.title}
+  description={post.frontmatter.description}
+>
   <main>
     <Navbar showLanguageButton={false} />
     <div class="post">
-      <div set:html={content} />
+      <h1>{post.frontmatter.title}</h1>
+      <Content />
     </div>
+    <Social />
     <Footer />
   </main>
 </Layout>
