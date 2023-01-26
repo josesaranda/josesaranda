@@ -8,10 +8,10 @@ const { redirect, showLanguageButton = true } = Astro.props;
 
 <div class="navbar-container">
   <div>
-    <div class="menu-container">
-      <div class="menu-title">
+    <div id="menu-container" class="menu-container">
+      <div id="menu-title" class="menu-title">
         <span class="menu-text">Menu</span>
-        <span class="menu-button">🙄</span>
+        <span class="menu-button">+</span>
       </div>
       <ul class="menu-options">
         <li><a id="home">{t("site.menu.home")}</a></li>
@@ -22,17 +22,39 @@ const { redirect, showLanguageButton = true } = Astro.props;
     <ThemeButton client:load />
   </div>
 </div>
+<script>
+  const menuContainer = document.getElementById("menu-container")!;
+  const menuTitle = document.getElementById("menu-title")!;
+  let isClosed = true;
+  menuTitle.addEventListener("click", () => {
+    if (isClosed) menuContainer.classList.add("open");
+    else menuContainer.classList.remove("open");
+    isClosed = !isClosed;
+  });
+</script>
 <style>
   .navbar-container div.menu-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    width: auto;
+    padding-top: 10px;
   }
 
-  .menu-container:hover .menu-title {
-    padding: 8px;
-    padding-right: 12px;
+  .menu-container.open .menu-title {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .menu-container .menu-button {
+    font-size: 24px;
+    transform: rotate(0deg);
+    transition: 0.5s all;
+  }
+  .menu-container.open .menu-button {
+    transform: rotate(-45deg);
+    transition: 0.5s all;
   }
 
   .menu-text {
@@ -58,8 +80,6 @@ const { redirect, showLanguageButton = true } = Astro.props;
 
   @media (max-width: 768px) {
     span.menu-button {
-      width: 42px;
-      height: 42px;
       font-size: var(--font-0);
       margin: 0;
     }
@@ -90,13 +110,12 @@ const { redirect, showLanguageButton = true } = Astro.props;
 
   .menu-button {
     width: 48px;
-    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  div.menu-container:hover {
+  div.menu-container.open {
     transform: scale(1);
     width: 160px;
     height: auto;
@@ -105,11 +124,11 @@ const { redirect, showLanguageButton = true } = Astro.props;
     transition: 0.5s all;
   }
 
-  div.menu-container:hover .menu-text {
+  div.menu-container.open .menu-text {
     display: inline-block;
   }
 
-  div.menu-container:hover .menu-button {
+  div.menu-container.open .menu-button {
     display: flex;
     align-items: end;
     justify-content: end;
@@ -120,14 +139,13 @@ const { redirect, showLanguageButton = true } = Astro.props;
   ul li {
     font-size: 18px;
     text-align: right;
-    padding: 10px;
     transition: 0.3s all;
   }
 
   ul li a {
-    width: 100%;
     height: 100%;
     display: block;
+    padding: 10px;
   }
 
   ul li a:hover {
@@ -145,6 +163,12 @@ const { redirect, showLanguageButton = true } = Astro.props;
       height: 42px;
       font-size: var(--font-0);
       margin-right: var(--spacing-7);
+    }
+
+    .navbar-container div.menu-title {
+      height: 42px;
+      padding-top: 0px;
+      width: auto;
     }
   }
 </style>
