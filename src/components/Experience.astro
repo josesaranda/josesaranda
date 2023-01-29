@@ -11,7 +11,7 @@ const experiences = [
 
 <section class="experience">
   <h3><span class="emoji">🔬</span> {t("experience.title")}</h3>
-  <p>
+  <p class="text-justify">
     {t("experience.paragraph1")}
   </p>
   {
@@ -22,7 +22,9 @@ const experiences = [
           <h5 class="dates">
             {t(`experience.experiences.${experience}.dates`)}
           </h5>
-          <p>{t(`experience.experiences.${experience}.description`)}</p>
+          <p class="text-justify">
+            {t(`experience.experiences.${experience}.description`)}
+          </p>
         </div>
       );
     })
