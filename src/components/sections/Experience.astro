@@ -1,12 +1,7 @@
 ---
+import { getExperiences } from "@services/experiences.service";
 import { t } from "i18next";
-const experiences = [
-  "fortris",
-  "shapelets",
-  "sombradoble",
-  "nowait",
-  "sombradoble-intern",
-];
+const experiences = getExperiences();
 ---
 
 <section class="experience">
