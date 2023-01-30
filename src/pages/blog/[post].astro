@@ -5,8 +5,6 @@ import Social from "@components/sections/Social.astro";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-import { getCollection } from "astro:content";
-
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
   return posts.map((post) => {
