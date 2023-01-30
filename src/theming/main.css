@@ -1,3 +1,7 @@
+@import "./variables.css";
+@import "./typography.css";
+@import "./blog.css";
+
 html {
   font-family: system-ui, sans-serif;
 }
