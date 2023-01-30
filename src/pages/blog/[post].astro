@@ -1,9 +1,8 @@
 ---
-import Footer from "../../components/Footer.astro";
-import Navbar from "../../components/Navbar/Navbar.astro";
-import Social from "../../components/Social.astro";
-import Layout from "../../layouts/Layout.astro";
-
+import Footer from "@components/layout/Footer.astro";
+import Navbar from "@components/layout/Navbar/Navbar.astro";
+import Social from "@components/sections/Social.astro";
+import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
