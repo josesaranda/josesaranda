@@ -58,6 +58,7 @@
     "title": "Social networks? Yup, here I am!"
   },
   "footer": {
-    "title": "Made with <0>💜</0> from scratch"
+    "title": "Made with <0>💜</0> from scratch",
+    "date": "Last update"
   }
 }
