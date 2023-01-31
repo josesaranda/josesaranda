@@ -1,0 +1,11 @@
+---
+import "./BlogButton.scss";
+---
+
+<a id="blog-button" class="blog-button">📖</a>
+<script>
+  const blogLink = document.getElementById("blog-button")!;
+
+  const isSpanish = document.location.pathname.startsWith("/es");
+  blogLink.setAttribute("href", isSpanish ? "/es/blog" : "/blog");
+</script>

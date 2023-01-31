@@ -1,23 +1,30 @@
 ---
 import { getExperiences } from "@services/experiences.service";
 import { t } from "i18next";
+import "./Experience.scss";
 const experiences = getExperiences();
 ---
 
 <section class="experience">
-  <h3><span class="emoji">🔬</span> {t("experience.title")}</h3>
-  <p class="text-justify">
+  <h3 class="heading-3">
+    <span class="emoji">🔬</span>
+    {t("experience.title")}
+  </h3>
+  <p class="paragraph text-justify">
     {t("experience.paragraph1")}
   </p>
   {
     experiences.map((experience) => {
       return (
         <div>
-          <h4 set:html={t(`experience.experiences.${experience}.title`)} />
-          <h5 class="dates">
+          <h4
+            class="heading-4"
+            set:html={t(`experience.experiences.${experience}.title`)}
+          />
+          <h5 class="heading-5 dates">
             {t(`experience.experiences.${experience}.dates`)}
           </h5>
-          <p class="text-justify">
+          <p class="paragraph text-justify">
             {t(`experience.experiences.${experience}.description`)}
           </p>
         </div>
@@ -25,13 +32,3 @@ const experiences = getExperiences();
     })
   }
 </section>
-<style>
-  .experience div {
-    padding: var(--spacing-2);
-    margin-top: var(--spacing-3);
-    margin-bottom: var(--spacing-3);
-  }
-  .experience div:not(:last-child) {
-    border-bottom: 1px dotted var(--c-primary);
-  }
-</style>

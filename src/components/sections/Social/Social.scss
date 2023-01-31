@@ -1,0 +1,40 @@
+.social {
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: var(--spacing-7) 0;
+  }
+  
+  .col {
+    width: 33.3%;
+    text-align: center;
+  }
+
+  svg {
+    width: auto;
+    height: 80px;
+    fill: var(--c-secondary);
+    transition: 0.3s all;
+
+    &:hover {
+      transform: scale(1.25);
+      transition: 0.3s all;
+    }
+  }
+
+  .path {
+    fill: var(--c-secondary);
+  }
+  
+  .path-reverse {
+    fill: var(--bg-primary);
+  }
+
+  @media (max-width: 768px) {
+    svg {
+      height: 60px;
+    }
+  }
+}

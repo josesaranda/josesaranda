@@ -2,6 +2,7 @@
   "site": {
     "title": "josesaranda | Welcome",
     "description": "Jose Sánchez Aranda webpage, a portfolio and CV",
+    "home_url": "/",
     "language": {
       "flag": "🇬🇧",
       "redirect-route": "/es"

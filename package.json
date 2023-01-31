@@ -18,6 +18,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "prettier-plugin-organize-imports": "3.2.2"
+    "prettier-plugin-organize-imports": "3.2.2",
+    "sass": "^1.57.1"
   }
 }

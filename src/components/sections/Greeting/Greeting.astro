@@ -1,0 +1,33 @@
+---
+import { Trans } from "astro-i18next/components";
+import { t } from "i18next";
+import "./Greeting.scss";
+---
+
+<section class="greeting">
+  <header class="header">
+    <img src="/images/profile.jpeg" alt={t("greeting.picture")} />
+    <div class="greeting">
+      <h1 class="heading-1">{t("greeting.title")}</h1>
+      <h2 class="heading-2">{t("greeting.name")}</h2>
+      <h3 class="heading-3">{t("greeting.position")}</h3>
+    </div>
+  </header>
+  <p class="paragraph text-justify">
+    <Trans i18nKey="greeting.paragraph1">
+      <a href="https://fortris.com" target="_blank"></a>
+    </Trans>
+  </p>
+  <p class="paragraph text-justify">
+    {t("greeting.paragraph2")}
+  </p>
+  <p class="paragraph text-justify">
+    <Trans i18nKey="greeting.paragraph3">
+      <a href="https://astro.build/" target="_blank"></a><a
+        href="https://astro.build/"
+        target="_blank"></a><a
+        href="https://github.com/josesaranda/josesaranda"
+        target="_blank"></a>
+    </Trans>
+  </p>
+</section>

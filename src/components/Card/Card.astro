@@ -1,0 +1,13 @@
+---
+import "./Card.scss";
+
+const { title, image, language, slug } = Astro.props;
+---
+
+<a class="card" href={"/blog/" + slug}>
+  <img class="card-image" src={image} width="auto" height="72px" alt="" />
+  <div class="card-info">
+    <h1>{title}</h1>
+    <h4>{language === "es" ? "🇪🇸" : "🇬🇧"}</h4>
+  </div>
+</a>

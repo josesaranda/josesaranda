@@ -1,12 +1,16 @@
 ---
 import { getTechnologies } from "@services/technologies.service";
 import { t } from "i18next";
+import "./Technologies.scss";
 
 const technologies = getTechnologies();
 ---
 
-<section>
-  <h3><span class="emoji">🧑🏻‍💻</span> {t("technologies.title")}</h3>
+<section class="technologies">
+  <h3 class="heading-3">
+    <span class="emoji">🧑🏻‍💻</span>
+    {t("technologies.title")}
+  </h3>
   <div class="technologies text-center">
     {
       technologies.map(({ href, name }) => (
@@ -17,12 +21,3 @@ const technologies = getTechnologies();
     }
   </div>
 </section>
-<style>
-  .technologies a {
-    display: inline-block;
-    margin: var(--spacing-0);
-    padding: var(--spacing-0);
-    transition: 0.3s;
-    font-size: var(--font-0);
-  }
-</style>
