@@ -2,6 +2,7 @@
   "site": {
     "title": "josesaranda | Bienvenido/a",
     "description": "Mi nombre es Jose Sánchez Aranda y esta es mi web personal",
+    "home_url": "/es",
     "language": {
       "flag": "🇪🇸",
       "redirect-route": "/"
