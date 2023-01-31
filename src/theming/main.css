@@ -1,6 +1,5 @@
 @import "./variables.css";
 @import "./typography.css";
-@import "./blog.css";
 
 html {
   font-family: system-ui, sans-serif;
@@ -26,33 +25,33 @@ main {
 
 /* fonts */
 
-p {
+.paragraph {
   margin-top: 0;
   margin-bottom: var(--spacing-2);
   font-size: var(--font-0);
   line-height: 32px;
 }
 
-h1 {
+.heading-1 {
   font-size: var(--font-5);
 }
 
-h2 {
+.heading-2 {
   font-size: var(--font-5);
   margin-bottom: var(--spacing-0);
 }
 
-h3 {
+.heading-3 {
   font-size: var(--font-2);
   margin-bottom: var(--spacing-1);
 }
 
-h4 {
+.heading-4 {
   font-size: var(--font-1);
   margin-bottom: var(--spacing-0);
 }
 
-h5 {
+.heading-5 {
   font-size: var(--font-0);
   margin-top: 0px;
   margin-bottom: var(--spacing-0);

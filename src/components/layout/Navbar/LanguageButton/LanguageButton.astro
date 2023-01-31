@@ -1,0 +1,9 @@
+---
+import { t } from "i18next";
+import "./LanguageButton.scss";
+const { redirect } = Astro.props;
+---
+
+<a id="language-button" class="language-button" href={redirect}
+  >{t("site.language.flag")}</a
+>

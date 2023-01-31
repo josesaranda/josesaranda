@@ -1,0 +1,32 @@
+section.greeting {
+  margin-top: var(--spacing-4) !important;
+
+  header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: var(--spacing-3);
+  }
+
+  img {
+    width: 200px;
+    border-radius: 10px;
+    margin-right: var(--spacing-7);
+    margin-bottom: var(--spacing-4);
+    -webkit-box-shadow: 0px 0px 20px 0px var(--c-secondary);
+    -moz-box-shadow: 0px 0px 20px 0px var(--c-secondary);
+    box-shadow: 0px 0px 20px 0px var(--c-secondary);
+  }
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+
+    img {
+      margin-right: 0;
+    }
+  }
+}

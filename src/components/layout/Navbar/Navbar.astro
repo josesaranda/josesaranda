@@ -1,174 +1,27 @@
 ---
 import { t } from "i18next";
-import LanguageButton from "./LanguageButton.astro";
+import BlogButton from "./BlogButton/BlogButton.astro";
+import LanguageButton from "./LanguageButton/LanguageButton.astro";
 import { ThemeButton } from "./ThemeButton";
+import "./Navbar.scss";
 
-const { redirect, showLanguageButton = true } = Astro.props;
+const { redirect, title, showLogo, showLanguageButton = true } = Astro.props;
 ---
 
-<div class="navbar-container">
-  <div>
-    <div id="menu-container" class="menu-container">
-      <div id="menu-title" class="menu-title">
-        <span class="menu-text">Menu</span>
-        <span class="menu-button">+</span>
-      </div>
-      <ul class="menu-options">
-        <li><a id="home">{t("site.menu.home")}</a></li>
-        <li><a id="blog">{t("site.menu.blog")}</a></li>
-      </ul>
-    </div>
+<div class="navbar">
+  <div class="navbar-left">
+    {
+      showLogo && (
+        <a class="logo" href={t("site.home_url")}>
+          <img src="/images/profile.jpeg" width="48px" height="48px" alt="" />
+        </a>
+      )
+    }
+    <h1>{title}</h1>
+  </div>
+  <div class="menu-right">
+    {(<BlogButton redirect={redirect} />)}
     {showLanguageButton && <LanguageButton redirect={redirect} />}
     <ThemeButton client:load />
   </div>
 </div>
-<script>
-  const menuContainer = document.getElementById("menu-container")!;
-  const menuTitle = document.getElementById("menu-title")!;
-  let isClosed = true;
-  menuTitle.addEventListener("click", () => {
-    if (isClosed) menuContainer.classList.add("open");
-    else menuContainer.classList.remove("open");
-    isClosed = !isClosed;
-  });
-</script>
-<style>
-  .navbar-container div.menu-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    width: auto;
-    padding-top: 10px;
-  }
-
-  .menu-container.open .menu-title {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
-  .menu-container .menu-button {
-    font-size: 24px;
-    transform: rotate(0deg);
-    transition: 0.5s all;
-  }
-  .menu-container.open .menu-button {
-    transform: rotate(-45deg);
-    transition: 0.5s all;
-  }
-
-  .menu-text {
-    display: none;
-  }
-
-  .navbar-container {
-    position: fixed;
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-    top: var(--spacing-7);
-  }
-
-  .navbar-container > div {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: start;
-    flex-direction: row;
-    padding-right: var(--spacing-2);
-  }
-
-  @media (max-width: 768px) {
-    span.menu-button {
-      font-size: var(--font-0);
-      margin: 0;
-    }
-
-    .navbar-container div {
-      flex-direction: column-reverse;
-      justify-content: end;
-      align-items: end;
-    }
-  }
-
-  div.menu-container {
-    position: relative;
-    margin-right: var(--spacing-2);
-    background: var(--bg-primary);
-    color: var(--c-secondary) !important;
-    border: 0;
-    cursor: pointer;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 20px 0px var(--c-secondary);
-    -moz-box-shadow: 0px 0px 20px 0px var(--c-secondary);
-    box-shadow: 0px 0px 20px 0px var(--c-secondary);
-    font-size: var(--font-1);
-    width: 48px;
-    height: 48px;
-    overflow: hidden;
-  }
-
-  .menu-button {
-    width: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  div.menu-container.open {
-    transform: scale(1);
-    width: 160px;
-    height: auto;
-    min-height: 120px;
-    border-radius: 10px;
-    transition: 0.5s all;
-  }
-
-  div.menu-container.open .menu-text {
-    display: inline-block;
-  }
-
-  div.menu-container.open .menu-button {
-    display: flex;
-    align-items: end;
-    justify-content: end;
-    width: auto;
-    height: auto;
-  }
-
-  ul li {
-    font-size: 18px;
-    text-align: right;
-    transition: 0.3s all;
-  }
-
-  ul li a {
-    height: 100%;
-    display: block;
-    padding: 10px;
-  }
-
-  ul li a:hover {
-    transform: scale(1);
-  }
-
-  ul li:hover {
-    background: #efefef;
-    transition: 0.3s all;
-  }
-
-  @media (max-width: 768px) {
-    div.menu-container {
-      width: 42px;
-      height: 42px;
-      font-size: var(--font-0);
-      margin-right: var(--spacing-7);
-    }
-
-    .navbar-container div.menu-title {
-      height: 42px;
-      padding-top: 0px;
-      width: auto;
-    }
-  }
-</style>

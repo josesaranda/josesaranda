@@ -1,0 +1,11 @@
+.experience {
+  div {
+    padding: var(--spacing-2);
+    margin-top: var(--spacing-3);
+    margin-bottom: var(--spacing-3);
+
+    &:not(:last-child) {
+      border-bottom: 1px dotted var(--c-primary);
+    }
+  }
+}

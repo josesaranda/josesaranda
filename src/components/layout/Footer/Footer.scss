@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-0);
+
+  a:hover {
+    transform: scale(1) !important;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+}

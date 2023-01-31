@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import "./ThemeButton.css";
+import { useEffect, useState } from "react";
+import "./ThemeButton.scss";
 
 export const ThemeButton = () => {
   const THEME_TOKEN = "theme";
