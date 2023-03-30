@@ -3,10 +3,10 @@ name: Node.js CI
 on:
   push:
     branches:
-      - '*'
+      - "*"
   pull_request:
     branches:
-      - '*'
+      - "*"
 
 jobs:
   install-dependencies:
@@ -17,22 +17,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        id: cache-dependencies
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: npm ci
-      - name: Save dependencies cache
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-node-
 
   build:
     strategy:
@@ -59,9 +45,6 @@ jobs:
         run: npm test
 
   deploy:
-    strategy:
-      matrix:
-        node-version: [16.x]
     needs: [build, test]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
