@@ -11,6 +11,14 @@ Here are some of the projects I've worked on:
 - [josesaranda.es](https://josesaranda.es): My personal website kind of portfolio/cv.
 - [jcofrade.josesaranda.es](https://jcofrade.josesaranda.es): A progresive web app to stay updated with easter week of Málaga.
 
+## My career
+
+Here are some of the companies I've worked on:
+
+- [Fortris](https://fortris.com): Actually
+- [Shapelets](https://shapelets.io): 3 years approx
+- [Sombradoble](https://shapelets.io): 3 years approx
+
 ## Skills
 
 Here are some of the skills I've developed:
@@ -21,4 +29,4 @@ Here are some of the skills I've developed:
 
 ## Contact Me
 
-If you're interested in collaborating on a project or just want to say hi, you can reach me at josesaranda@gmail.com or connect with me on Linkedin or Twitter. Thanks for stopping by!
+If you're interested in collaborating on a project or just want to say hi, you can reach me at josesaranda@gmail.com or connect with me on [Linkedin](https://www.linkedin.com/in/josesaranda/) or Twitter. Thanks for stopping by!
