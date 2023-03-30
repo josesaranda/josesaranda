@@ -17,7 +17,7 @@ Here are some of the companies I've worked on:
 
 - [Fortris](https://fortris.com): Actually
 - [Shapelets](https://shapelets.io): 3 years approx
-- [Sombradoble](https://shapelets.io): 3 years approx
+- [Sombradoble](https://sombradoble.es): 3 years approx
 
 ## Skills
 
