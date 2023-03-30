@@ -75,6 +75,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist
+          path: .
       - name: deploy
         uses: garygrossgarten/github-action-scp@release
         with:
