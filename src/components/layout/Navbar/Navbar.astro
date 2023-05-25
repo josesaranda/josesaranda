@@ -20,8 +20,8 @@ const { redirect, title, showLogo, showLanguageButton = true } = Astro.props;
     <h1>{title}</h1>
   </div>
   <div class="menu-right">
-    {(<BlogButton redirect={redirect} />)}
     {showLanguageButton && <LanguageButton redirect={redirect} />}
+    {(<BlogButton redirect={redirect} />)}
     <ThemeButton client:load />
   </div>
 </div>

@@ -3,18 +3,13 @@ a.blog-button {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  text-transform: uppercase;
-  background: var(--bg-primary);
-  color: var(--c-secondary) !important;
   border: 0;
   cursor: pointer;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 20px 0px var(--c-secondary);
-  -moz-box-shadow: 0px 0px 20px 0px var(--c-secondary);
-  box-shadow: 0px 0px 20px 0px var(--c-secondary);
   font-size: var(--font-1);
   width: 48px;
   height: 48px;
+  background: var(--c-primary-800);
+  border-radius: 10px;
 
   &:hover {
     transform: scale(1);
@@ -24,5 +19,9 @@ a.blog-button {
     width: 42px;
     height: 42px;
     font-size: var(--font-0);
+  }
+
+  .icon-blog {
+    background: var(--c-secondary);
   }
 }

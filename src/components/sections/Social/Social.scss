@@ -12,29 +12,18 @@
     text-align: center;
   }
 
-  svg {
-    width: auto;
-    height: 80px;
-    fill: var(--c-secondary);
-    transition: 0.3s all;
+  .icon {
+    background: var(--c-secondary);
 
-    &:hover {
-      transform: scale(1.25);
-      transition: 0.3s all;
-    }
-  }
+    &.icon-linkedin,
+    &.icon-github,
+    &.icon-twitter {
+      transition: .3s all;
 
-  .path {
-    fill: var(--c-secondary);
-  }
-  
-  .path-reverse {
-    fill: var(--bg-primary);
-  }
-
-  @media (max-width: 768px) {
-    svg {
-      height: 60px;
+      &:hover {
+        background: var(--c-primary);
+        transition: .3s all;
+      }
     }
   }
 }
