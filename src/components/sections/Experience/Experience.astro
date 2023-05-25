@@ -7,7 +7,7 @@ const experiences = getExperiences();
 
 <section class="experience">
   <h3 class="heading-3">
-    <span class="emoji">🔬</span>
+    <span class="icon icon-medium icon-experience"></span>
     {t("experience.title")}
   </h3>
   <p class="paragraph text-justify">
@@ -24,8 +24,12 @@ const experiences = getExperiences();
           <h5 class="heading-5 dates">
             {t(`experience.experiences.${experience}.dates`)}
           </h5>
-          <p class="paragraph text-justify">
+          <p class="paragraph text-justify description">
             {t(`experience.experiences.${experience}.description`)}
+          </p>
+          <p class="paragraph text-jusify technologies">
+            <strong>{t(`dictionary.technologies`)}:</strong>
+            {t(`experience.experiences.${experience}.technologies`)}
           </p>
         </div>
       );

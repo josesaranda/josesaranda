@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./ThemeButton.scss";
+import React from "react";
 
 export const ThemeButton = () => {
   const THEME_TOKEN = "theme";
@@ -32,9 +33,9 @@ export const ThemeButton = () => {
   }, []);
 
   useEffect(() => {
-    if (isDark) document.body.classList.add("dark");
-    else document.body.classList.remove("dark");
-    document.getElementById("love")!.innerHTML = isDark ? "💚" : "💜";
+    isDark
+      ? document.body.classList.add("dark")
+      : document.body.classList.remove("dark");
   }, [isDark]);
 
   return (
@@ -47,7 +48,8 @@ export const ThemeButton = () => {
         });
       }}
     >
-      {isDark ? "🌞" : "🌙"}
+      {isDark && <span className="icon icon-small icon-sun"></span>}
+      {!isDark && <span className="icon icon-small icon-moon"></span>}
     </button>
   );
 };

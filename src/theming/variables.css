@@ -1,5 +1,16 @@
 :root {
   --c-primary: #000;
+  --c-primary-50: #1a1a1a; 
+  --c-primary-100: #333333;
+  --c-primary-200: #4d4d4d;
+  --c-primary-300: #666666;
+  --c-primary-400: #808080;
+  --c-primary-500: #999999;
+  --c-primary-600: #b3b3b3;
+  --c-primary-700: #cccccc;
+  --c-primary-800: #e6e6e6;
+  --c-primary-900: #fff;
+
   --c-secondary: #7b6ab8;
   --bg-primary: #fff;
   --bg-secondary: #000;
@@ -24,6 +35,17 @@
 
 :root .dark {
   --c-primary: #fff;
+  --c-primary-50: #e6e6e6; 
+  --c-primary-100: #cccccc;
+  --c-primary-200: #b3b3b3;
+  --c-primary-300: #999999;
+  --c-primary-400: #808080;
+  --c-primary-500: #666666;
+  --c-primary-600: #4c4c4c;
+  --c-primary-700: #333333;
+  --c-primary-800: #191919;
+  --c-primary-900: #000000;
+
   --c-secondary: #70a2a0;
   --bg-primary: #111011;
   --bg-secondary: #fff;

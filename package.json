@@ -1,7 +1,7 @@
 {
-  "name": "@example/basics",
+  "name": "@josesaranda/josesaranda",
   "type": "module",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -12,14 +12,14 @@
     "test": "echo test"
   },
   "dependencies": {
-    "@astrojs/react": "2.0.1",
-    "astro": "2.0.2",
-    "astro-i18next": "1.0.0-beta.17",
+    "@astrojs/react": "2.2.0",
+    "astro": "2.5.5",
+    "astro-i18next": "1.0.0-beta.21",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "prettier-plugin-organize-imports": "3.2.2",
-    "sass": "^1.57.1"
+    "sass": "1.62.1"
   }
 }

@@ -1,5 +1,6 @@
 @import "./variables.css";
 @import "./typography.css";
+@import "./icons.scss";
 
 html {
   font-family: system-ui, sans-serif;
@@ -11,7 +12,6 @@ html {
 }
 
 body {
-  color: var(--c-primary);
   background: var(--bg-primary);
   transition: 0.5s all;
 }
@@ -30,37 +30,43 @@ main {
   margin-bottom: var(--spacing-2);
   font-size: var(--font-0);
   line-height: 32px;
+  color: var(--c-primary-100);
 }
 
 .heading-1 {
   font-size: var(--font-5);
+  color: var(--c-primary);
 }
 
 .heading-2 {
   font-size: var(--font-5);
   margin-bottom: var(--spacing-0);
+  color: var(--c-primary);
 }
 
 .heading-3 {
   font-size: var(--font-2);
   margin-bottom: var(--spacing-1);
+  color: var(--c-primary-50);
 }
 
 .heading-4 {
   font-size: var(--font-1);
   margin-bottom: var(--spacing-0);
+  color: var(--c-primary-50);
 }
 
 .heading-5 {
   font-size: var(--font-0);
   margin-top: 0px;
   margin-bottom: var(--spacing-0);
+  color: var(--c-primary-100);
 }
 
 /* links */
 
 a {
-  color: var(--c-primary);
+  color: var(--c-primary-100);
 }
 
 a:hover {
@@ -74,19 +80,4 @@ a:hover {
 section {
   margin-top: var(--spacing-8);
   margin-bottom: var(--spacing-8);
-}
-
-span.emoji {
-  font-size: var(--font-4);
-  vertical-align: middle;
-}
-
-span.emoji.small {
-  font-size: var(--font-3);
-}
-
-@media (max-width: 768px) {
-  span.emoji.small {
-    font-size: var(--font-2);
-  }
 }

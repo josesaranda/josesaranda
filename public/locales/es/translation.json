@@ -31,17 +31,17 @@
       "fortris": {
         "title": "Ingeniero Frontend en <a href='https://fortris.com' target='_blank'>Fortris</a>",
         "dates": "Oct. 2021 - actualidad",
-        "description": "Trabajando con Angular, Nx, NestJS y muchas otras tecnologías. Desarrollando la mejor plataforma de gestión de criptomonedas del mercado. Jugando y creando y el equipo de análisis de datos."
+        "description": "El producto principal de Fortris es un sistema de gestión de activos de criptomonedas. En Fortris soy responsable del desarrollo, mantenimiento y despliegue de nuestra SPA y la aplicación del servidor BFF."
       },
       "shapelets": {
         "title": "Ingeniero de software en <a href='https://shapelets.io' target='_blank'>Shapelets</a>",
         "dates": "Mayo 2019 - Oct. 2021",
-        "description": "Frontend en todos los sitios. Creando inmejorables interfaces de usuario para visualización de datos usando React, Mobx, Vega, Typescript y más."
+        "description": "El producto principal de Shapelets es un conjunto de herramientas para científicos de datos. En Shapelets fui responsable del desarrollo, mantenimiento y despliegue de una SPA que incluía visualizaciones de datos (paneles de control)."
       },
       "sombradoble": {
         "title": "Ingeniero de software en <a href='https://sombradoble.es' target='_blank'>Sombradoble</a>",
         "dates": "Sept. 2016 - Abril 2019",
-        "description": "Allí trabajé con las siguientes tecnologías: NodeJS, Express, EJS, Loopback, MySQL, MongoDB, Angular, AngularMaterial, Bootstrap, HTML, CSS, Javascript and Typescript. Me hice cargo de los requisitos, arquitectura, ejecución y mantenimiento."
+        "description": "Sombradoble es una agencia de consultoría especializada en el sector científico. En Sombradoble fui responsable de obtener los requisitos del cliente, el desarrollo, el mantenimiento y el despliegue de diferentes SPAs, aplicaciones web progresivas y aplicaciones móviles híbridas."
       },
       "nowait": {
         "title": "CTO/Fundador en Nowait",
@@ -51,7 +51,7 @@
       "sombradoble-intern": {
         "title": "Becario en <a href='https://sombradoble.es' target='_blank'>Sombradoble</a>",
         "dates": "Abril 2016 - Julio 2016",
-        "description": "En esta etapa, en Sombradoble, desarrollamos una aplicación móvil híbrida llamada MyLeaf. Esta aplicación fue construida usando el framework de Ionic. MyLeaf permitía a pacientes, con enfermedades raras y crónicas, monitorizar su día a día y analizar la evolución que tenían a lo largo del tiempo, teniendo más conocimiento sobre su ingesta de medicamentos, actividades que hacían y alimentos que comían. Todas estas funciones se alojaban en un servidor desarrollado con NodeJS, que obtenia datos de una base de datos SQLServer."
+        "description": "Sombradoble es una agencia de consultoría especializada en el sector científico. Me uní a la empresa para construir la aplicación MyLeaf. MyLeaf permitía a los pacientes con enfermedades crónicas y raras monitorear su día a día y analizar la evolución que tuvieron a lo largo del tiempo, obteniendo un mayor conocimiento sobre la ingesta de sus medicamentos, las actividades que realizaron y los alimentos que consumieron."
       }
     }
   },
@@ -59,7 +59,10 @@
     "title": "¿Redes sociales? Si, ¡aquí estoy!"
   },
   "footer": {
-    "title": "Hecho con <0>💜</0> desde cero",
+    "title": "Hecho con <0></0> desde cero",
     "date": "Ultima actualización"
+  },
+  "dictionary": {
+    "technologies": "Tecnologías"
   }
 }
