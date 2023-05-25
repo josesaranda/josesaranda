@@ -12,38 +12,45 @@
     margin-bottom: var(--spacing-2);
     font-size: var(--font-0);
     line-height: 32px;
+    color: var(--c-primary-100);
   }
 
   h1 {
     margin-bottom: var(--spacing-3);
     font-size: var(--font-5);
+    color: var(--c-primary);
   }
 
   h2 {
     margin-bottom: var(--spacing-3);
     font-size: var(--font-2);
     margin-bottom: var(--spacing-0);
+    color: var(--c-primary-50);
   }
 
   h3 {
     font-size: var(--font-2);
     margin-bottom: var(--spacing-1);
+    color: var(--c-primary-50);
   }
 
   h4 {
     font-size: var(--font-1);
     margin-bottom: var(--spacing-0);
+    color: var(--c-primary-50);
   }
 
   h5 {
     font-size: var(--font-0);
     margin-top: 0px;
     margin-bottom: var(--spacing-0);
+    color: var(--c-primary-100);
   }
 
   ul {
     margin-bottom: var(--spacing-3);
     margin-left: var(--spacing-7);
+    color: var(--c-primary-100);
 
     li {
       font-size: var(--font-0);
