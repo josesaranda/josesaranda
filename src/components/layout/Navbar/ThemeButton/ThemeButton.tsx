@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-import "./ThemeButton.scss";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export const ThemeButton = () => {
   const THEME_TOKEN = "theme";
@@ -40,7 +38,7 @@ export const ThemeButton = () => {
 
   return (
     <button
-      className="theme-button"
+      className="theme-button button"
       onClick={() => {
         setIsDark((isDark) => {
           window.localStorage.setItem(THEME_TOKEN, !isDark ? "dark" : "light");
@@ -48,8 +46,8 @@ export const ThemeButton = () => {
         });
       }}
     >
-      {isDark && <span className="icon icon-small icon-sun"></span>}
-      {!isDark && <span className="icon icon-small icon-moon"></span>}
+      {isDark && <span className="icon icon-small icon-sun secondary"></span>}
+      {!isDark && <span className="icon icon-small icon-moon secondary"></span>}
     </button>
   );
 };
