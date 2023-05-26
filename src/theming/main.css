@@ -1,6 +1,7 @@
 @import "./variables.css";
 @import "./typography.css";
-@import "./icons.scss";
+@import "./icon.scss";
+@import "./button.scss";
 
 html {
   font-family: system-ui, sans-serif;
@@ -68,12 +69,6 @@ main {
 
 a {
   color: var(--c-primary-100);
-}
-
-a:hover {
-  transform: scale(1.25);
-  transition: 0.3s;
-  color: var(--c-secondary);
 }
 
 /* others */

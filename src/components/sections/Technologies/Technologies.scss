@@ -3,11 +3,13 @@
     display: inline-block;
     margin: var(--spacing-0);
     padding: var(--spacing-0);
-    transition: 0.3s;
     font-size: var(--font-0);
-  }
+    transition: 0.3s;
 
-  .icon-computer-chip {
-    background: var(--c-secondary);
+    &:hover {
+      transform: scale(1.25);
+      transition: 0.3s;
+      color: var(--c-secondary);
+    }
   }
 }
