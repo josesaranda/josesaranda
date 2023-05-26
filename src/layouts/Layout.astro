@@ -19,6 +19,7 @@ const { title, description } = Astro.props;
       content={description ? description : t("site.description")}
     />
     <title>{title ? title : t("site.title")}</title>
+    <script src="/scripts/echarts.min.js" is:inline></script>
     <HeadHrefLangs />
   </head>
   <body>
