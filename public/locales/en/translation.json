@@ -22,7 +22,11 @@
     "paragraph3": "I am always keen to learn different technologies and improve as a software engineer. As an example, this web is made with <0>Astro</0>. Have you heard about <1>Astro</1> before? Have a look at the <2>source code</2> of this project."
   },
   "technologies": {
-    "title": "Technologies? Yes. These ones."
+    "title": "Technologies? Yes. These ones.",
+    "chart": {
+      "xAxis.name": "Technologies",
+      "yAxis.name": "Years of experience"
+    }
   },
   "experience": {
     "title": "Experience? A bit...",
