@@ -24,7 +24,7 @@
   padding-right: var(--spacing-2);
 
   transition: .3s all;
-  
+
   &:hover {
     background: var(--c-primary-700);
     transition: .3s all;
@@ -33,7 +33,8 @@
   @media (max-width: 768px) {
     height: 42px;
     font-size: var(--font-0);
-    padding: 0 var(--spacing-1);
+    padding-left: var(--spacing-1);
+    padding-right: var(--spacing-1);
   }
 
   &.button-primary {
