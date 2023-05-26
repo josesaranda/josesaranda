@@ -45,7 +45,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: dist
-          key: ${{ runner.os }}-node-dist-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-dist-${{ hashFiles('dist/**') }}
 
   test:
     strategy:
@@ -75,7 +75,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: dist
-          key: ${{ runner.os }}-node-dist-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-dist-${{ hashFiles('dist/**') }}
       - name: deploy
         uses: garygrossgarten/github-action-scp@release
         with:
