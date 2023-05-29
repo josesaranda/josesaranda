@@ -2,11 +2,13 @@
 
 ## About Me
 
+![Profile picture](https://josesaranda.es/images/profile.jpeg)
+
 Hi there! My name is **Jose Sánchez Aranda**, and I'm a **Software Engineer**. I'm passionate about coding, designing, developing, and I love to travel, learn. I'm always looking for new opportunities to learn and grow, and I'm excited to share my projects with you!
 
 ## My Projects
 
-Here are some of the projects I've worked on:
+Here are some projects I've worked on:
 
 - [josesaranda.es](https://josesaranda.es): My personal website kind of portfolio/cv.
 - [jcofrade.josesaranda.es](https://jcofrade.josesaranda.es): A progresive web app to stay updated with easter week of Málaga.
@@ -15,7 +17,7 @@ Here are some of the projects I've worked on:
 
 Here are some of the companies I've worked on:
 
-- [Fortris](https://fortris.com): Actually
+- [Fortris](https://fortris.com): Currently
 - [Shapelets](https://shapelets.io): 3 years approx
 - [Sombradoble](https://sombradoble.es): 3 years approx
 
