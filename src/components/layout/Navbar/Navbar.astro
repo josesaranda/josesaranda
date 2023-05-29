@@ -12,14 +12,20 @@ const { redirect, title, showLogo, showLanguageButton = true } = Astro.props;
   <div class="navbar-left">
     {
       showLogo && (
-        <a class="logo" href={t("site.home_url")}>
-          <img src="/images/profile.jpeg" width="48px" height="48px" alt="" />
+        <a class="navbar-logo" href={t("site.home_url")}>
+          <img
+            class="navbar-img"
+            src="/images/profile.jpeg"
+            alt="Profile picture"
+            width="48px"
+            height="48px"
+          />
         </a>
       )
     }
-    <h1>{title}</h1>
+    {title && <h1 class="navbar-title">{title}</h1>}
   </div>
-  <div class="menu-right">
+  <div class="navbar-right">
     {showLanguageButton && <LanguageButton redirect={redirect} />}
     {(<BlogButton redirect={redirect} />)}
     <ThemeButton client:load />

@@ -16,22 +16,21 @@
   }
 
   h1 {
-    margin-bottom: var(--spacing-3);
+    margin: var(--spacing-6) 0;
     font-size: var(--font-5);
-    color: var(--c-primary);
+    color: var(--c-secondary);
   }
 
   h2 {
-    margin-bottom: var(--spacing-3);
+    margin: var(--spacing-5) 0;
     font-size: var(--font-2);
-    margin-bottom: var(--spacing-0);
-    color: var(--c-primary-50);
+    color: var(--c-secondary);
   }
 
   h3 {
-    font-size: var(--font-2);
-    margin-bottom: var(--spacing-1);
-    color: var(--c-primary-50);
+    font-size: var(--font-1);
+    margin: var(--spacing-6) 0;
+    color: var(--c-secondary)
   }
 
   h4 {

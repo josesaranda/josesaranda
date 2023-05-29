@@ -9,66 +9,59 @@
   align-items: center;
   z-index: 10;
 
-  div.menu-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    width: auto;
-    padding-top: 10px;
-  }
-
-  h1 {
-    display: inline-flex;
-    vertical-align: middle;
-    font-size: var(--font-3);
-    color: var(--c-primary-50);
+  @media (max-width: 768px) {
+    align-items: flex-start;
+    overflow: visible;
+    height: 42px;
   }
 
   .navbar-left {
     width: 100%;
 
-    a.logo {
+    .navbar-title {
+      display: inline-flex;
+      vertical-align: middle;
+      font-size: var(--font-3);
+      color: var(--c-primary);
+      text-shadow: 0px 0px 2px var(--c-primary-900);
+
+      @media (max-width: 768px) {
+        font-size: var(--font-2);
+        line-height: 42px;
+      }
+    }
+
+    .navbar-logo {
       text-decoration: none;
+      
+      .navbar-img {
+        border-radius: 10px;
+        border: 1px solid var(--c-primary-400);
+        -webkit-box-shadow: 4px 4px 2px 0px var(--c-secondary);
+        -moz-box-shadow: 4px 4px 2px 0px var(--c-secondary);
+        box-shadow: 4px 4px 2px 0px var(--c-secondary);
+        display: inline-flex;
+        margin-right: var(--spacing-2);
+        vertical-align: middle;
+
+        @media (max-width: 768px) {
+          width: 42px;
+          height: 42px;
+        }
+      }
     }
   }
 
-  img {
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 20px 0px var(--c-secondary);
-    -moz-box-shadow: 0px 0px 20px 0px var(--c-secondary);
-    box-shadow: 0px 0px 20px 0px var(--c-secondary);
-    display: inline-flex;
-    margin-right: var(--spacing-2);
-    vertical-align: middle;
-  }
-
-  .menu-right {
+  .navbar-right {
     display: flex;
     justify-content: end;
     align-items: start;
     gap: var(--spacing-2);
-  }
 
-  @media (max-width: 768px) {
-    align-items: flex-start;
-    overflow: visible;
-    height: 42px;
-
-    h1 {
-      font-size: var(--font-2);
-      line-height: 42px;
-    }
-
-    .menu-right {
+    @media (max-width: 768px) {
       flex-direction: column;
       align-items: end;
       gap: var(--spacing-1);
-    }
-
-    .navbar-left a.logo img {
-      width: 42px;
-      height: 42px;
     }
   }
 }
