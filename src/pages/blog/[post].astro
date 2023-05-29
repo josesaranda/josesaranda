@@ -5,6 +5,7 @@ import Social from "@components/sections/Social/Social.astro";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import "./post.scss";
+import { Progress } from "@components/ui/Progress/Progress";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -27,6 +28,7 @@ const { Content } = await post.render();
   title={"josesaranda | " + post.data.title}
   description={post.data.description}
 >
+  <Progress client:only />
   <main>
     <Navbar
       showLanguageButton={false}
