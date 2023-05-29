@@ -18,7 +18,7 @@ It means many things, here you have listed some of benefits of using Astro:
 
 You can create a new project just typing one line into your terminal:
 
-```
+```shell
 # create a new project with npm
 npm create astro@latest
 ```

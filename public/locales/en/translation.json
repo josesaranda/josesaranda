@@ -6,10 +6,6 @@
     "language": {
       "flag": "🇬🇧",
       "redirect-route": "/es"
-    },
-    "menu": {
-      "home": "Home",
-      "blog": "Blog"
     }
   },
   "greeting": {
@@ -34,7 +30,7 @@
     "experiences": {
       "fortris": {
         "title": "Frontend Engineer at <a href='https://fortris.com' target='_blank'>Fortris</a>",
-        "dates": "Oct. 2021 - actually",
+        "dates": "Oct. 2021 - Currently",
         "description": "Fortris' main product is a crypto asset management system. At Fortris I'm responsible of development, maintainability and deployment of our single page app and BFF server app.",
         "technologies": "Angular, Angular Material, Typescript, Javascript, Sass, Html, Nx, NodeJS, Express, NestJS, GraphQL, Jest, Cypress, Testing Library."
       },
