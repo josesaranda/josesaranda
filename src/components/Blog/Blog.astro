@@ -9,12 +9,13 @@ const posts = await getCollection("blog");
   {
     posts.map((post) => {
       return (
-        <Card
-          title={post.data.title}
-          slug={post.slug}
-          image={post.data.image}
-          language={post.data.language}
-        />
+        <a class="blog-link" href={"/blog/" + post.slug}>
+          <Card
+            title={post.data.title}
+            image={post.data.image}
+            language={post.data.language}
+          />
+        </a>
       );
     })
   }

@@ -1,4 +1,8 @@
 .blog {
   display: flex;
-  gap: var(--spacing-2)
+  gap: var(--spacing-2);
+
+  .blog-link {
+    text-decoration: none;
+  }
 }
