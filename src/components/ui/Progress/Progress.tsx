@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import "./Progress.scss"
+import { useEffect, useState } from "react";
+import "./Progress.scss";
 
 export const Progress = () => {
   const [progress, setProgress] = useState(0);
@@ -9,7 +9,7 @@ export const Progress = () => {
       const winScroll =
         document.body.scrollTop || document.documentElement.scrollTop;
       const height =
-        document.documentElement.scrollHeight -
+        document.documentElement.offsetHeight -
         document.documentElement.clientHeight;
 
       setProgress((winScroll / height) * 100);
