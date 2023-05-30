@@ -22,11 +22,16 @@ export async function getStaticPaths() {
 }
 const { post } = Astro.props;
 const { Content } = await post.render();
+
+const tags: string[] = post.data.tags.split(",");
+
+const MAX_TAGS = 3;
 ---
 
 <Layout
   title={"josesaranda | " + post.data.title}
   description={post.data.description}
+  keywords={post.data.tags}
 >
   <Progress client:only />
   <main>
@@ -36,8 +41,18 @@ const { Content } = await post.render();
       title={post.data.title}
     />
     <div class="post">
-      <div class="image-container text-center">
+      <div
+        class={"post-image-container text-center" +
+          (tags.length ? " with-tags" : "")}
+      >
         <img src={post.data.image} width="100%" alt="" />
+      </div>
+      <div class="post-tags">
+        {
+          tags.splice(0, MAX_TAGS).map((tag) => {
+            return <span class="post-tag button">#{tag.trim()}</span>;
+          })
+        }
       </div>
       <Content />
     </div>

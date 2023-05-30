@@ -3,6 +3,7 @@ slug: what-is-astro
 title: What is astro?
 language: en
 image: /images/blog/astro-bg.jpeg
+tags: astro, javascript, framework, islands, server, ui, npm, nodejs, github
 ---
 
 **Astro** is an **all-in-one web framework** for building fast, content-focused websites.
