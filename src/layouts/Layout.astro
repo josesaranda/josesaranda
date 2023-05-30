@@ -3,9 +3,7 @@ import i18next, { t } from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 import "@theming/main.css";
 
-const { title, description } = Astro.props;
-
-//dummy comment
+const { title, description, keywords } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -18,6 +16,7 @@ const { title, description } = Astro.props;
       name="description"
       content={description ? description : t("site.description")}
     />
+    {keywords && <meta name="keywords" content={keywords} />}
     <title>{title ? title : t("site.title")}</title>
     <script src="/scripts/echarts.min.js" is:inline></script>
     <HeadHrefLangs />

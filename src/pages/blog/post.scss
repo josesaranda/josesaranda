@@ -1,6 +1,10 @@
 .post {
-  .image-container {
+  .post-image-container {
     margin: 40px auto;
+
+    &.with-tags {
+      margin-bottom: 10px;
+    }
     
     img {
       border-radius: 10px;
@@ -65,5 +69,18 @@
     border-radius: 10px;
     padding: var(--spacing-3);
     margin-bottom: var(--spacing-3);
+  }
+
+  .post-tags {
+    text-align: right;
+    margin-bottom: var(--spacing-6);
+    
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  .post-tag:not(:last-child) {
+    margin-right: 6px;
   }
 }
