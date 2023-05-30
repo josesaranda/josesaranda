@@ -1,9 +1,9 @@
 .post {
   .post-image-container {
-    margin: 40px auto;
+    margin: var(--spacing-8) auto;
 
     &.with-tags {
-      margin-bottom: 10px;
+      margin-bottom: var(--spacing-1);
     }
     
     img {
@@ -80,7 +80,12 @@
     }
   }
 
-  .post-tag:not(:last-child) {
-    margin-right: 6px;
+  .post-tag {
+    margin-bottom: var(--spacing-1);
+    font-size: var(--font-0);
+
+    &:not(:last-child) {
+      margin-right: var(--spacing-1);
+    }
   }
 }
