@@ -71,6 +71,11 @@
     margin-bottom: var(--spacing-3);
   }
 
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
   .post-tags {
     text-align: right;
     margin-bottom: var(--spacing-6);
