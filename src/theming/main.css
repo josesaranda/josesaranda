@@ -77,3 +77,10 @@ section {
   margin-top: var(--spacing-8);
   margin-bottom: var(--spacing-8);
 }
+
+.time {
+  display: inline-flex;
+  font-size: var(--font-0);
+  color: var(--c-primary-200);
+  margin: var(--spacing-2) 0 var(--spacing-3) 0;
+}

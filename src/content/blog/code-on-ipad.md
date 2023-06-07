@@ -4,6 +4,7 @@ title: ¿Programar desde el iPad?
 language: es
 image: /images/blog/ipad-appstore-code-apps.jpeg
 tags: programar, ipad, vscode, javascript, github
+date: 2023-05-31
 ---
 
 El iPad cada vez se acerca más, en las últimas versiones de iPadOS, a su sistema operativo hermano MacOS. Pero aun hay una diferencia abismal. El sistema de archivos. Así es. Está bastante limitado y por ello tareas como escribir código desde este dispositivo se convierten en un auténtico desafio. No obstante, para algunas tareas simples existen soluciones. (**Este artículo se ha redactado usando un iPad Air**)
