@@ -12,8 +12,8 @@
     "test": "echo test"
   },
   "dependencies": {
-    "@astrojs/react": "2.2.0",
-    "astro": "2.5.5",
+    "@astrojs/react": "2.2.1",
+    "astro": "2.6.1",
     "astro-i18next": "1.0.0-beta.21",
     "react": "18.2.0",
     "react-dom": "18.2.0"

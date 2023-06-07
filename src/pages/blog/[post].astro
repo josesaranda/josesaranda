@@ -6,6 +6,8 @@ import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import "./post.scss";
 import { Progress } from "@components/ui/Progress/Progress";
+import { changeLanguage } from "i18next";
+import { Time } from "@components/ui/Time/Time";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -26,6 +28,8 @@ const { Content } = await post.render();
 const tags: string[] = post.data.tags.split(",");
 
 const MAX_TAGS = 3;
+
+changeLanguage(post.data.language);
 ---
 
 <Layout
@@ -40,13 +44,18 @@ const MAX_TAGS = 3;
       showLogo="true"
       title={post.data.title}
     />
-    <div class="post">
+    <article class="post">
       <div
         class={"post-image-container text-center" +
           (tags.length ? " with-tags" : "")}
       >
         <img src={post.data.image} width="100%" alt="" />
       </div>
+      {
+        post.data.date && (
+          <Time time={post.data.date} language={post.data.language} />
+        )
+      }
       <div class="post-tags">
         {
           tags.splice(0, MAX_TAGS).map((tag) => {
@@ -55,7 +64,7 @@ const MAX_TAGS = 3;
         }
       </div>
       <Content />
-    </div>
+    </article>
     <Social />
   </main>
   <Footer />
