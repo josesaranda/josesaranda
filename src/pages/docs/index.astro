@@ -1,0 +1,298 @@
+---
+import Footer from "@components/layout/Footer/Footer.astro";
+import Navbar from "@components/layout/Navbar/Navbar.astro";
+import Layout from "@layouts/Layout.astro";
+import { t } from "i18next";
+
+const ids = [
+  "Headings",
+  "Fonts",
+  "Margins",
+  "Paddings",
+  "Colors",
+  "Buttons",
+  "Links",
+];
+---
+
+<Layout>
+  <main class="bg-primary-900" style="z-index: 1">
+    <Navbar
+      redirect={t("site.language.redirect-route")}
+      showLogo="true"
+      title="Docs"
+    />
+    <p class="paragraph mt-5">
+      This is a guideline of how to use css utilities and classes created for
+      this project.
+    </p>
+    <section id="headings">
+      <h2 class="heading-2 mb-5 c-secondary">Headings</h2>
+      <p class="paragraph mb-5">List of different headings</p>
+      <div
+        class="flex flex-responsive align-items-center gap-1 my-2 p-2 bg-primary-800 border-radius"
+      >
+        <h1 class="heading-1 flex-1">Heading 1</h1>
+        <code class="code flex-1">{'<h1 class="heading-1">Heading 1</h1>'}</code
+        >
+      </div>
+      <div
+        class="flex flex-responsive align-items-center gap-1 my-2 p-2 bg-primary-800 border-radius"
+      >
+        <h2 class="heading-2 flex-1">Heading 2</h2>
+        <code class="code flex-1">{'<h2 class="heading-2">Heading 2</h2>'}</code
+        >
+      </div>
+      <div
+        class="flex flex-responsive align-items-center gap-1 my-2 p-2 bg-primary-800 border-radius"
+      >
+        <h3 class="heading-3 flex-1">Heading 3</h3>
+        <code class="code flex-1">{'<h3 class="heading-3">Heading 3</h3>'}</code
+        >
+      </div>
+      <div
+        class="flex flex-responsive align-items-center gap-1 my-2 p-2 bg-primary-800 border-radius"
+      >
+        <h4 class="heading-4 flex-1">Heading 4</h4>
+        <code class="code flex-1">{'<h4 class="heading-4">Heading 4</h4>'}</code
+        >
+      </div>
+      <div
+        class="flex flex-responsive align-items-center gap-1 my-2 p-2 bg-primary-800 border-radius"
+      >
+        <h5 class="heading-5 flex-1">Heading 5</h5>
+        <code class="code flex-1">{'<h5 class="heading-5">Heading 5</h5>'}</code
+        >
+      </div>
+    </section>
+    <section id="fonts">
+      <h2 class="heading-2 mb-5 c-secondary">Fonts</h2>
+      <p class="paragraph mb-5">List of different fonts</p>
+      <div
+        class="flex flex-responsive align-items-center gap-1 my-2 p-2 bg-primary-800 border-radius"
+      >
+        <span class="font-1 flex-1">font 1</span>
+        <code class="code flex-1">{'<span class="font-1">font 1</span>'}</code>
+      </div>
+      <div
+        class="flex flex-responsive align-items-center gap-1 my-2 p-2 bg-primary-800 border-radius"
+      >
+        <span class="font-2 flex-1">font 2</span>
+        <code class="code flex-1">{'<span class="font-2">font 2</span>'}</code>
+      </div>
+      <div
+        class="flex flex-responsive align-items-center gap-1 my-2 p-2 bg-primary-800 border-radius"
+      >
+        <span class="font-3 flex-1">font 3</span>
+        <code class="code flex-1">{'<span class="font-3">font 3</span>'}</code>
+      </div>
+      <div
+        class="flex flex-responsive align-items-center gap-1 my-2 p-2 bg-primary-800 border-radius"
+      >
+        <span class="font-4 flex-1">font 4</span>
+        <code class="code flex-1">{'<span class="font-4">font 4</span>'}</code>
+      </div>
+      <div
+        class="flex flex-responsive align-items-center gap-1 my-2 p-2 bg-primary-800 border-radius"
+      >
+        <span class="font-5 flex-1">font 5</span>
+        <code class="code flex-1">{'<span class="font-5">font 5</span>'}</code>
+      </div>
+    </section>
+    <section id="spacing">
+      <h2 class="heading-2 mb-5 c-secondary">Spacing</h2>
+      <h3 id="margins" class="heading-3 mb-5 c-secondary">Margins</h3>
+      <p class="paragraph mb-5">Table of margins</p>
+      <div class="overflow-x">
+        <table class="mb-5">
+          <tbody>
+            <tr>
+              <td>Set margin:</td>
+              <td>.m-0</td>
+              <td>.m-1..7</td>
+              <td>.m-8</td>
+            </tr>
+            <tr>
+              <td>Set margin left:</td>
+              <td>.ml-0</td>
+              <td>.ml-1..7</td>
+              <td>.ml-8</td>
+            </tr>
+            <tr>
+              <td>Set margin top:</td>
+              <td>.mt-0</td>
+              <td>.mt-1..7</td>
+              <td>.mt-8</td>
+            </tr>
+            <tr>
+              <td>Set margin right:</td>
+              <td>.mr-0</td>
+              <td>.mr-1..7</td>
+              <td>.mr-8</td>
+            </tr>
+            <tr>
+              <td>Set margin bottom:</td>
+              <td>.mb-0</td>
+              <td>.mb-1..7</td>
+              <td>.mb-8</td>
+            </tr>
+            <tr>
+              <td>Set margin x axis:</td>
+              <td>.mx-0</td>
+              <td>.mx-1..7</td>
+              <td>.mx-8</td>
+            </tr>
+            <tr>
+              <td>Set margin y axis:</td>
+              <td>.my-0</td>
+              <td>.my-1..7</td>
+              <td>.my-8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 id="paddings" class="heading-3 mb-5 c-secondary">Paddings</h3>
+      <p class="paragraph mb-5">Table of paddings</p>
+      <div class="overflow-x">
+        <table>
+          <tbody>
+            <tr>
+              <td>Set padding:</td>
+              <td>.p-0</td>
+              <td>.p-1..7</td>
+              <td>.p-8</td>
+            </tr>
+            <tr>
+              <td>Set padding left:</td>
+              <td>.pl-0</td>
+              <td>.pl-1..7</td>
+              <td>.pl-8</td>
+            </tr>
+            <tr>
+              <td>Set padding top:</td>
+              <td>.pt-0</td>
+              <td>.pt-1..7</td>
+              <td>.pt-8</td>
+            </tr>
+            <tr>
+              <td>Set padding right:</td>
+              <td>.pr-0</td>
+              <td>.pr-1..7</td>
+              <td>.pr-8</td>
+            </tr>
+            <tr>
+              <td>Set padding bottom:</td>
+              <td>.pb-0</td>
+              <td>.pb-1..7</td>
+              <td>.pb-8</td>
+            </tr>
+            <tr>
+              <td>Set padding x axis:</td>
+              <td>.px-0</td>
+              <td>.px-1..7</td>
+              <td>.px-8</td>
+            </tr>
+            <tr>
+              <td>Set padding y axis:</td>
+              <td>.py-0</td>
+              <td>.py-1..7</td>
+              <td>.py-8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section id="colors">
+      <h2 class="heading-2 mb-5 c-secondary">Colors</h2>
+      <p class="paragraph mb-5">Table of different colors</p>
+      <div class="overflow-x">
+        <table>
+          <tbody>
+            <tr>
+              <td>.c-primary</td>
+              <td class="bg-primary"></td>
+              <td class="bg-primary-50"></td>
+              <td class="bg-primary-100"></td>
+              <td class="bg-primary-200"></td>
+              <td class="bg-primary-300"></td>
+              <td class="bg-primary-400"></td>
+              <td class="bg-primary-500"></td>
+              <td class="bg-primary-600"></td>
+              <td class="bg-primary-700"></td>
+              <td class="bg-primary-800"></td>
+              <td class="bg-primary-900"></td>
+            </tr>
+            <tr>
+              <td>.c-secondary</td>
+              <td class="bg-secondary"></td>
+              <td class="bg-secondary-50"></td>
+              <td class="bg-secondary-100"></td>
+              <td class="bg-secondary-200"></td>
+              <td class="bg-secondary-300"></td>
+              <td class="bg-secondary-400"></td>
+              <td class="bg-secondary-500"></td>
+              <td class="bg-secondary-600"></td>
+              <td class="bg-secondary-700"></td>
+              <td class="bg-secondary-800"></td>
+              <td class="bg-secondary-900"></td>
+            </tr>
+            <tr>
+              <td>shades</td>
+              <td class="px-0 py-1">none</td>
+              <td class="px-0 py-1">50</td>
+              <td class="px-0 py-1">100</td>
+              <td class="px-0 py-1">200</td>
+              <td class="px-0 py-1">300</td>
+              <td class="px-0 py-1">400</td>
+              <td class="px-0 py-1">500</td>
+              <td class="px-0 py-1">600</td>
+              <td class="px-0 py-1">700</td>
+              <td class="px-0 py-1">800</td>
+              <td class="px-0 py-1">900</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section id="buttons">
+      <h2 class="heading-2 mb-5 c-secondary">Buttons</h2>
+      <p class="paragraph mb-5">List of different buttons</p>
+      <button class="button">Button</button>
+    </section>
+    <section id="links">
+      <h2 class="heading-2 mb-5 c-secondary">Links</h2>
+      <p class="paragraph mb-5">List of different links</p>
+      <a href="#">Link</a>
+    </section>
+  </main>
+  <aside class="p-2">
+    <h5 class="heading-5 mb-4">Menu</h5>
+    <nav>
+      <ul>
+        {
+          ids.map((id) => {
+            return (
+              <li class="my-1">
+                <a href={"#" + id.toLowerCase()} class="button">
+                  {id}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+  </aside>
+  <Footer />
+</Layout>
+
+<style>
+  aside {
+    position: fixed;
+    display: block;
+    overflow: hidden;
+    width: 200px;
+    top: var(--spacing-4);
+    left: var(--spacing-4);
+  }
+</style>
