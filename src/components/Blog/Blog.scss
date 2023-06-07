@@ -1,6 +1,6 @@
 .blog {
   display: flex;
-  gap: var(--spacing-2);
+  gap: var(--spacing-3);
 
   @media (max-width: 768px) {
     flex-direction: column;

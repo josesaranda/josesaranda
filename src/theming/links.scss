@@ -1,0 +1,12 @@
+/* links */
+
+a {
+  display: inline-block;
+  color: var(--c-primary);
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--c-secondary);
+    transition: 0.3s;
+  }
+}

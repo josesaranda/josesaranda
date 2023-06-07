@@ -1,9 +1,9 @@
 .post {
   .post-image-container {
-    margin: var(--spacing-8) auto;
+    margin: var(--spacing-9) auto;
 
     &.with-tags {
-      margin-bottom: var(--spacing-1);
+      margin-bottom: var(--spacing-2);
     }
     
     img {
@@ -13,7 +13,7 @@
 
   p {
     margin-top: 0;
-    margin-bottom: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
     font-size: var(--font-0);
     line-height: 32px;
     color: var(--c-primary-100);
@@ -24,51 +24,51 @@
   }
 
   h1 {
-    margin: var(--spacing-6) 0;
+    margin: var(--spacing-7) 0;
     font-size: var(--font-5);
     color: var(--c-secondary);
   }
 
   h2 {
-    margin: var(--spacing-5) 0;
+    margin: var(--spacing-6) 0;
     font-size: var(--font-2);
     color: var(--c-secondary);
   }
 
   h3 {
     font-size: var(--font-1);
-    margin: var(--spacing-6) 0;
+    margin: var(--spacing-7) 0;
     color: var(--c-secondary)
   }
 
   h4 {
     font-size: var(--font-1);
-    margin-bottom: var(--spacing-0);
+    margin-bottom: var(--spacing-1);
     color: var(--c-primary-50);
   }
 
   h5 {
     font-size: var(--font-0);
     margin-top: 0px;
-    margin-bottom: var(--spacing-0);
+    margin-bottom: var(--spacing-1);
     color: var(--c-primary-100);
   }
 
   ul {
-    margin-bottom: var(--spacing-3);
-    margin-left: var(--spacing-7);
+    margin-bottom: var(--spacing-4);
+    margin-left: var(--spacing-8);
     color: var(--c-primary-100);
 
     li {
       font-size: var(--font-0);
-      margin-bottom: var(--spacing-1);
+      margin-bottom: var(--spacing-2);
     }
   }
 
   pre {
     border-radius: 10px;
-    padding: var(--spacing-3);
-    margin-bottom: var(--spacing-3);
+    padding: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
   }
 
   img {
@@ -78,7 +78,7 @@
 
   .post-tags {
     text-align: right;
-    margin-bottom: var(--spacing-6);
+    margin-bottom: var(--spacing-7);
     
     @media (max-width: 768px) {
       text-align: center;
@@ -86,11 +86,11 @@
   }
 
   .post-tag {
-    margin-bottom: var(--spacing-1);
+    margin-bottom: var(--spacing-2);
     font-size: var(--font-0);
 
     &:not(:last-child) {
-      margin-right: var(--spacing-1);
+      margin-right: var(--spacing-2);
     }
   }
 

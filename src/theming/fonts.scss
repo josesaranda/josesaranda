@@ -1,0 +1,54 @@
+/* fonts */
+
+.paragraph {
+  margin-top: 0;
+  margin-bottom: var(--spacing-3);
+  font-size: var(--font-0);
+  line-height: var(--spacing-7);
+  color: var(--c-primary-50);
+}
+
+.heading-1 {
+  font-size: var(--font-5);
+  color: var(--c-primary);
+}
+
+.heading-2 {
+  font-size: var(--font-4);
+  color: var(--c-primary);
+}
+
+.heading-3 {
+  font-size: var(--font-3);
+  color: var(--c-primary-50);
+}
+
+.heading-4 {
+  font-size: var(--font-2);
+  color: var(--c-primary-50);
+}
+
+.heading-5 {
+  font-size: var(--font-1);
+  color: var(--c-primary-100);
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+// fonts
+
+@for $i from 0 to 6 {
+  .font-#{$i} {
+    font-size: var(--font-#{$i});
+  }
+}

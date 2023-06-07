@@ -4,7 +4,7 @@
   max-width: 1200px;
   width: 100%;
   overflow: visible;
-  top: var(--spacing-3);
+  top: var(--spacing-4);
   justify-content: space-between;
   align-items: center;
   z-index: 10;
@@ -41,7 +41,7 @@
         -moz-box-shadow: 4px 4px 2px 0px var(--c-secondary);
         box-shadow: 4px 4px 2px 0px var(--c-secondary);
         display: inline-flex;
-        margin-right: var(--spacing-2);
+        margin-right: var(--spacing-3);
         vertical-align: middle;
 
         @media (max-width: 768px) {
@@ -56,12 +56,12 @@
     display: flex;
     justify-content: end;
     align-items: start;
-    gap: var(--spacing-2);
+    gap: var(--spacing-3);
 
     @media (max-width: 768px) {
       flex-direction: column;
       align-items: end;
-      gap: var(--spacing-1);
+      gap: var(--spacing-2);
     }
   }
 }
