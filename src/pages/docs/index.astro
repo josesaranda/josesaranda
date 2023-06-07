@@ -28,7 +28,7 @@ const ids = [
       This is a guideline of how to use css utilities and classes created for
       this project.
     </p>
-    <section id="headings">
+    <section id="headings" class="mt-0">
       <h2 class="heading-2 mb-5 c-secondary">Headings</h2>
       <p class="paragraph mb-5">List of different headings</p>
       <div
@@ -101,51 +101,50 @@ const ids = [
         <code class="code flex-1">{'<span class="font-5">font 5</span>'}</code>
       </div>
     </section>
-    <section id="spacing">
-      <h2 class="heading-2 mb-5 c-secondary">Spacing</h2>
-      <h3 id="margins" class="heading-3 mb-5 c-secondary">Margins</h3>
+    <section id="margins">
+      <h2 class="heading-2 c-secondary">Margins</h2>
       <p class="paragraph mb-5">Table of margins</p>
       <div class="overflow-x">
         <table class="mb-5">
           <tbody>
             <tr>
-              <td>Set margin:</td>
+              <td>margin:</td>
               <td>.m-0</td>
               <td>.m-1..7</td>
               <td>.m-8</td>
             </tr>
             <tr>
-              <td>Set margin left:</td>
+              <td>margin left:</td>
               <td>.ml-0</td>
               <td>.ml-1..7</td>
               <td>.ml-8</td>
             </tr>
             <tr>
-              <td>Set margin top:</td>
+              <td>margin top:</td>
               <td>.mt-0</td>
               <td>.mt-1..7</td>
               <td>.mt-8</td>
             </tr>
             <tr>
-              <td>Set margin right:</td>
+              <td>margin right:</td>
               <td>.mr-0</td>
               <td>.mr-1..7</td>
               <td>.mr-8</td>
             </tr>
             <tr>
-              <td>Set margin bottom:</td>
+              <td>margin bottom:</td>
               <td>.mb-0</td>
               <td>.mb-1..7</td>
               <td>.mb-8</td>
             </tr>
             <tr>
-              <td>Set margin x axis:</td>
+              <td>margin x axis:</td>
               <td>.mx-0</td>
               <td>.mx-1..7</td>
               <td>.mx-8</td>
             </tr>
             <tr>
-              <td>Set margin y axis:</td>
+              <td>margin y axis:</td>
               <td>.my-0</td>
               <td>.my-1..7</td>
               <td>.my-8</td>
@@ -153,49 +152,51 @@ const ids = [
           </tbody>
         </table>
       </div>
-      <h3 id="paddings" class="heading-3 mb-5 c-secondary">Paddings</h3>
+    </section>
+    <section id="paddings">
+      <h2 class="heading-2 mb-5 c-secondary">Paddings</h2>
       <p class="paragraph mb-5">Table of paddings</p>
       <div class="overflow-x">
         <table>
           <tbody>
             <tr>
-              <td>Set padding:</td>
+              <td>padding:</td>
               <td>.p-0</td>
               <td>.p-1..7</td>
               <td>.p-8</td>
             </tr>
             <tr>
-              <td>Set padding left:</td>
+              <td>padding left:</td>
               <td>.pl-0</td>
               <td>.pl-1..7</td>
               <td>.pl-8</td>
             </tr>
             <tr>
-              <td>Set padding top:</td>
+              <td>padding top:</td>
               <td>.pt-0</td>
               <td>.pt-1..7</td>
               <td>.pt-8</td>
             </tr>
             <tr>
-              <td>Set padding right:</td>
+              <td>padding right:</td>
               <td>.pr-0</td>
               <td>.pr-1..7</td>
               <td>.pr-8</td>
             </tr>
             <tr>
-              <td>Set padding bottom:</td>
+              <td>padding bottom:</td>
               <td>.pb-0</td>
               <td>.pb-1..7</td>
               <td>.pb-8</td>
             </tr>
             <tr>
-              <td>Set padding x axis:</td>
+              <td>padding x axis:</td>
               <td>.px-0</td>
               <td>.px-1..7</td>
               <td>.px-8</td>
             </tr>
             <tr>
-              <td>Set padding y axis:</td>
+              <td>padding y axis:</td>
               <td>.py-0</td>
               <td>.py-1..7</td>
               <td>.py-8</td>
@@ -206,12 +207,12 @@ const ids = [
     </section>
     <section id="colors">
       <h2 class="heading-2 mb-5 c-secondary">Colors</h2>
-      <p class="paragraph mb-5">Table of different colors</p>
+      <p class="paragraph mb-5">Table of colors</p>
       <div class="overflow-x">
         <table>
           <tbody>
             <tr>
-              <td>.c-primary</td>
+              <td>primary</td>
               <td class="bg-primary"></td>
               <td class="bg-primary-50"></td>
               <td class="bg-primary-100"></td>
@@ -225,7 +226,7 @@ const ids = [
               <td class="bg-primary-900"></td>
             </tr>
             <tr>
-              <td>.c-secondary</td>
+              <td>secondary</td>
               <td class="bg-secondary"></td>
               <td class="bg-secondary-50"></td>
               <td class="bg-secondary-100"></td>
@@ -240,17 +241,17 @@ const ids = [
             </tr>
             <tr>
               <td>shades</td>
-              <td class="px-0 py-1">none</td>
-              <td class="px-0 py-1">50</td>
-              <td class="px-0 py-1">100</td>
-              <td class="px-0 py-1">200</td>
-              <td class="px-0 py-1">300</td>
-              <td class="px-0 py-1">400</td>
-              <td class="px-0 py-1">500</td>
-              <td class="px-0 py-1">600</td>
-              <td class="px-0 py-1">700</td>
-              <td class="px-0 py-1">800</td>
-              <td class="px-0 py-1">900</td>
+              <td>none</td>
+              <td>50</td>
+              <td>100</td>
+              <td>200</td>
+              <td>300</td>
+              <td>400</td>
+              <td>500</td>
+              <td>600</td>
+              <td>700</td>
+              <td>800</td>
+              <td>900</td>
             </tr>
           </tbody>
         </table>
@@ -292,9 +293,13 @@ const ids = [
   aside {
     position: fixed;
     display: block;
-    overflow: hidden;
-    width: 200px;
+    overflow: auto;
     top: var(--spacing-4);
     left: var(--spacing-4);
+  }
+  @media (max-width: 1530px) {
+    aside {
+      display: none;
+    }
   }
 </style>
