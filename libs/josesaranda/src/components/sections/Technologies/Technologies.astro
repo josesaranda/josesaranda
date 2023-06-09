@@ -1,7 +1,7 @@
 ---
 import { getTechnologies } from "@services/technologies.service";
 import { t } from "i18next";
-import { VerticalBarChart } from "@components/ui/VerticalBarChart/VerticalBarChart";
+import { VerticalBarChart } from "@josesaranda/components/ui/VerticalBarChart/VerticalBarChart";
 
 const technologies = getTechnologies().sort((a, b) => {
   return a.exp < b.exp ? 1 : -1;

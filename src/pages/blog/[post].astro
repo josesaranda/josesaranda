@@ -1,13 +1,13 @@
 ---
-import Footer from "@components/layout/Footer/Footer.astro";
-import Navbar from "@components/layout/Navbar/Navbar.astro";
-import Social from "@components/sections/Social/Social.astro";
+import Footer from "@josesaranda/components/layout/Footer/Footer.astro";
+import Navbar from "@josesaranda/components/layout/Navbar/Navbar.astro";
+import Social from "@josesaranda/components/sections/Social/Social.astro";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import "./post.scss";
-import { Progress } from "@components/ui/Progress/Progress";
+import { Progress } from "@josesaranda/components/ui/Progress/Progress";
 import { changeLanguage } from "i18next";
-import { Time } from "@components/ui/Time/Time";
+import { Time } from "@josesaranda/components/ui/Time/Time";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
