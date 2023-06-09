@@ -1,37 +1,19 @@
+@use "mixins.scss";
+
 // colors
 
 $colors: 0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900;
 
-.c-primary {
-  color: var(--c-primary);
-}
+@include mixins.toBreakpoints("c-primary", "color", var(--c-primary));
+@include mixins.toBreakpoints("bg-primary", "background", var(--c-primary));
 
-.bg-primary {
-  background: var(--c-primary);
-}
-
-.c-secondary {
-  color: var(--c-secondary);
-}
-
-.bg-secondary {
-  background: var(--c-secondary);
-}
+@include mixins.toBreakpoints("c-secondary", "color", var(--c-secondary));
+@include mixins.toBreakpoints("bg-secondary", "background", var(--c-secondary));
 
 @each $color in $colors {
-  .c-primary-#{$color} {
-    color: var(--c-primary-#{$color});
-  }
+  @include mixins.toBreakpoints("c-primary-#{$color}", "color", var(--c-primary-#{$color}));
+  @include mixins.toBreakpoints("bg-primary-#{$color}", "background", var(--c-primary-#{$color}));
 
-  .c-secondary-#{$color} {
-    color: var(--c-secondary-#{$color});
-  }
-
-  .bg-primary-#{$color} {
-    background: var(--c-primary-#{$color});
-  }
-
-  .bg-secondary-#{$color} {
-    background: var(--c-secondary-#{$color});
-  }
+  @include mixins.toBreakpoints("c-secondary-#{$color}", "color", var(--c-secondary-#{$color}));
+  @include mixins.toBreakpoints("bg-secondary-#{$color}", "background", var(--c-secondary-#{$color}));
 }

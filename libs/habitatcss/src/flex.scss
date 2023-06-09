@@ -1,29 +1,19 @@
-// flex
-
-.flex {
-  display: flex;
-}
-
-.flex-responsive {
-  flex-direction: row;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-}
+@use "mixins.scss";
 
 .flex-1 {
   flex: 1;
 }
 
-.justify-content-center {
-  justify-content: center;
-}
+@include mixins.toBreakpoints("block", "display", block);
 
-.align-items-center {
-  align-items: center;
-}
-
-.gap-1 {
-  gap: var(--spacing-2);
-}
+@include mixins.toBreakpoints("flex", "display", flex);
+@include mixins.toBreakpoints("flex-column", "flex-direction", column);
+@include mixins.toBreakpoints("flex-row", "flex-direction", row);
+@include mixins.toBreakpoints("content-start", "justify-content", start);
+@include mixins.toBreakpoints("content-center", "justify-content", center);
+@include mixins.toBreakpoints("content-end", "justify-content", end);
+@include mixins.toBreakpoints("content-between", "justify-content", space-between);
+@include mixins.toBreakpoints("content-around", "justify-content", space-around);
+@include mixins.toBreakpoints("items-start", "align-items", start);
+@include mixins.toBreakpoints("items-center", "align-items", center);
+@include mixins.toBreakpoints("items-end", "align-items", end);
