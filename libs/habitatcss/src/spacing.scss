@@ -41,4 +41,6 @@
   @include mixins.toBreakpoints("px-#{$i}", "padding-right", var(--spacing-#{$i}));
   @include mixins.toBreakpoints("py-#{$i}", "padding-top", var(--spacing-#{$i}));
   @include mixins.toBreakpoints("py-#{$i}", "padding-bottom", var(--spacing-#{$i}));
+
+  @include mixins.toBreakpoints("gap-#{$i}", "gap", var(--spacing-#{$i}));
 }

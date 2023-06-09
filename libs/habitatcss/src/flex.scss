@@ -1,5 +1,4 @@
 @use "mixins.scss";
-@import "variables.scss";
 
 .flex-1 {
   flex: 1;
@@ -18,7 +17,3 @@
 @include mixins.toBreakpoints("items-start", "align-items", start);
 @include mixins.toBreakpoints("items-center", "align-items", center);
 @include mixins.toBreakpoints("items-end", "align-items", end);
-
-@for $i from 1 to $spacings-length {
-  @include mixins.toBreakpoints("gap-#{$i}", "gap", var(--spcaing-#{$i}));
-}
