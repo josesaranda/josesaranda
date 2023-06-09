@@ -22,7 +22,12 @@ const posts = await getCollection("blog");
 <style>
   .blog {
     display: flex;
+    justify-content: space-between;
     gap: var(--spacing-3);
+  }
+
+  .blog > * {
+    flex: 1;
   }
 
   .blog-link {
