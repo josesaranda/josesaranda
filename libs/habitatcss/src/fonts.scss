@@ -1,3 +1,5 @@
+@use "mixins.scss";
+
 /* fonts */
 
 .paragraph {
@@ -33,22 +35,13 @@
   color: var(--c-primary-100);
 }
 
-.text-center {
-  text-align: center !important;
-}
-
-.text-justify {
-  text-align: justify !important;
-}
-
-.text-right {
-  text-align: right !important;
-}
-
 // fonts
 
 @for $i from 0 to 6 {
-  .font-#{$i} {
-    font-size: var(--font-#{$i});
-  }
+  @include mixins.toBreakpoints("font-#{$i}", "font-size", var(--font-#{$i}));
 }
+
+
+@include mixins.toBreakpoints("text-center", "text-align", center);
+@include mixins.toBreakpoints("text-justify", "text-align", justify);
+@include mixins.toBreakpoints("text-right", "text-align", right);
