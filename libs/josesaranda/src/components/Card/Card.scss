@@ -2,20 +2,25 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-radius: 10px;
   gap: var(--spacing-3);
-  border: 2px solid var(--c-primary-800);
   transition: 0.3s all;
+  min-height: 72px;
+  height: 100%;
+  width: 100%;
+  border: 2px solid transparent;
 
   &:hover {
-    background: var(--c-primary-800);
-    transition: 0.3s all;
+    border: 2px solid var(--c-secondary);
+    transition: .3s all;
   }
 
   .card-image {
+    box-sizing: border-box;
     border-radius: 10px;
     height: 72px;
-    width: auto;
+    width: 72px;
+    object-fit: cover;
+    object-position: center center;
   }
 
   .card-language {
@@ -32,20 +37,11 @@
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: var(--spacing-5);
+    justify-content: center;
 
     .card-image {
       width: 100%;
       height: auto;
-    }
-
-    .card-info {
-      margin-top: 0;
-      margin-bottom: var(--spacing-3);
-    }
-
-    .card-title {
-      font-size: var(--font-2);
     }
   }
 }

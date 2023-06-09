@@ -1,3 +1,5 @@
+@import "@habitatcss/fonts.scss";
+
 .post {
   .post-image-container {
     margin: var(--spacing-9) auto;
@@ -12,11 +14,7 @@
   }
 
   p {
-    margin-top: 0;
-    margin-bottom: var(--spacing-3);
-    font-size: var(--font-0);
-    line-height: 32px;
-    color: var(--c-primary-100);
+    @extend .paragraph;
   }
 
   strong {
@@ -24,31 +22,31 @@
   }
 
   h1 {
+    @extend .heading-1;
     margin: var(--spacing-7) 0;
-    font-size: var(--font-5);
     color: var(--c-secondary);
   }
 
   h2 {
+    @extend .heading-2;
     margin: var(--spacing-6) 0;
-    font-size: var(--font-2);
     color: var(--c-secondary);
   }
 
   h3 {
-    font-size: var(--font-1);
+    @extend .heading-3;
     margin: var(--spacing-7) 0;
     color: var(--c-secondary)
   }
 
   h4 {
-    font-size: var(--font-1);
+    @extend .heading-4;
     margin-bottom: var(--spacing-1);
     color: var(--c-primary-50);
   }
 
   h5 {
-    font-size: var(--font-0);
+    @extend .heading-5;
     margin-top: 0px;
     margin-bottom: var(--spacing-1);
     color: var(--c-primary-100);

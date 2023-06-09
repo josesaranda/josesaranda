@@ -4,23 +4,13 @@ import "./Card.scss";
 const { title, image, language } = Astro.props;
 ---
 
-<div class="card">
-  {
-    image && (
-      <img
-        class="card-image"
-        src={image}
-        width="auto"
-        height="72px"
-        alt="Main image"
-      />
-    )
-  }
+<div class="card bg-primary-800 border-radius p-2">
+  {image && <img class="card-image" src={image} alt="Main image" />}
   <div class="card-info">
-    {title && <h1 class="card-title">{title}</h1>}
+    {title && <span class="card-title font-1">{title}</span>}
     {
       language && (
-        <h4 class="card-language">{language === "es" ? "🇪🇸" : "🇬🇧"}</h4>
+        <span class="card-language">{language === "es" ? "🇪🇸" : "🇬🇧"}</span>
       )
     }
   </div>
