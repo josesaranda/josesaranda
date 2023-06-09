@@ -21,7 +21,7 @@
 @include mixins.toBreakpoints("py-0", "padding-top", 0);
 @include mixins.toBreakpoints("py-0", "padding-bottom", 0);
 
-@for $i from 1 to 10 {
+@for $i from 1 to $spacings-length {
   @include mixins.toBreakpoints("m-#{$i}", "margin", var(--spacing-#{$i}));
   @include mixins.toBreakpoints("ml-#{$i}", "margin-left", var(--spacing-#{$i}));
   @include mixins.toBreakpoints("mt-#{$i}", "margin-top", var(--spacing-#{$i}));

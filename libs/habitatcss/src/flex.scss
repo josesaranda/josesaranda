@@ -19,6 +19,6 @@
 @include mixins.toBreakpoints("items-center", "align-items", center);
 @include mixins.toBreakpoints("items-end", "align-items", end);
 
-@for $i from 0 to 6 {
+@for $i from 1 to $spacings-length {
   @include mixins.toBreakpoints("gap-#{$i}", "gap", var(--spcaing-#{$i}));
 }
