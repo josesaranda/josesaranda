@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Card from "../Card/Card.astro";
-import "./Blog.scss";
+import Card from "./Card/Card.astro";
 const posts = await getCollection("blog");
 ---
 
@@ -20,3 +19,23 @@ const posts = await getCollection("blog");
     })
   }
 </section>
+<style>
+  .blog {
+    display: flex;
+    gap: var(--spacing-3);
+  }
+
+  .blog-link {
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .blog {
+      flex-direction: column;
+    }
+
+    .blog-link {
+      text-align: center;
+    }
+  }
+</style>

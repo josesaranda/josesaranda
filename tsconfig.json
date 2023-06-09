@@ -6,11 +6,12 @@
     "strict": true,
     "importsNotUsedAsValues": "error",
     "paths": {
-      "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/layouts/*"],
       "@theming/*": ["src/theming/*"],
-      "@services/*": ["src/services/*"]
+      "@services/*": ["src/services/*"],
+      "@habitatcss/*": ["libs/habitatcss/src/*"],
+      "@josesaranda/*": ["libs/josesaranda/src/*"]
     }
   }
 }
