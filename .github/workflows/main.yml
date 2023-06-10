@@ -23,7 +23,7 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --force
 
   build-habitatcss-web:
     strategy:
@@ -76,7 +76,7 @@ jobs:
       - name: Deploy
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: dist/josesaranda-web
+          local: dist/packages/josesaranda-web
           remote: ${{ secrets.DIST_REMOTE }}
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
