@@ -1,5 +1,13 @@
 @use "sass:list";
-@import "variables.scss";
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 
 @mixin toBreakpoints($class, $property, $value) {
   @for $i from 1 to length($breakpoints) + 1 {

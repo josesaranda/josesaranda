@@ -1,15 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Buttons from "@habitatcss-web/components/Buttons.astro";
 
 const ids = [
-  'Headings',
-  'Fonts',
-  'Margins',
-  'Paddings',
-  'Colors',
-  'Breakpoints',
-  'Buttons',
-  'Links',
+  "Headings",
+  "Fonts",
+  "Margins",
+  "Paddings",
+  "Colors",
+  "Breakpoints",
+  "Buttons",
+  "Links",
 ];
 ---
 
@@ -315,11 +316,7 @@ const ids = [
         </table>
       </div>
     </section>
-    <section id="buttons">
-      <h2 class="heading-2 mb-5 c-secondary">Buttons</h2>
-      <p class="paragraph mb-5">List of different buttons</p>
-      <button class="button">Button</button>
-    </section>
+    <Buttons />
     <section id="links">
       <h2 class="heading-2 mb-5 c-secondary">Links</h2>
       <p class="paragraph mb-5">List of different links</p>
@@ -334,7 +331,7 @@ const ids = [
           ids.map((id) => {
             return (
               <li class="my-1">
-                <a href={'#' + id.toLowerCase()} class="button">
+                <a href={"#" + id.toLowerCase()} class="button">
                   {id}
                 </a>
               </li>

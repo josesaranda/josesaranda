@@ -38,7 +38,7 @@ export const ThemeButton = () => {
 
   return (
     <button
-      className="theme-button button"
+      className="theme-button button square"
       onClick={() => {
         setIsDark((isDark) => {
           window.localStorage.setItem(THEME_TOKEN, !isDark ? "dark" : "light");

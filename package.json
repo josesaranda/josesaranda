@@ -4,12 +4,16 @@
   "license": "MIT",
   "scripts": {
     "nx": "npx nx",
+    "start": "npm run nx dev",
+    "start:all": "npm run start:josesaranda-web & npm run start:habitatcss-web",
     "start:josesaranda-web": "npm run nx dev josesaranda-web",
     "start:habitatcss-web": "npm run nx dev habitatcss-web",
     "build": "nx affected:build",
     "build:josesaranda-web": "npm run nx build josesaranda-web",
     "build:habitatcss-web": "npm run nx build habitatcss-web",
-    "postinstall": "node ./tools/scripts/patch-nx-cli.js"
+    "build:habitatcss": "./packages/habitatcss/script.sh",
+    "postinstall": "node ./tools/scripts/patch-nx-cli.js",
+    "sass": "sass"
   },
   "private": true,
   "dependencies": {

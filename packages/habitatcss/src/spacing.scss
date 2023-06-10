@@ -1,5 +1,6 @@
 @use "mixins.scss";
-@import "variables.scss";
+
+$spacings-length: 10; //length + 1
 
 @include mixins.toBreakpoints("m-0", "margin", 0);
 @include mixins.toBreakpoints("ml-0", "margin-left", 0);
