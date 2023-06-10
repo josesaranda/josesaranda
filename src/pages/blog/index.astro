@@ -1,0 +1,23 @@
+---
+import Blog from "@josesaranda/components/Blog.astro";
+import Footer from "@josesaranda/components/layout/Footer/Footer.astro";
+import Navbar from "@josesaranda/components/layout/Navbar/Navbar.astro";
+import Social from "@josesaranda/components/sections/Social/Social.astro";
+import Layout from "@layouts/Layout.astro";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("en");
+---
+
+<Layout>
+  <main>
+    <Navbar
+      redirect={t("site.language.redirect-route") + "/blog"}
+      showLogo="true"
+      title="Blog"
+    />
+    <Blog />
+    <Social />
+  </main>
+  <Footer />
+</Layout>

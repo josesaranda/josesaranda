@@ -1,0 +1,34 @@
+---
+import { getTechnologies } from "@services/technologies.service";
+import { t } from "i18next";
+import { VerticalBarChart } from "@josesaranda/components/ui/VerticalBarChart/VerticalBarChart";
+
+const technologies = getTechnologies().sort((a, b) => {
+  return a.exp < b.exp ? 1 : -1;
+});
+---
+
+<section class="technologies">
+  <h3 class="heading-3">
+    <span class="icon icon-medium icon-computer-chip secondary"></span>
+    {t("technologies.title")}
+  </h3>
+  <VerticalBarChart
+    client:only
+    data={technologies.map((technology) => ({
+      key: technology.name,
+      value: technology.exp,
+    }))}
+    xAxis={{ name: t("technologies.chart.xAxis.name") }}
+    yAxis={{ name: t("technologies.chart.yAxis.name") }}
+  />
+  <div class="technologies text-center">
+    {
+      technologies.map(({ href, name }) => (
+        <a class="mx-2 my-2 font-0" href={href} target="_blank">
+          {name}
+        </a>
+      ))
+    }
+  </div>
+</section>

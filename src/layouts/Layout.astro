@@ -1,0 +1,27 @@
+---
+import i18next, { t } from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
+import "@theming/main.scss";
+
+const { title, description, keywords } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={i18next.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta
+      name="description"
+      content={description ? description : t("site.description")}
+    />
+    {keywords && <meta name="keywords" content={keywords} />}
+    <title>{title ? title : t("site.title")}</title>
+    <script src="/scripts/echarts.min.js" is:inline></script>
+    <HeadHrefLangs />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

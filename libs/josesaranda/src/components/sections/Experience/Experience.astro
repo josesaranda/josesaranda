@@ -1,0 +1,37 @@
+---
+import { getExperiences } from "@services/experiences.service";
+import { t } from "i18next";
+const experiences = getExperiences();
+---
+
+<section>
+  <h3 class="heading-3">
+    <span class="icon icon-medium icon-experience secondary"></span>
+    {t("experience.title")}
+  </h3>
+  <p class="paragraph mt-4 text-justify">
+    {t("experience.paragraph1")}
+  </p>
+  {
+    experiences.map((experience) => {
+      return (
+        <div class="my-9">
+          <h4
+            class="heading-4 mb-2"
+            set:html={t(`experience.experiences.${experience}.title`)}
+          />
+          <h5 class="heading-5 mb-2 c-primary-100">
+            {t(`experience.experiences.${experience}.dates`)}
+          </h5>
+          <p class="paragraph mb-1 text-justify c-primary-100">
+            {t(`experience.experiences.${experience}.description`)}
+          </p>
+          <p class="paragraph mb-1 text-jusify c-primary-100">
+            <strong>{t(`dictionary.technologies`)}:</strong>
+            {t(`experience.experiences.${experience}.technologies`)}
+          </p>
+        </div>
+      );
+    })
+  }
+</section>
