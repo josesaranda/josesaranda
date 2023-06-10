@@ -1,0 +1,12 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid var(--c-primary);
+}
+
+td {
+  padding: var(--spacing-3);
+}

@@ -1,0 +1,23 @@
+---
+import Footer from "@josesaranda-web/components/layout/Footer/Footer.astro";
+import Navbar from "@josesaranda-web/components/layout/Navbar/Navbar.astro";
+import Experience from "@josesaranda-web/components/sections/Experience/Experience.astro";
+import Greeting from "@josesaranda-web/components/sections/Greeting/Greeting.astro";
+import Social from "@josesaranda-web/components/sections/Social/Social.astro";
+import Technologies from "@josesaranda-web/components/sections/Technologies/Technologies.astro";
+import Layout from "@josesaranda-web/layouts/Layout.astro";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("es");
+---
+
+<Layout>
+  <main>
+    <Navbar redirect={t("site.language.redirect-route")} />
+    <Greeting />
+    <Technologies />
+    <Experience />
+    <Social />
+  </main>
+  <Footer />
+</Layout>

@@ -23,9 +23,9 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --force
 
-  build:
+  build-habitatcss-web:
     strategy:
       matrix:
         node-version: [16.x]
@@ -40,9 +40,9 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Build project
-        run: GH_TOKEN=${{secrets.GH_TOKEN}} npm run build --if-present
+        run: npm run build:habitatcss-web --if-present
 
-  test:
+  build-josesaranda-web:
     strategy:
       matrix:
         node-version: [16.x]
@@ -56,11 +56,11 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      - name: Run tests
-        run: npm test
+      - name: Build project
+        run: GH_TOKEN=${{secrets.GH_TOKEN}} npm run build:josesaranda-web --if-present
 
-  deploy:
-    needs: [build, test]
+  deploy-josesaranda-web:
+    needs: [build-josesaranda-web]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
@@ -72,11 +72,11 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Build project
-        run: GH_TOKEN=${{secrets.GH_TOKEN}} npm run build --if-present
+        run: GH_TOKEN=${{secrets.GH_TOKEN}} npm run build:josesaranda-web --if-present
       - name: Deploy
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: ${{ secrets.DIST_LOCAL }}
+          local: dist/josesaranda-web
           remote: ${{ secrets.DIST_REMOTE }}
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}

@@ -1,0 +1,71 @@
+---
+import Footer from "@josesaranda-web/components/layout/Footer/Footer.astro";
+import Navbar from "@josesaranda-web/components/layout/Navbar/Navbar.astro";
+import Social from "@josesaranda-web/components/sections/Social/Social.astro";
+import Layout from "@josesaranda-web/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import "./post.scss";
+import { Progress } from "@josesaranda-web/components/ui/Progress/Progress";
+import { changeLanguage } from "i18next";
+import { Time } from "@josesaranda-web/components/ui/Time/Time";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => {
+    return {
+      params: {
+        post: post.slug,
+      },
+      props: {
+        post,
+      },
+    };
+  });
+}
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const tags: string[] = post.data.tags.split(",");
+
+const MAX_TAGS = 3;
+
+changeLanguage(post.data.language);
+---
+
+<Layout
+  title={"josesaranda | " + post.data.title}
+  description={post.data.description}
+  keywords={post.data.tags}
+>
+  <Progress client:only />
+  <main>
+    <Navbar
+      showLanguageButton={false}
+      showLogo="true"
+      title={post.data.title}
+    />
+    <article class="post">
+      <div
+        class={"post-image-container text-center" +
+          (tags.length ? " with-tags" : "")}
+      >
+        <img src={post.data.image} width="100%" alt="" />
+      </div>
+      {
+        post.data.date && (
+          <Time time={post.data.date} language={post.data.language} />
+        )
+      }
+      <div class="post-tags">
+        {
+          tags.splice(0, MAX_TAGS).map((tag) => {
+            return <span class="post-tag button">#{tag.trim()}</span>;
+          })
+        }
+      </div>
+      <Content />
+    </article>
+    <Social />
+  </main>
+  <Footer />
+</Layout>

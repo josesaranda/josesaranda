@@ -1,0 +1,17 @@
+---
+import "./Card.scss";
+
+const { title, image, language } = Astro.props;
+---
+
+<div class="card bg-primary-800 border-radius p-2">
+  {image && <img class="card-image" src={image} alt="Main image" />}
+  <div class="card-info">
+    {title && <span class="card-title font-1">{title}</span>}
+    {
+      language && (
+        <span class="card-language">{language === "es" ? "🇪🇸" : "🇬🇧"}</span>
+      )
+    }
+  </div>
+</div>

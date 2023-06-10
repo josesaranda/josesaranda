@@ -3,5 +3,6 @@
   "useTabs": false,
   "importOrder": ["^components/(.*)$", "^[./]"],
   "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "importOrderSortSpecifiers": true,
+  "singleQuote": false
 }
