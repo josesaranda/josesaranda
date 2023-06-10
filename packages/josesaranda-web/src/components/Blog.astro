@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import Card from "./Card/Card.astro";
+const posts = await getCollection("blog");
+---
+
+<section class="blog">
+  {
+    posts.map((post) => {
+      return (
+        <a class="blog-link" href={"/blog/" + post.slug}>
+          <Card
+            title={post.data.title}
+            image={post.data.image}
+            language={post.data.language}
+          />
+        </a>
+      );
+    })
+  }
+</section>
+<style>
+  .blog {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-3);
+  }
+
+  .blog > * {
+    flex: 1;
+  }
+
+  .blog-link {
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .blog {
+      flex-direction: column;
+    }
+
+    .blog-link {
+      text-align: center;
+    }
+  }
+</style>

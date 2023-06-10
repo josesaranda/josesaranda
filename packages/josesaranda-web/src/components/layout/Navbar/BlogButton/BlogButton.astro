@@ -1,0 +1,8 @@
+<a id="blogButton" class="button">
+  <span class="icon icon-small icon-blog secondary"></span>
+</a>
+<script>
+  const blogButton = document.getElementById("blogButton")!;
+  const isSpanish = document.location.pathname.startsWith("/es");
+  blogButton.setAttribute("href", isSpanish ? "/es/blog" : "/blog");
+</script>

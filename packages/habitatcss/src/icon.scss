@@ -1,0 +1,89 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.icon.primary {
+  background: var(--c-primary);
+}
+
+.icon.secondary {
+  background: var(--c-secondary);
+}
+
+.icon-small {
+  width: 26px;
+  height: 26px;
+}
+
+.icon-medium {
+  width: 48px;
+  height: 48px;
+}
+
+.icon-large {
+  width: 72px;
+  height: 72px;
+}
+
+.icon-heart {
+  -webkit-mask: url("/icons/heart.svg") no-repeat 50% 50%;
+  mask: url("/icons/heart.svg") no-repeat 50% 50%;
+}
+
+.icon-computer-chip {
+  -webkit-mask: url("/icons/computer-chip.svg") no-repeat 50% 50%;
+  mask: url("/icons/computer-chip.svg") no-repeat 50% 50%;
+}
+
+.icon-share {
+  -webkit-mask: url("/icons/share.svg") no-repeat 50% 50%;
+  mask: url("/icons/share.svg") no-repeat 50% 50%;
+}
+
+.icon-experience {
+  -webkit-mask: url("/icons/experience.svg") no-repeat 50% 50%;
+  mask: url("/icons/experience.svg") no-repeat 50% 50%;
+}
+
+.icon-linkedin {
+  -webkit-mask: url("/icons/linkedin.svg") no-repeat 50% 50%;
+  mask: url("/icons/linkedin.svg") no-repeat 50% 50%;
+}
+
+.icon-twitter {
+  -webkit-mask: url("/icons/twitter.svg") no-repeat 50% 50%;
+  mask: url("/icons/twitter.svg") no-repeat 50% 50%;
+}
+
+.icon-github {
+  -webkit-mask: url("/icons/github.svg") no-repeat 50% 50%;
+  mask: url("/icons/github.svg") no-repeat 50% 50%;
+}
+
+.icon-moon {
+  -webkit-mask: url("/icons/moon.svg") no-repeat 50% 50%;
+  mask: url("/icons/moon.svg") no-repeat 50% 50%;
+}
+
+.icon-sun {
+  -webkit-mask: url("/icons/sun.svg") no-repeat 50% 50%;
+  mask: url("/icons/sun.svg") no-repeat 50% 50%;
+}
+
+.icon-blog {
+  -webkit-mask: url("/icons/blog.svg") no-repeat 50% 50%;
+  mask: url("/icons/blog.svg") no-repeat 50% 50%;
+}
+
+.icon-language {
+  -webkit-mask: url("/icons/language.svg") no-repeat 50% 50%;
+  mask: url("/icons/language.svg") no-repeat 50% 50%;
+}

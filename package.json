@@ -1,0 +1,45 @@
+{
+  "name": "josesaranda-monorepo",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "nx": "npx nx",
+    "start:josesaranda-web": "npm run nx dev josesaranda-web",
+    "start:habitatcss-web": "npm run nx dev habitatcss-web",
+    "build": "nx affected:build",
+    "build:josesaranda-web": "npm run nx build josesaranda-web",
+    "build:habitatcss-web": "npm run nx build habitatcss-web",
+    "postinstall": "node ./tools/scripts/patch-nx-cli.js"
+  },
+  "private": true,
+  "dependencies": {
+    "@astrojs/react": "2.2.1",
+    "astro": "2.6.1",
+    "astro-i18next": "1.0.0-beta.21",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@nrwl/cypress": "15.9.4",
+    "@nrwl/eslint-plugin-nx": "15.9.4",
+    "@nrwl/js": "15.9.4",
+    "@nrwl/linter": "15.9.4",
+    "@nxtensions/astro": "3.5.0",
+    "@types/node": "16.11.7",
+    "@typescript-eslint/eslint-plugin": "5.36.1",
+    "@typescript-eslint/parser": "5.36.1",
+    "cypress": "12.2.0",
+    "eslint": "8.15.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-cypress": "2.10.3",
+    "nx": "16.3.2",
+    "prettier": "2.6.2",
+    "typescript": "4.9.5",
+    "sass": "1.62.1",
+    "@types/echarts": "4.9.18",
+    "prettier-plugin-organize-imports": "3.2.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

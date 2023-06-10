@@ -1,0 +1,24 @@
+---
+import { Trans } from "astro-i18next/components";
+import i18next, { t } from "i18next";
+import { getLastCommit } from "@josesaranda-web/services/github.service";
+import "./Footer.scss";
+
+const { date, url } = await getLastCommit();
+---
+
+<footer class="footer">
+  <div>
+    <Trans i18nKey="footer.title">
+      <span class="icon icon-heart"></span>
+    </Trans>
+  </div>
+  <a href="https://habitatcss.josesaranda.es">habitatcss</a>
+  <a href={url} target="_blank">
+    <strong>{t("footer.date")}:</strong>
+    <time datetime={date.toISOString()}
+      >{date.toLocaleDateString(i18next.language)} -
+      {date.toLocaleTimeString(i18next.language)}</time
+    >
+  </a>
+</footer>

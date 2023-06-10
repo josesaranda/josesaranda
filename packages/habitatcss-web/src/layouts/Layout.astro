@@ -1,0 +1,33 @@
+---
+import "@habitatcss/main.scss";
+import "@habitatcss/variables.scss";
+import "@habitatcss/fonts.scss";
+import "@habitatcss/spacing.scss";
+import "@habitatcss/links.scss";
+import "@habitatcss/colors.scss";
+import "@habitatcss/flex.scss";
+import "@habitatcss/icon.scss";
+import "@habitatcss/button.scss";
+import "@habitatcss/table.scss";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>

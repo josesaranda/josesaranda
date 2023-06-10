@@ -1,0 +1,68 @@
+{
+  "site": {
+    "title": "josesaranda | Bienvenido/a",
+    "description": "Mi nombre es Jose Sánchez Aranda y esta es mi web personal",
+    "home_url": "/es",
+    "language": {
+      "flag": "🇪🇸",
+      "redirect-route": "/"
+    }
+  },
+  "greeting": {
+    "title": "¡Hola! 👋🏽",
+    "name": "Jose Sánchez Aranda",
+    "picture": "Imagen de perfil",
+    "position": "Ingeniero de software - Desarrollador Frontend",
+    "paragraph1": "Actualmente trabajo en <0>Fortris</0>, una empresa de soluciones financieras cuyo producto principal es un sistema gestor de criptomonedas, ¡aquí formo parte del equipo de Frontend!",
+    "paragraph2": "Tecnologias cómo Angular, Nx, NestJS, y GraphQL son parte de mi día a día. Pero me enorgullece decir que también he trabajado con otras muchas tecnologías de Frontend como React, NextJS, Loopback, Ionic, y Electron.",
+    "paragraph3": "Siempre estoy aprendiendo diferentes tecnologías y mejorando como ingeniero de software. Como ejemplo, esta web está hecha con <0>Astro</0>. ¿Conocías <1>Astro</1>? Echa un vistazo al <2>código</2> de este proyecto."
+  },
+  "technologies": {
+    "title": "¿Tecnologías? Si, estas.",
+    "chart": {
+      "xAxis.name": "Tecnologías",
+      "yAxis.name": "Años de experiencia"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "paragraph1": "He estado envuelto en muchos proyectos con diferentes tecnologías a lo largo de mi carrera como ingeniero de software. Mira más abajo mi experiencia.",
+    "experiences": {
+      "fortris": {
+        "title": "Ingeniero Frontend en <a href='https://fortris.com' target='_blank'>Fortris</a>",
+        "dates": "Oct. 2021 - actualidad",
+        "description": "El producto principal de Fortris es un sistema de gestión de activos de criptomonedas. En Fortris soy responsable del desarrollo, mantenimiento y despliegue de nuestra SPA y la aplicación del servidor BFF."
+      },
+      "shapelets": {
+        "title": "Ingeniero de software en <a href='https://shapelets.io' target='_blank'>Shapelets</a>",
+        "dates": "Mayo 2019 - Oct. 2021",
+        "description": "El producto principal de Shapelets es un conjunto de herramientas para científicos de datos. En Shapelets fui responsable del desarrollo, mantenimiento y despliegue de una SPA que incluía visualizaciones de datos (paneles de control)."
+      },
+      "sombradoble": {
+        "title": "Ingeniero de software en <a href='https://sombradoble.es' target='_blank'>Sombradoble</a>",
+        "dates": "Sept. 2016 - Abril 2019",
+        "description": "Sombradoble es una agencia de consultoría especializada en el sector científico. En Sombradoble fui responsable de obtener los requisitos del cliente, el desarrollo, el mantenimiento y el despliegue de diferentes SPAs, aplicaciones web progresivas y aplicaciones móviles híbridas."
+      },
+      "nowait": {
+        "title": "CTO/Fundador en Nowait",
+        "dates": "2015 - 2017",
+        "description": "Fundador de la startup Nowait. En Nowait creamos nuestro propio producto llamado \"noesperescolas.com\", una plataforma para gestionar los pedidos, de usuarios, encargados a copisterias de forma rápida y segura."
+      },
+      "sombradoble-intern": {
+        "title": "Becario en <a href='https://sombradoble.es' target='_blank'>Sombradoble</a>",
+        "dates": "Abril 2016 - Julio 2016",
+        "description": "Sombradoble es una agencia de consultoría especializada en el sector científico. Me uní a la empresa para construir la aplicación MyLeaf. MyLeaf permitía a los pacientes con enfermedades crónicas y raras monitorear su día a día y analizar la evolución que tuvieron a lo largo del tiempo, obteniendo un mayor conocimiento sobre la ingesta de sus medicamentos, las actividades que realizaron y los alimentos que consumieron."
+      }
+    }
+  },
+  "social": {
+    "title": "¿Redes sociales? Si, ¡aquí estoy!"
+  },
+  "footer": {
+    "title": "Hecho con <0></0> desde cero",
+    "date": "Ultima actualización"
+  },
+  "dictionary": {
+    "technologies": "Tecnologías"
+  }
+}
