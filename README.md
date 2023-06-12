@@ -13,6 +13,7 @@ Hi there! My name is **Jose Sánchez Aranda**, and I'm a **Software Engineer**. 
 Here are some projects I've worked on:
 
 - [josesaranda.es](https://josesaranda.es): My personal website kind of portfolio/cv.
+- [Virtual Pad](https://github.com/josesaranda/virtual-pad): Play remotely from your mobile. [Youtube demo](https://www.youtube.com/watch?v=xePYvEX66po)
 - [jcofrade.josesaranda.es](https://jcofrade.josesaranda.es): A progresive web app to stay updated with easter week of Málaga.
 
 ## My career
