@@ -28,9 +28,13 @@
     "title": "Experience",
     "paragraph1": "I've been involved in many projects with different technologies throughout my career as a software engineer. See below my working experience.",
     "experiences": {
+      "knowmadmood": {
+        "title": "Frontend Lead Engineer at <a href='https://www.knowmadmood.com/en' target='_blank'>Knowmad Mood</a>",
+        "dates": "June 2023 - Currently"
+      },
       "fortris": {
         "title": "Frontend Engineer at <a href='https://fortris.com' target='_blank'>Fortris</a>",
-        "dates": "Oct. 2021 - Currently",
+        "dates": "Oct. 2021 - June 2023",
         "description": "Fortris' main product is a crypto asset management system. At Fortris I'm responsible of development, maintainability and deployment of our single page app and BFF server app.",
         "technologies": "Angular, Angular Material, Typescript, Javascript, Sass, Html, Nx, NodeJS, Express, NestJS, GraphQL, Jest, Cypress, Testing Library."
       },
