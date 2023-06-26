@@ -28,9 +28,13 @@
     "title": "Experiencia",
     "paragraph1": "He estado envuelto en muchos proyectos con diferentes tecnologías a lo largo de mi carrera como ingeniero de software. Mira más abajo mi experiencia.",
     "experiences": {
+      "knowmadmood": {
+        "title": "Ingeniero Frontend Lead en <a href='https://www.knowmadmood.com/es' target='_blank'>Knowmad Mood</a>",
+        "dates": "Junio 2023 - Actualidad"
+      },
       "fortris": {
         "title": "Ingeniero Frontend en <a href='https://fortris.com' target='_blank'>Fortris</a>",
-        "dates": "Oct. 2021 - actualidad",
+        "dates": "Oct. 2021 - Junio 2023",
         "description": "El producto principal de Fortris es un sistema de gestión de activos de criptomonedas. En Fortris soy responsable del desarrollo, mantenimiento y despliegue de nuestra SPA y la aplicación del servidor BFF."
       },
       "shapelets": {

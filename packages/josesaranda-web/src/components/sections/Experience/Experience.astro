@@ -23,13 +23,19 @@ const experiences = getExperiences();
           <h5 class="heading-5 mb-2 c-primary-100">
             {t(`experience.experiences.${experience}.dates`)}
           </h5>
-          <p class="paragraph mb-1 text-justify c-primary-100">
-            {t(`experience.experiences.${experience}.description`)}
-          </p>
-          <p class="paragraph mb-1 text-jusify c-primary-100">
-            <strong>{t(`dictionary.technologies`)}:</strong>
-            {t(`experience.experiences.${experience}.technologies`)}
-          </p>
+          {t(`experience.experiences.${experience}.description`) !==
+            `experience.experiences.${experience}.description` && (
+            <p class="paragraph mb-1 text-justify c-primary-100">
+              {t(`experience.experiences.${experience}.description`)}
+            </p>
+          )}
+          {t(`experience.experiences.${experience}.technologies`) !==
+            `experience.experiences.${experience}.technologies` && (
+            <p class="paragraph mb-1 text-jusify c-primary-100">
+              <strong>{t(`dictionary.technologies`)}:</strong>
+              {t(`experience.experiences.${experience}.technologies`)}
+            </p>
+          )}
         </div>
       );
     })
