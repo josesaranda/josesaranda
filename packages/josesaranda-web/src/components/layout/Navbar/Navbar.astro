@@ -1,9 +1,8 @@
 ---
 import { t } from "i18next";
-import BlogButton from "./BlogButton/BlogButton.astro";
-import LanguageButton from "./LanguageButton/LanguageButton.astro";
-import { ThemeButton } from "./ThemeButton/ThemeButton";
-import "./Navbar.scss";
+import BlogButton from "./BlogButton.astro";
+import LanguageButton from "./LanguageButton.astro";
+import { ThemeButton } from "./ThemeButton";
 
 const { redirect, title, showLogo, showLanguageButton = true } = Astro.props;
 ---
@@ -19,6 +18,7 @@ const { redirect, title, showLogo, showLanguageButton = true } = Astro.props;
             alt="Profile picture"
             width="48px"
             height="48px"
+            style="view-transition-name: profile-image"
           />
         </a>
       )

@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { VerticalBarChartSpec } from "./VerticalBarChartSpec";
 
-import "./VerticalBarChart.scss";
-
 type VerticalBarChartProps = {
   data: { key: string; value: number }[];
   xAxis: { name: string };

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Progress.scss";
 
 export const Progress = () => {
   const [progress, setProgress] = useState(0);

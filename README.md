@@ -20,7 +20,8 @@ Here are some projects I've worked on:
 
 Here are some of the companies I've worked on:
 
-- [Fortris](https://fortris.com): Currently
+- [Knowmad Mood](https://knowmadmood.com): Currently
+- [Fortris](https://fortris.com): 1 year, 8 months
 - [Shapelets](https://shapelets.io): 3 years approx
 - [Sombradoble](https://sombradoble.es): 3 years approx
 

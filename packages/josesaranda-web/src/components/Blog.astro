@@ -13,6 +13,7 @@ const posts = await getCollection("blog");
             title={post.data.title}
             image={post.data.image}
             language={post.data.language}
+            slug={post.slug}
           />
         </a>
       );

@@ -1,0 +1,8 @@
+---
+const [, lang] = Astro.url.pathname.split('/');
+const href = ["es", "en"].includes(lang) ? ("/" + lang + "/blog") : "/blog";
+---
+
+<a class="button square" href={href}>
+  <span class="icon icon-small icon-blog secondary"></span>
+</a>
