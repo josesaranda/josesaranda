@@ -1,10 +1,9 @@
 ---
 import Footer from "@josesaranda-web/components/layout/Footer/Footer.astro";
 import Navbar from "@josesaranda-web/components/layout/Navbar/Navbar.astro";
-import Social from "@josesaranda-web/components/sections/Social/Social.astro";
+import Social from "@josesaranda-web/components/sections/Social.astro";
 import Layout from "@josesaranda-web/layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import "./post.scss";
 import { Progress } from "@josesaranda-web/components/ui/Progress/Progress";
 import { changeLanguage } from "i18next";
 import { Time } from "@josesaranda-web/components/ui/Time/Time";
@@ -49,7 +48,12 @@ changeLanguage(post.data.language);
         class={"post-image-container text-center" +
           (tags.length ? " with-tags" : "")}
       >
-        <img src={post.data.image} width="100%" alt="" />
+        <img
+          src={post.data.image}
+          width="100%"
+          alt=""
+          style={`view-transition-name: ${post.data.slug}`}
+        />
       </div>
       {
         post.data.date && (
