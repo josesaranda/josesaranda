@@ -31,6 +31,7 @@ const { title, description, keywords } = Astro.props;
     {keywords && <meta name="keywords" content={keywords} />}
     <title>{title ? title : t("site.title")}</title>
     <script src="/scripts/echarts.min.js" is:inline></script>
+    <script src="/scripts/view_transitions.js" is:inline></script>
     <meta name="view-transition" content="same-origin" />
     <HeadHrefLangs />
   </head>
@@ -38,24 +39,3 @@ const { title, description, keywords } = Astro.props;
     <slot />
   </body>
 </html>
-<script>
-  if ((document as any).startViewTransition) {
-    (window as any).navigation.addEventListener("navigate", (event: any) => {
-      const toUrl = new URL(event.destination.url);
-
-      if (location.origin !== toUrl.origin) return;
-
-      event.intercept({
-        async handler() {
-          const response = await fetch(toUrl.pathname);
-          const text = await response.text();
-          const [, data] = text.match(/<body>([\s\S]*)<\/body>/i) as any;
-          (document as any).startViewTransition(() => {
-            document.body.innerHTML = data;
-            document.documentElement.scrollTop = 0;
-          });
-        },
-      });
-    });
-  }
-</script>
