@@ -10,7 +10,9 @@ import { Trans } from "astro-i18next/components";
     href={t("site.language.redirect-route")}
     class="absolute right-[20px] top-[20px] md:right-[80px] md:top-[80px] rounded-lg p-2 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 text-3xl"
   >
-    {t("site.language.flag")}
+    <Trans i18nKey="site.language.flag">
+      <span class="text-green-200"></span>
+    </Trans>
   </a>
   <div class="flex flex-col justify-center items-center">
     <div

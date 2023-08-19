@@ -4,7 +4,7 @@
     "description": "Mi nombre es Jose Sánchez Aranda y esta es mi web personal",
     "home_url": "/es",
     "language": {
-      "flag": "Idioma: 🇪🇸",
+      "flag": "Idioma: <0>ES</0>",
       "redirect-route": "/"
     }
   },
@@ -17,7 +17,7 @@
   },
   "experience": {
     "title": "Experiencia",
-    "paragraph1": "He estado envuelto en muchos proyectos con diferentes tecnologías a lo largo de mi carrera como <0>ingeniero de software</0>. Mira más abajo mi experiencia.",
+    "paragraph": "He estado envuelto en muchos proyectos con diferentes tecnologías a lo largo de mi carrera como <0>ingeniero de software</0>. Mira más abajo mi experiencia.",
     "experiences": {
       "0": {
         "company": "Knowmad Mood",
