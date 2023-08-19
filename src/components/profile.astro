@@ -1,0 +1,51 @@
+---
+import { t } from "i18next";
+import { Trans } from "astro-i18next/components";
+---
+
+<section
+  class="relative snap-center h-full w-full flex p-4 gap-8 justify-center items-center text-slate-50 bg-gray-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10"
+>
+  <a
+    href={t("site.language.redirect-route")}
+    class="absolute right-[20px] top-[20px] md:right-[80px] md:top-[80px] rounded-lg p-2 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 text-3xl"
+  >
+    {t("site.language.flag")}
+  </a>
+  <div class="flex flex-col justify-center items-center">
+    <div
+      class="bg-gray-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 p-4 mb-8 animate__onvisible"
+    >
+      <img
+        class="w-80 rounded-lg shadow-lg"
+        src="/images/profile.jpeg"
+        alt="José Sánchez Aranda"
+      />
+    </div>
+    <h1
+      class="animate__onvisible font-montserrat lg:text-9xl text-6xl mb-4 lg:-ml-[400px] text-slate-200 lg:bg-gray-500 lg:rounded-lg lg:bg-clip-padding lg:backdrop-filter lg:backdrop-blur-sm lg:bg-opacity-20 lg:p-4"
+    >
+      {t("greeting.title")}
+    </h1>
+    <h2
+      class="animate__onvisible font-lora lg:text-6xl text-2xl lg:ml-[400px] text-green-200 lg:bg-gray-600 lg:rounded-lg lg:bg-clip-padding lg:backdrop-filter lg:backdrop-blur-sm lg:bg-opacity-30 lg:p-4"
+    >
+      {t("greeting.name")}
+    </h2>
+  </div>
+</section>
+<section
+  class="snap-center h-full md:h-auto md:py-[150px] w-full flex p-4 gap-8 justify-center items-center text-slate-50 bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50"
+>
+  <div class="flex flex-col justify-center items-center">
+    <p
+      class="font-lora text-xl lg:text-4xl mb-4 max-w-7xl m-auto lg:leading-[50px]"
+    >
+      <Trans i18nKey="greeting.paragraph">
+        <span class="underline text-green-200"></span>
+        <span class="underline text-green-200"></span>
+        <span class="underline text-green-200"></span>
+      </Trans>
+    </p>
+  </div>
+</section>

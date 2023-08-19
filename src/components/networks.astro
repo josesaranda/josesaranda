@@ -1,0 +1,36 @@
+---
+import X from "../icons/x.astro";
+import Github from "../icons/github.astro";
+import Linkedin from "../icons/linkedin.astro";
+import { t } from "i18next";
+---
+
+<section
+  class="snap-center h-full md:h-auto md:py-[150px] w-full flex p-4 gap-8 justify-center items-center text-slate-50 bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50"
+>
+  <div class="flex flex-col justify-center items-center text-center max-w-7xl">
+    <h1 class="font-montserrat text-4xl lg:text-6xl mb-8 lg:leading-[50px]">
+      {t("social.title")}
+    </h1>
+    <p class="font-lora text-2xl mb-[64px]">
+      {t("social.paragraph")}
+    </p>
+    <div class="flex flex-row gap-8">
+      <a
+        class="bg-gray-400 hover:bg-gray-600 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 p-4"
+        href="https://twitter.com/JoseSaranda"
+        target="_blank"><X /></a
+      >
+      <a
+        class="bg-gray-400 hover:bg-gray-600 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 p-4"
+        href="https://github.com/josesaranda"
+        target="_blank"><Github /></a
+      >
+      <a
+        class="bg-gray-400 hover:bg-gray-600 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 p-4"
+        href="https://www.linkedin.com/in/josesaranda/"
+        target="_blank"><Linkedin /></a
+      >
+    </div>
+  </div>
+</section>

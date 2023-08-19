@@ -1,0 +1,80 @@
+---
+import Profile from "../../components/profile.astro";
+import Experience from "../../components/experience.astro";
+import Networks from "../../components/networks.astro";
+import "animate.css/animate.min.css";
+import i18next, { t } from "i18next";
+i18next.changeLanguage("es");
+---
+
+<html lang={i18next.language}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{t("site.title")}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="overflow-y-hidden">
+    <div
+      id="scroll"
+      class="overflow-y-auto snap-mandatory snap-y lg:snap-none snap-center h-screen"
+    >
+      <Profile />
+      <Experience />
+      <Networks />
+    </div>
+  </body>
+</html>
+<style>
+  .font-montserrat {
+    font-family: "Montserrat", sans-serif;
+  }
+  .font-lora {
+    font-family: "Lora", serif;
+  }
+  body {
+    background-image: url("https://w.wallhaven.cc/full/yj/wallhaven-yjm67g.jpg");
+    background-size: cover;
+  }
+  .animate-onvisible {
+    scale: 0;
+  }
+</style>
+<script>
+  const observerOptions = {
+    root: document.querySelector("#scroll"),
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  function intersectionCallback(intersectingEntries: any[]) {
+    intersectingEntries.forEach((entry: any) => {
+      if (
+        entry.isIntersecting &&
+        entry.intersectionRatio > observerOptions.threshold &&
+        entry.target &&
+        entry.target.classList
+      ) {
+        entry.target.classList.add("animate__animated", "animate__zoomIn");
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(
+      intersectionCallback,
+      observerOptions
+    );
+
+    document.querySelectorAll(".animate__onvisible").forEach((element) => {
+      observer.observe(element);
+    });
+  });
+</script>
