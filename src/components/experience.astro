@@ -4,7 +4,7 @@ import { t } from "i18next";
 ---
 
 <section
-  class="snap-center h-full md:h-auto md:py-[150px] w-full flex p-4 gap-8 justify-center items-center text-slate-50 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10"
+  class="snap-center h-full md:h-auto md:py-[150px] w-full flex p-4 gap-8 justify-center items-center text-slate-50"
 >
   <div class="flex flex-col justify-center items-center text-center max-w-7xl">
     <h1 class="font-montserrat text-4xl lg:text-6xl mb-8 lg:leading-[50px]">
@@ -12,15 +12,14 @@ import { t } from "i18next";
     </h1>
     <p class="font-lora text-2xl">
       <Trans i18nKey="experience.paragraph">
-        <span class="underline text-green-200"></span>
+        <span class="text-green-200"></span>
       </Trans>
     </p>
   </div>
 </section>
 {
   [0, 1, 2, 3, 4].map((index) => {
-    const classes =
-      index === 0 ? "bg-gray-900 bg-opacity-50" : "bg-gray-400 bg-opacity-10";
+    const classes = index === 0 ? "bg-gray-900 bg-opacity-50" : "";
     return (
       <section
         class={
@@ -31,7 +30,18 @@ import { t } from "i18next";
         <div class="flex flex-col max-w-7xl">
           <h1 class="font-montserrat text-4xl mb-1 md:mb-2 lg:text-6xl lg:leading-[50px]">
             <span class="text-green-200">{index + 1}.</span>{" "}
-            {t(`experience.experiences.${index}.company`)}
+            <a
+              class="hover:text-green-200 hover:underline"
+              href={t(`experience.experiences.${index}.link`)}
+              target={
+                t(`experience.experiences.${index}.link`) === "#"
+                  ? "_self"
+                  : "_blank"
+              }
+              rel="noopener noreferrer"
+            >
+              {t(`experience.experiences.${index}.company`)}
+            </a>
           </h1>
           <h2 class="text-xl md:text-2xl text-green-50 mb-1 md:mb-2">
             {t(`experience.experiences.${index}.position`)}

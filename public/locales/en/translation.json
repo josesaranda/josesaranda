@@ -21,6 +21,7 @@
     "experiences": {
       "0": {
         "company": "Knowmad Mood",
+        "link": "https://www.knowmadmood.com/",
         "position": "Frontend Lead Engineer",
         "dates": "June 2023 - Currently",
         "summary": "Knowmad is a software solutions company. Here I am a technical lead of a FrontEnd Team. I'm responsible of choosing technologies, architecture, applying best practices and methodologies and supporting my teammates.",
@@ -28,6 +29,7 @@
       },
       "1": {
         "company": "Fortris",
+        "link": "https://fortris.com/",
         "position": "Frontend Engineer",
         "dates": "Oct. 2021 - June 2023",
         "summary": "Fortris' main product is a crypto asset management system. At Fortris I'm responsible of development, maintainability and deployment of our single page app and BFF server app.",
@@ -35,6 +37,7 @@
       },
       "2": {
         "company": "Shapelets",
+        "link": "https://shapelets.io/",
         "position": "Software Engineer",
         "dates": "May. 2019 - Oct. 2021",
         "summary": "Shapelets' main product is a set of tools for Data scientist. At Shapelets I was responsible of development, maintainability and deployment of a single page app which included data visualisations (Dashboards).",
@@ -42,6 +45,7 @@
       },
       "3": {
         "company": "Sombradoble",
+        "link": "https://www.sombradoble.es/en/home/",
         "position": "Software Engineer",
         "dates": "Sept. 2016 - Apr. 2019",
         "summary": "Sombradoble is a consultancy agency specialised in scientist sector. At Sombradoble I was responsible of getting customer requirements, development, maintainability and deployment of different single page apps, progressive web apps and hybrid mobile apps.",
@@ -49,6 +53,7 @@
       },
       "4": {
         "company": "Nowait",
+        "link": "#",
         "position": "Founder / CTO",
         "dates": "2015 - 2017",
         "summary": "Founder of NoWait startup. At NoWait we developed our own product \"noesperescolas.com\", a platform for managing copyshops' orders in a quick and secure way.",
@@ -58,6 +63,6 @@
   },
   "social": {
     "title": "Social networks",
-    "paragraph": "You can find me in this places, I try to keep them active, but you know..., I do really like to go to the beach in summer or even take a coffee in winter."
+    "paragraph": "You can find me on this networks, I try to keep them active, but you know..., I do really like to go to the beach in summer or even take a coffee in winter."
   }
 }

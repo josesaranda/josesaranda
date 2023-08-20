@@ -4,7 +4,7 @@ import { Trans } from "astro-i18next/components";
 ---
 
 <section
-  class="relative snap-center h-full w-full flex p-4 gap-8 justify-center items-center text-slate-50 bg-gray-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10"
+  class="relative snap-center h-full w-full flex p-4 gap-8 justify-center items-center text-slate-50"
 >
   <a
     href={t("site.language.redirect-route")}
@@ -44,9 +44,12 @@ import { Trans } from "astro-i18next/components";
       class="font-lora text-xl lg:text-4xl mb-4 max-w-7xl m-auto lg:leading-[50px]"
     >
       <Trans i18nKey="greeting.paragraph">
-        <span class="underline text-green-200"></span>
-        <span class="underline text-green-200"></span>
-        <span class="underline text-green-200"></span>
+        <a
+          class="underline text-green-200"
+          target="_blank"
+          href="https://knowmadmood.com"></a>
+        <span class="text-green-200"></span>
+        <span class="text-green-200"></span>
       </Trans>
     </p>
   </div>
