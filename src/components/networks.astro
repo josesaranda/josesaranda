@@ -3,6 +3,7 @@ import X from "../icons/x.astro";
 import Github from "../icons/github.astro";
 import Linkedin from "../icons/linkedin.astro";
 import { t } from "i18next";
+import Button from "./button.astro";
 ---
 
 <section
@@ -16,21 +17,15 @@ import { t } from "i18next";
       {t("social.paragraph")}
     </p>
     <div class="flex flex-row gap-8">
-      <a
-        class="bg-gray-400 hover:bg-gray-600 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 p-4"
-        href="https://twitter.com/JoseSaranda"
-        target="_blank"><X /></a
-      >
-      <a
-        class="bg-gray-400 hover:bg-gray-600 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 p-4"
-        href="https://github.com/josesaranda"
-        target="_blank"><Github /></a
-      >
-      <a
-        class="bg-gray-400 hover:bg-gray-600 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 p-4"
-        href="https://www.linkedin.com/in/josesaranda/"
-        target="_blank"><Linkedin /></a
-      >
+      <Button href="https://twitter.com/JoseSaranda" target="_blank">
+        <X />
+      </Button>
+      <Button href="https://github.com/josesaranda" target="_blank">
+        <Github />
+      </Button>
+      <Button href="https://www.linkedin.com/in/josesaranda/" target="_blank">
+        <Linkedin />
+      </Button>
     </div>
   </div>
 </section>

@@ -1,22 +1,25 @@
 ---
 import { t } from "i18next";
 import { Trans } from "astro-i18next/components";
+import Link from "./link.astro";
+import Button from "./button.astro";
 ---
 
 <section
   class="relative snap-center h-full w-full flex p-4 gap-8 justify-center items-center text-slate-50"
 >
-  <a
-    href={t("site.language.redirect-route")}
-    class="absolute right-[20px] top-[20px] md:right-[80px] md:top-[80px] rounded-lg p-2 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 text-3xl"
+  <span
+    class="absolute right-[20px] top-[40px] md:right-[80px] md:top-[80px] text-2xl"
   >
-    <Trans i18nKey="site.language.flag">
-      <span class="text-green-200"></span>
-    </Trans>
-  </a>
+    <Button href={t("site.language.redirect-route")}>
+      <Trans i18nKey="site.language.flag">
+        <span class="text-green-200"></span>
+      </Trans>
+    </Button>
+  </span>
   <div class="flex flex-col justify-center items-center">
     <div
-      class="bg-gray-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 p-4 mb-8 animate__onvisible"
+      class="bg-gray-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 p-4 mb-8 animate__onvisible"
     >
       <img
         class="w-80 rounded-lg shadow-lg"
@@ -30,7 +33,7 @@ import { Trans } from "astro-i18next/components";
       {t("greeting.title")}
     </h1>
     <h2
-      class="animate__onvisible font-lora lg:text-6xl text-2xl lg:ml-[400px] text-green-200 lg:bg-gray-600 lg:rounded-lg lg:bg-clip-padding lg:backdrop-filter lg:backdrop-blur-sm lg:bg-opacity-30 lg:p-4"
+      class="animate__onvisible font-lora lg:text-6xl text-2xl lg:ml-[400px] text-green-200 lg:bg-gray-500 lg:rounded-lg lg:bg-clip-padding lg:backdrop-filter lg:backdrop-blur-sm lg:bg-opacity-20 lg:p-4"
     >
       {t("greeting.name")}
     </h2>
@@ -44,10 +47,7 @@ import { Trans } from "astro-i18next/components";
       class="font-lora text-xl lg:text-4xl mb-4 max-w-7xl m-auto lg:leading-[50px]"
     >
       <Trans i18nKey="greeting.paragraph">
-        <a
-          class="underline text-green-200"
-          target="_blank"
-          href="https://knowmadmood.com"></a>
+        <Link target="_blank" href="https://knowmadmood.com" />
         <span class="text-green-200"></span>
         <span class="text-green-200"></span>
       </Trans>

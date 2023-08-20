@@ -1,6 +1,7 @@
 ---
 import { Trans } from "astro-i18next/components";
 import { t } from "i18next";
+import Link from "./link.astro";
 ---
 
 <section
@@ -19,29 +20,27 @@ import { t } from "i18next";
 </section>
 {
   [0, 1, 2, 3, 4].map((index) => {
-    const classes = index === 0 ? "bg-gray-900 bg-opacity-50" : "";
+    const classes = index === 0 ? " bg-gray-900 bg-opacity-50" : "";
     return (
       <section
         class={
-          "snap-center h-full md:h-auto md:py-[150px] w-full flex p-4 gap-8 justify-center items-start text-slate-50 bg-clip-padding backdrop-filter backdrop-blur-sm " +
+          "snap-center h-full md:h-auto md:py-[150px] w-full flex p-4 gap-8 justify-center items-center text-slate-50 bg-clip-padding backdrop-filter backdrop-blur-sm" +
           classes
         }
       >
         <div class="flex flex-col max-w-7xl">
           <h1 class="font-montserrat text-4xl mb-1 md:mb-2 lg:text-6xl lg:leading-[50px]">
             <span class="text-green-200">{index + 1}.</span>{" "}
-            <a
-              class="hover:text-green-200 hover:underline"
+            <Link
               href={t(`experience.experiences.${index}.link`)}
               target={
                 t(`experience.experiences.${index}.link`) === "#"
                   ? "_self"
                   : "_blank"
               }
-              rel="noopener noreferrer"
             >
               {t(`experience.experiences.${index}.company`)}
-            </a>
+            </Link>
           </h1>
           <h2 class="text-xl md:text-2xl text-green-50 mb-1 md:mb-2">
             {t(`experience.experiences.${index}.position`)}
