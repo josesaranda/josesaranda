@@ -13,7 +13,7 @@
     "name": "Soy José Sánchez Aranda",
     "picture": "Imagen de perfil",
     "position": "Ingeniero de software - Desarrollador Frontend",
-    "paragraph": "Actualmente trabajo en <0>Knowmad Mood</0> ¡Aquí soy <1>lider técnico</1> del equipo de <2>FrontEnd</2>! Tecnologias cómo Angular, Nx, Ionic, Capacitor, NestJS, y GraphQL son parte de mi día a día. Pero me enorgullece decir que también he trabajado con otras muchas tecnologías de Frontend como React, NextJS, Loopback, y Electron. Siempre estoy aprendiendo diferentes tecnologías y mejorando como ingeniero de software. Como ejemplo, esta web está hecha con Astro. ¿Conocías Astro? Echa un vistazo al código de este proyecto."
+    "paragraph": "Actualmente trabajo en <0>Knowmad Mood</0> ¡Aquí soy <1>lider técnico</1> del equipo de <2>FrontEnd</2>! Tecnologías cómo Angular, Nx, Ionic, Capacitor, NestJS, y GraphQL son parte de mi día a día. Pero me enorgullece decir que también he trabajado con otras muchas tecnologías de Frontend como React, NextJS, Loopback, y Electron. Siempre estoy aprendiendo diferentes tecnologías y mejorando como ingeniero de software. Como ejemplo, esta web está hecha con Astro. ¿Conocías Astro? Echa un vistazo al <3>código</3> de este proyecto."
   },
   "experience": {
     "title": "Experiencia",

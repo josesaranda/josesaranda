@@ -1,0 +1,13 @@
+---
+const { dark = false, blur = false, center = false } = Astro.props;
+
+let classes =
+  "snap-start h-full md:h-auto md:py-[150px] w-full flex p-4 gap-8 justify-center items-start text-slate-50 bg-clip-padding backdrop-filter";
+if (dark) classes += " bg-gray-900 bg-opacity-50";
+if (blur) classes += " backdrop-blur-sm";
+classes += center ? " items-center" : " items-start";
+---
+
+<section class={classes}>
+  <slot />
+</section>

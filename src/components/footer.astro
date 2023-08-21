@@ -1,0 +1,19 @@
+---
+import Link from "./link.astro";
+---
+
+<footer
+  class="snap-start p-4 max-w-7xl flex text-lg text-slate-50 justify-between items-center m-auto"
+>
+  <p>
+    josesaranda © <span id="date"></span>
+  </p>
+  <Link href="https://github.com/josesaranda/josesaranda" target="_blank">
+    Code on Github
+  </Link>
+</footer>
+<script>
+  document.getElementById("date")!.innerHTML = new Date()
+    .getFullYear()
+    .toString();
+</script>
