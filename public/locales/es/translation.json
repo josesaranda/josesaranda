@@ -64,5 +64,9 @@
   "social": {
     "title": "Redes sociales",
     "paragraph": "También puedes encontrarme por estos lugares, intento mantenerlos activos, pero tu sabes, ir a la playa en verano o tomar cafe en invierno también me gusta."
+  },
+  "404": {
+    "paragraph": "Un fallo lo tiene cualquiera",
+    "link": "Volver al inicio"
   }
 }

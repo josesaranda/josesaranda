@@ -64,5 +64,9 @@
   "social": {
     "title": "Social networks",
     "paragraph": "You can find me on this networks, I try to keep them active, but you know..., I do really like to go to the beach in summer or even take a coffee in winter."
+  },
+  "404": {
+    "paragraph": "Everybody fails",
+    "link": "Go back home"
   }
 }

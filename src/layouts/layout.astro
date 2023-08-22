@@ -1,9 +1,5 @@
 ---
 import i18next, { t } from "i18next";
-import Profile from "../components/profile.astro";
-import Experience from "../components/experience.astro";
-import Networks from "../components/networks.astro";
-import Footer from "../components/footer.astro";
 import "animate.css/animate.min.css";
 ---
 
@@ -28,62 +24,65 @@ import "animate.css/animate.min.css";
     />
   </head>
   <body class="overflow-y-hidden">
-    <div
-      id="scroll"
-      class="overflow-y-auto snap-mandatory snap-y lg:snap-none snap-center h-screen"
-    >
-      <Profile />
-      <Experience />
-      <Networks />
-      <Footer />
-    </div>
+    <slot />
   </body>
+  <style is:global>
+    .font-montserrat {
+      font-family: "Montserrat", sans-serif;
+    }
+    .font-lora {
+      font-family: "Lora", serif;
+    }
+    body {
+      background-image: url("/images/wallpaper.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .animate-onvisible {
+      scale: 0;
+    }
+
+    a svg,
+    a svg path {
+      fill: white;
+    }
+
+    a:hover svg,
+    a:hover svg path {
+      fill: #86efac;
+      transition: all 0.5s ease-in-out;
+    }
+  </style>
+  <script>
+    const observerOptions = {
+      root: document.querySelector("#scroll"),
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+
+    function intersectionCallback(intersectingEntries: any[]) {
+      intersectingEntries.forEach((entry: any) => {
+        if (
+          entry.isIntersecting &&
+          entry.intersectionRatio > observerOptions.threshold &&
+          entry.target &&
+          entry.target.classList
+        ) {
+          entry.target.classList.add("animate__animated", "animate__zoomIn");
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver(
+        intersectionCallback,
+        observerOptions
+      );
+
+      document.querySelectorAll(".animate__onvisible").forEach((element) => {
+        observer.observe(element);
+      });
+    });
+  </script>
 </html>
-<style>
-  .font-montserrat {
-    font-family: "Montserrat", sans-serif;
-  }
-  .font-lora {
-    font-family: "Lora", serif;
-  }
-  body {
-    background-image: url("/images/wallpaper.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  .animate-onvisible {
-    scale: 0;
-  }
-</style>
-<script>
-  const observerOptions = {
-    root: document.querySelector("#scroll"),
-    rootMargin: "0px",
-    threshold: 0.1,
-  };
-
-  function intersectionCallback(intersectingEntries: any[]) {
-    intersectingEntries.forEach((entry: any) => {
-      if (
-        entry.isIntersecting &&
-        entry.intersectionRatio > observerOptions.threshold &&
-        entry.target &&
-        entry.target.classList
-      ) {
-        entry.target.classList.add("animate__animated", "animate__zoomIn");
-      }
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver(
-      intersectionCallback,
-      observerOptions
-    );
-
-    document.querySelectorAll(".animate__onvisible").forEach((element) => {
-      observer.observe(element);
-    });
-  });
-</script>

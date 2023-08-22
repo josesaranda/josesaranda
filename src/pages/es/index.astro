@@ -1,8 +1,23 @@
 ---
 import "animate.css/animate.min.css";
 import i18next from "i18next";
-i18next.changeLanguage("es");
 import Layout from "../../layouts/layout.astro";
+import Profile from "../../components/profile.astro";
+import Experience from "../../components/experience.astro";
+import Networks from "../../components/networks.astro";
+import Footer from "../../components/footer.astro";
+
+i18next.changeLanguage("es");
 ---
 
-<Layout />
+<Layout>
+  <div
+    id="scroll"
+    class="overflow-y-auto snap-mandatory snap-y lg:snap-none snap-center h-screen"
+  >
+    <Profile />
+    <Experience />
+    <Networks />
+    <Footer />
+  </div>
+</Layout>

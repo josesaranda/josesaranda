@@ -1,0 +1,19 @@
+---
+import Link from "../components/link.astro";
+import Section from "../components/section.astro";
+import Layout from "../layouts/layout.astro";
+import { t } from "i18next";
+---
+
+<Layout>
+  <div class="h-screen">
+    <div
+      class="h-full flex flex-col justify-center items-center text-slate-50 text-center"
+    >
+      <h1 class="text-9xl text-green-200 mb-4">404</h1>
+      <p class="text-3xl lg:text-4xl mb-4">{t("404.paragraph")}</p>
+
+      <Link big href={t("site.home_url")}>{t("404.link")}</Link>
+    </div>
+  </div>
+</Layout>
