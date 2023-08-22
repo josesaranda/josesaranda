@@ -32,7 +32,7 @@ import Section from "./section.astro";
       {t("greeting.title")}
     </h1>
     <h2
-      class="animate__onvisible font-lora lg:text-6xl text-2xl lg:ml-[400px] text-green-200 lg:bg-gray-500 lg:rounded-lg lg:bg-clip-padding lg:backdrop-filter lg:backdrop-blur-sm lg:bg-opacity-20 lg:p-4"
+      class="animate__onvisible lg:text-6xl text-2xl lg:ml-[400px] text-green-200 lg:bg-gray-500 lg:rounded-lg lg:bg-clip-padding lg:backdrop-filter lg:backdrop-blur-sm lg:bg-opacity-20 lg:p-4"
     >
       {t("greeting.name")}
     </h2>
@@ -40,9 +40,7 @@ import Section from "./section.astro";
 </section>
 <Section dark blur center>
   <div class="flex flex-col justify-center items-center">
-    <p
-      class="font-lora text-xl lg:text-3xl mb-4 max-w-7xl m-auto lg:leading-[50px]"
-    >
+    <p class="text-xl lg:text-3xl mb-4 max-w-7xl m-auto lg:leading-[50px]">
       <Trans i18nKey="greeting.paragraph">
         <Link target="_blank" href="https://knowmadmood.com" />
         <span class="text-green-200"></span>

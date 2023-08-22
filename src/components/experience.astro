@@ -10,7 +10,7 @@ import Section from "./section.astro";
     <h1 class="font-montserrat text-4xl lg:text-6xl mb-8 lg:leading-[50px]">
       {t("experience.title")}
     </h1>
-    <p class="font-lora text-xl lg:text-2xl">
+    <p class="text-xl lg:text-2xl">
       <Trans i18nKey="experience.paragraph">
         <span class="text-green-200"></span>
       </Trans>
@@ -23,7 +23,7 @@ import Section from "./section.astro";
     return (
       <Section dark={dark} blur>
         <div class="flex flex-col max-w-7xl">
-          <h1 class="font-montserrat text-4xl mb-1 md:mb-2 lg:text-6xl lg:leading-[50px]">
+          <h1 class="font-montserrat text-4xl mb-2 lg:text-6xl lg:leading-[50px]">
             <span class="text-green-200">{index + 1}.</span>{" "}
             <Link
               href={t(`experience.experiences.${index}.link`)}
@@ -36,17 +36,17 @@ import Section from "./section.astro";
               {t(`experience.experiences.${index}.company`)}
             </Link>
           </h1>
-          <h2 class="text-xl md:text-2xl text-green-50 mb-1 md:mb-2">
+          <h2 class="font-montserrat text-xl md:text-2xl text-green-50 mb-1">
             {t(`experience.experiences.${index}.position`)}
           </h2>
-          <h3 class="text-lg md:text-xl text-green-50 mb-8">
+          <h3 class="font-montserrat text-lg md:text-xl text-green-50 mb-8">
             {t(`experience.experiences.${index}.dates`)}
           </h3>
-          <p class="font-lora text-xl md:text-2xl">
+          <p class="text-xl md:text-2xl">
             {t(`experience.experiences.${index}.summary`)}
           </p>
           <br />
-          <p class="font-lora text-xl md:text-2xl">
+          <p class="text-xl md:text-2xl">
             {t(`experience.experiences.${index}.technologies`)}
           </p>
         </div>
