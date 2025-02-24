@@ -1,19 +1,20 @@
 ---
-import Link from "../components/link.astro";
-import Section from "../components/section.astro";
 import Layout from "../layouts/layout.astro";
 import { t } from "i18next";
 ---
 
 <Layout>
-  <div class="h-screen">
-    <div
-      class="h-full flex flex-col justify-center items-center text-slate-50 text-center"
+  <section
+    class="max-w-screen-2xl mx-auto px-4 py-32 lg:py-64 text-center lg:text-left"
+  >
+    <p class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6">
+      Everyone make mistakes but you just made a big one. The page you are
+      looking for doesn't exist.
+    </p>
+    <p
+      class="text-gray-500 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
     >
-      <h1 class="text-9xl text-green-200 mb-4">404</h1>
-      <p class="text-3xl lg:text-4xl mb-4">{t("404.paragraph")}</p>
-
-      <Link big href={t("site.home_url")}>{t("404.link")}</Link>
-    </div>
-  </div>
+      Come on back to the <a href="/" class="text-blue-500 underline">home page</a> and try again.
+    </p>
+  </section>
 </Layout>

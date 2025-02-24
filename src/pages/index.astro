@@ -1,23 +1,136 @@
 ---
-import "animate.css/animate.min.css";
-import i18next from "i18next";
+import Divider from "../components/Divider.astro";
+import Experience from "../components/Experience.astro";
+import Project from "../components/Project.astro";
+import Social from "../components/Social.astro";
 import Layout from "../layouts/layout.astro";
-import Profile from "../components/profile.astro";
-import Experience from "../components/experience.astro";
-import Networks from "../components/networks.astro";
-import Footer from "../components/footer.astro";
-
-i18next.changeLanguage("en");
 ---
 
 <Layout>
-  <div
-    id="scroll"
-    class="overflow-y-auto snap-mandatory snap-y lg:snap-none snap-center h-screen"
+  <section class="max-w-screen-2xl mx-auto px-4 pt-32 lg:pt-64 py-16 lg:py-32">
+    <h1 class="text-center lg:text-left text-5xl lg:text-8xl font-serif mb-2">
+      <span class="text-gray-500">I'm</span> José<br /> Sánchez Aranda
+    </h1>
+  </section>
+  <section
+    class="max-w-screen-2xl mx-auto px-4 pt-0 lg:pt-32 pb-16 lg:py-32 text-center lg:text-left"
   >
-    <Profile />
-    <Experience />
-    <Networks />
-    <Footer />
+    <p class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6">
+      A FrontEnd Engineer so seasoned, I remember when the internet was just a
+      rumor!
+    </p>
+    <p
+      class="text-gray-500 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+    >
+      Last decades I've been working with Angular, Html, Css, Sass, Tailwind,
+      JavaScript, Typescript and many other great web technologies
+    </p>
+  </section>
+  <Divider />
+  <section class="max-w-screen-2xl mx-auto px-4 lg:pt-16 py-16 lg:py-32">
+    <p class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6">
+      Currently experimenting with ChatBots, AI, and other futuristic tech.
+      Trying to stay ahead of the robots!
+    </p>
+    <p
+      class="text-gray-500 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+    >
+      Also, leveling up my gaming skills. Because saving the world can wait
+      until after this boss fight.
+    </p>
+  </section>
+  <Divider />
+  <section class="max-w-screen-2xl mx-auto px-4 py-16 lg:py-32">
+    <p class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6">
+      I've worked for some amazing companies, and by amazing, I mean they
+      tolerated my coffee addiction and bad puns. Check out my work below!
+    </p>
+  </section>
+  <Experience
+    link="https://knowmadmood.com"
+    title="Knowmad Mood - Currently"
+    description="Knowmad is a software solutions company. Here, I'm the technical lead of a FrontEnd Team, which means I get to choose the coolest technologies, design the fanciest architectures, enforce best practices like a coding superhero, and support my teammates (mostly by bringing donuts). Angular, Angular Material, Typescript, Javascript, Sass, Html, Nx, NodeJS, Ionic, Capacitor, Jest, Cypress, Testing Library - basically, if it's got a name, I've probably used it."
+  />
+  <Experience
+    link="https://fortris.io"
+    title="Fortris - Oct. 2021 / June 2023"
+    description="Fortris' main product is a crypto asset management system. At Fortris, I'm the wizard behind the curtain, responsible for development, maintainability, and deployment of our single page app and BFF server app. Angular, Angular Material, Typescript, Javascript, Sass, Html, Nx, NodeJS, Express, NestJS, GraphQL, Jest, Cypress, Testing Library - basically, if it's got a name, I've probably cast a spell on it."
+  />
+  <Experience
+    link="https://shapelets.io"
+    title="Shapelets - May. 2019 / Oct. 2021"
+    description="Shapelets' main product is a set of tools for Data Scientists. At Shapelets, I was the data magician, conjuring up development, maintainability, and deployment of a single page app with dazzling data visualizations (Dashboards). React, AntDesign, Mobx, Axios, Apache Echarts, Vega visualizations, Typescript, Javascript, Less, Html, Nx, Jest, Testing Library - if it sounds fancy, I've probably waved my wand at it."
+  />
+  <Experience
+    link="https://sombradoble.com"
+    title="Sombradoble - Sept. 2016 / Apr. 2019"
+    description="Sombradoble is a consultancy agency specialized in the scientific sector. At Sombradoble, I was the go-to tech wizard, responsible for gathering customer requirements, development, maintainability, and deployment of various single-page apps, progressive web apps, and hybrid mobile apps. Basically, if it had a screen, I was on it. Angular, Angular Material, Ionic framework, Typescript, Javascript, Sass, Html, NodeJS, Express, Loopback, MongoDB, SQLServer, Jest, Cypress - if it sounds like a spell from a fantasy novel, I've probably cast it."
+  />
+  <Experience
+    link="https://www.uma.es/facultadmarketing/noticias/no-wait-start-creada-por-alumnos-del-grado-en-marketing-en-el-foro-ser-emprendedor/"
+    title="NoWait - 2015 - 2017"
+    description="Founder of NoWait startup. At NoWait, we developed our own product noesperescolas.com, a platform for managing copyshops' orders in a quick and secure way. Basically, we made sure you never had to wait in line for your copies again. Html, Css, Javascript, NodeJS, ExpressJS, EJS, MongoDB - and a lot of coffee to keep us going!"
+  />
+  <Divider />
+  <section class="max-w-screen-2xl mx-auto px-4 py-16 lg:py-32">
+    <p class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6">
+      Also, I'd like to mention the projects I've worked on as a collaborator.
+      Because, you know, sharing is caring!
+    </p>
+    <p
+      class="text-gray-500 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+    >
+      Yay Yay Events trusted me to make their events' website sparkle. Check out
+      the landings I've crafted for them. Spoiler: they're fabulous!
+    </p>
+  </section>
+  <Project link="https://lambda.world" title="Lambda World - 2025 Edition" description="Experience the brilliance of functional programming at Lambda World in Cadiz, Spain. Join us from October 23-24, 2025, to connect with our (dis)functional family, dive into FP trends, and soak up the coastal charm of this must-attend event!"/>
+  <Project link="https://jonthebeach.com" title="J On The Beach - 2025 Edition" description="A Big Data conference for developers, DevOps & Data Scientists on the beach! May 14-16, 2025 in Malaga, Spain. If you are into distributed systems, Machine Learning, Microservices, AI or DevSecOps, buy your tickets NOW!"/>
+  <Project link="https://weyweyweb.com" title="Wey Wey Web - 2024 Edition" description="A Yay-Yay international conf for UX and Front-End Developers in Malaga, 27-29 November, 2024"/>
+  <Project link="https://2024.jonthebeach.com" title="J On The Beach - 2024 Edition" description="A Big Data conference for developers, DevOps & Data Scientists On The Beach! May 8-10, 2024 in Torremolinos - Malaga, Spain. If you are into Distributed Systems, Data Engineering, DevSecOps or Data Science, buy your tickets NOW!"/>
+  <Project link="https://2024.lambda.world" title="Lambda World - 2024 Edition" description="Experience the brilliance of functional programming at Lambda World in Cadiz, Spain. Join us from October 2nd to 4th, 2024, to connect with our (dis)functional family, dive into FP trends, and soak up the coastal charm of this must-attend event! Warning: excessive laughter and sudden bursts of genius may occur."/>
+  <Project link="https://2023.jonthebeach.com" title="Wey Wey Web - 2023 Edition" description="A Yay-Yay international conf for UX and Front-End Developers in Malaga, November 23-24, 2023"/>
+  <Divider />
+  <section class="max-w-screen-2xl mx-auto px-4 py-16 lg:py-32">
+    <p class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6">
+      Follow me in social media networks
+    </p>
+    <p
+      class="text-gray-500 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+    >
+      Cause having a stalker is creepy, but having a follower is flattering!
+    </p>
+  </section>
+  <div class="flex flex-row flex-wrap justify-center items-center gap-8 md:gap-16 pb-20">
+    <Social title="X (Twitter)" link="https://twitter.com/JoseSaranda" />
+    <Social title="Linkedin" link="https://www.linkedin.com/in/josesaranda/" />
+    <Social title="Github" link="https://github.com/josesaranda" />
   </div>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+        }
+
+        if (!entry.isIntersecting) {
+          entry.target.classList.remove("fade-in");
+        }
+      });
+    });
+
+    document.querySelectorAll("*").forEach((p) => {
+      observer.observe(p);
+    });
+  </script>
+  <style is:global>
+    .fade-in {
+      opacity: 1;
+      transition: opacity 1s ease-in;
+    }
+
+    p {
+      opacity: 0;
+    }
+  </style>
 </Layout>
