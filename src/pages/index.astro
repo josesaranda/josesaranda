@@ -146,31 +146,31 @@ import Layout from "../layouts/layout.astro";
     <Social title="Linkedin" link="https://www.linkedin.com/in/josesaranda/" />
     <Social title="Github" link="https://github.com/josesaranda" />
   </div>
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in");
-        }
-
-        if (!entry.isIntersecting) {
-          entry.target.classList.remove("fade-in");
-        }
-      });
-    });
-
-    document.querySelectorAll("*").forEach((p) => {
-      observer.observe(p);
-    });
-  </script>
-  <style is:global>
-    .fade-in {
-      opacity: 1;
-      transition: opacity 1s ease-in-out;
-    }
-
-    * {
-      opacity: 0;
-    }
-  </style>
 </Layout>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+      }
+
+      if (!entry.isIntersecting) {
+        entry.target.classList.remove("fade-in");
+      }
+    });
+  });
+
+  document.querySelectorAll("*").forEach((p) => {
+    observer.observe(p);
+  });
+</script>
+<style is:global>
+  .fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  * {
+    opacity: 0;
+  }
+</style>
