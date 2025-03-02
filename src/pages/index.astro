@@ -7,13 +7,15 @@ import Layout from "../layouts/layout.astro";
 ---
 
 <Layout>
-  <section class="max-w-screen-2xl mx-auto px-4 pt-32 lg:pt-64 py-16 lg:py-32">
+  <section
+    class="max-w-screen-2xl mx-auto px-4 pt-32 md:px-16 lg:pt-64 py-16 lg:py-32"
+  >
     <h1 class="text-center lg:text-left text-5xl lg:text-8xl font-serif mb-2">
       <span class="text-gray-500">I'm</span> José<br /> Sánchez Aranda
     </h1>
   </section>
   <section
-    class="max-w-screen-2xl mx-auto px-4 pt-0 lg:pt-32 pb-16 lg:py-32 text-center lg:text-left"
+    class="max-w-screen-2xl mx-auto px-4 md:px-16 pt-0 lg:pt-32 pb-16 lg:py-32 text-center lg:text-left"
   >
     <p
       class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
@@ -29,7 +31,9 @@ import Layout from "../layouts/layout.astro";
     </p>
   </section>
   <Divider />
-  <section class="max-w-screen-2xl mx-auto px-4 lg:pt-16 py-16 lg:py-32">
+  <section
+    class="max-w-screen-2xl mx-auto px-4 md:px-16 lg:pt-16 py-16 lg:py-32"
+  >
     <p
       class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
     >
@@ -44,7 +48,7 @@ import Layout from "../layouts/layout.astro";
     </p>
   </section>
   <Divider />
-  <section class="max-w-screen-2xl mx-auto px-4 py-16 lg:py-32">
+  <section class="max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32">
     <p
       class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
     >
@@ -54,7 +58,7 @@ import Layout from "../layouts/layout.astro";
   </section>
   <Experience
     link="https://knowmadmood.com"
-    title="Knowmad Mood - Currently"
+    title="Knowmad Mood - June 2023 / Currently"
     description="Knowmad is a software solutions company. Here, I'm the technical lead of a FrontEnd Team, which means I get to choose the coolest technologies, design the fanciest architectures, enforce best practices like a coding superhero, and support my teammates (mostly by bringing donuts). Angular, Angular Material, Typescript, Javascript, Sass, Html, Nx, NodeJS, Ionic, Capacitor, Jest, Cypress, Testing Library - basically, if it's got a name, I've probably used it."
   />
   <Experience
@@ -74,11 +78,11 @@ import Layout from "../layouts/layout.astro";
   />
   <Experience
     link="https://www.uma.es/facultadmarketing/noticias/no-wait-start-creada-por-alumnos-del-grado-en-marketing-en-el-foro-ser-emprendedor/"
-    title="NoWait - 2015 - 2017"
+    title="NoWait - 2015 / 2017"
     description="Founder of NoWait startup. At NoWait, we developed our own product noesperescolas.com, a platform for managing copyshops' orders in a quick and secure way. Basically, we made sure you never had to wait in line for your copies again. Html, Css, Javascript, NodeJS, ExpressJS, EJS, MongoDB - and a lot of coffee to keep us going!"
   />
   <Divider />
-  <section class="max-w-screen-2xl mx-auto px-4 py-16 lg:py-32">
+  <section class="max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32">
     <p
       class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
     >
@@ -123,7 +127,7 @@ import Layout from "../layouts/layout.astro";
     description="A Yay-Yay international conf for UX and Front-End Developers in Malaga, November 23-24, 2023"
   />
   <Divider />
-  <section class="max-w-screen-2xl mx-auto px-4 py-16 lg:py-32">
+  <section class="max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32">
     <p
       class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
     >
@@ -162,10 +166,10 @@ import Layout from "../layouts/layout.astro";
   <style is:global>
     .fade-in {
       opacity: 1;
-      transition: opacity 1s ease-in;
+      transition: opacity 1s ease-in-out;
     }
 
-    p {
+    * {
       opacity: 0;
     }
   </style>
