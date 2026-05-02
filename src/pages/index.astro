@@ -17,8 +17,11 @@ import { socialLinks } from "../data/social";
     class="fade-target max-w-screen-2xl mx-auto px-4 pt-32 md:px-16 lg:pt-64 py-16 lg:py-32"
   >
     <h1 class="text-center lg:text-left text-5xl lg:text-8xl font-serif mb-2">
-      <span class="text-gray-500 dark:text-gray-400">I'm</span> José<br /> Sánchez
-      Aranda
+      <span class="text-gray-500 dark:text-gray-400">I'm</span>
+      <span id="typewriter"></span><span
+        id="typewriter-cursor"
+        class="inline-block w-[3px] lg:w-[6px] ml-1 bg-gray-800 dark:bg-white animate-blink align-middle"
+      ></span>
     </h1>
   </section>
   <section
@@ -131,8 +134,48 @@ import { socialLinks } from "../data/social";
       observer.observe(el);
     });
   }
+
+  const typewriterEl = document.getElementById("typewriter");
+  const cursorEl = document.getElementById("typewriter-cursor");
+  const text = "José Sánchez Aranda";
+  let index = 0;
+
+  function type() {
+    if (!typewriterEl || !cursorEl) return;
+
+    if (isReducedMotion) {
+      typewriterEl.textContent = text;
+      cursorEl.remove();
+      return;
+    }
+
+    if (index < text.length) {
+      typewriterEl.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, 70);
+    } else {
+      setTimeout(() => cursorEl.classList.add("hidden"), 1500);
+    }
+  }
+
+  setTimeout(type, 600);
 </script>
 <style is:global>
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+    height: 0.85em;
+  }
+
   .fade-in {
     opacity: 1 !important;
     transition: opacity 0.3s ease-in-out;

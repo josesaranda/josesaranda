@@ -36,13 +36,13 @@ const themeConfig = {
     <link rel="manifest" href="/manifest.json" />
     <script define:vars={themeConfig} is:inline>
       (function () {
-        const t = localStorage.getItem(THEME_CONFIG.storageKey);
+        const t = localStorage.getItem(storageKey);
         if (t === "dark") {
-          document.documentElement.classList.add(THEME_CONFIG.darkClass);
+          document.documentElement.classList.add(darkClass);
         } else if (t === "light") {
-          document.documentElement.classList.remove(THEME_CONFIG.darkClass);
-        } else if (window.matchMedia(THEME_CONFIG.mediaQuery).matches) {
-          document.documentElement.classList.add(THEME_CONFIG.darkClass);
+          document.documentElement.classList.remove(darkClass);
+        } else if (window.matchMedia(mediaQuery).matches) {
+          document.documentElement.classList.add(darkClass);
         }
       })();
     </script>
