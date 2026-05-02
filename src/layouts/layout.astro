@@ -63,10 +63,9 @@ const themeConfig = {
     });
   }
 
-  const themeToggle = document.getElementById("theme-toggle");
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => themeService.toggle());
-  }
+  document.querySelectorAll(".theme-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => themeService.toggle());
+  });
 
   themeService.watchSystemPreference();
 </script>
