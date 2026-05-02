@@ -1,8 +1,18 @@
 ---
 import Footer from "../components/Footer.astro";
+import {
+  THEME_STORAGE_KEY,
+  THEME_DARK_CLASS,
+  THEME_MEDIA_QUERY,
+} from "../services/theme";
 import "../styles/global.css";
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const themeConfig = {
+  storageKey: THEME_STORAGE_KEY,
+  darkClass: THEME_DARK_CLASS,
+  mediaQuery: THEME_MEDIA_QUERY,
+};
 ---
 
 <html lang="en">
@@ -24,16 +34,39 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     />
     <title>josesaranda - Welcome</title>
     <link rel="manifest" href="/manifest.json" />
+    <script define:vars={themeConfig} is:inline>
+      (function () {
+        const t = localStorage.getItem(THEME_CONFIG.storageKey);
+        if (t === "dark") {
+          document.documentElement.classList.add(THEME_CONFIG.darkClass);
+        } else if (t === "light") {
+          document.documentElement.classList.remove(THEME_CONFIG.darkClass);
+        } else if (window.matchMedia(THEME_CONFIG.mediaQuery).matches) {
+          document.documentElement.classList.add(THEME_CONFIG.darkClass);
+        }
+      })();
+    </script>
   </head>
-  <body class="bg-white">
+  <body
+    class="bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-100 transition-colors duration-300"
+  >
     <slot />
     <Footer />
   </body>
 </html>
 <script>
+  import { themeService } from "../services/theme";
+
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
       navigator.serviceWorker.register("/sw.js");
     });
   }
+
+  const themeToggle = document.getElementById("theme-toggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => themeService.toggle());
+  }
+
+  themeService.watchSystemPreference();
 </script>

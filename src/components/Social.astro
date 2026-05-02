@@ -21,26 +21,26 @@ const icons: Record<string, string> = {
   target="_blank"
   rel="noopener noreferrer"
   aria-label={`Visit ${title} profile of José Sánchez Aranda`}
-  class="social-card group relative flex items-center gap-5 px-7 py-6 rounded-2xl border-2 border-gray-200 bg-white overflow-hidden"
+  class="social-card group relative flex items-center gap-5 px-7 py-6 rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 overflow-hidden"
 >
   <div
-    class="absolute inset-0 bg-blue-900 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-in-out"
+    class="absolute inset-0 bg-blue-900 dark:bg-blue-600 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-in-out"
   >
   </div>
   <div
-    class="relative flex-shrink-0 w-11 h-11 lg:w-14 lg:h-14 flex items-center justify-center rounded-xl bg-gray-100 group-hover:bg-white/20 transition-colors duration-500"
+    class="relative flex-shrink-0 w-11 h-11 lg:w-14 lg:h-14 flex items-center justify-center rounded-xl bg-gray-100 dark:bg-gray-800 group-hover:bg-white/20 transition-colors duration-500"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      class="w-6 h-6 lg:w-7 lg:h-7 text-gray-800 group-hover:text-white transition-colors duration-500"
+      class="w-6 h-6 lg:w-7 lg:h-7 text-gray-800 dark:text-gray-200 group-hover:text-white transition-colors duration-500"
     >
       <Fragment set:html={icons[icon]} />
     </svg>
   </div>
   <p
-    class="relative text-gray-800 text-xl lg:text-2xl font-serif leading-tight group-hover:text-white transition-colors duration-500"
+    class="relative text-gray-800 dark:text-gray-200 text-xl lg:text-2xl font-serif leading-tight group-hover:text-white transition-colors duration-500"
   >
     {title}
   </p>
