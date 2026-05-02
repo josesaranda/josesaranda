@@ -27,7 +27,8 @@ const items = [
           <li>
             <a
               href={item.href}
-              class="text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-300"
+              data-nav-link={item.href}
+              class="nav-link text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-300"
             >
               {item.label}
             </a>
@@ -90,6 +91,7 @@ const items = [
           <li class="py-2">
             <a
               href={item.href}
+              data-nav-link={item.href}
               class="mobile-nav-link text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors duration-300"
             >
               {item.label}
@@ -138,4 +140,33 @@ const items = [
       toggle?.setAttribute("aria-expanded", "false");
     });
   });
+
+  const navLinks = document.querySelectorAll("[data-nav-link]");
+  const sections = document.querySelectorAll("section[id]");
+  const extras = document.querySelectorAll("[data-section]");
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const id =
+          entry.target.getAttribute("id") ||
+          entry.target.getAttribute("data-section");
+        const href = `#${id}`;
+        navLinks.forEach((link) => {
+          if (
+            entry.isIntersecting &&
+            link.getAttribute("data-nav-link") === href
+          ) {
+            link.classList.add("active-nav");
+          } else if (link.getAttribute("data-nav-link") === href) {
+            link.classList.remove("active-nav");
+          }
+        });
+      });
+    },
+    { rootMargin: "-50% 0px -50% 0px" },
+  );
+
+  sections.forEach((section) => sectionObserver.observe(section));
+  extras.forEach((extra) => sectionObserver.observe(extra));
 </script>

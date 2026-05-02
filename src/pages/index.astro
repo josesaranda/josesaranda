@@ -69,7 +69,9 @@ import { socialLinks } from "../data/social";
       tolerated my coffee addiction and bad puns. Check out my work below!
     </p>
   </section>
-  {experiences.map((exp) => <Experience {...exp} />)}
+  <div data-section="experience">
+    {experiences.map((exp) => <Experience {...exp} />)}
+  </div>
   <Divider />
   <section
     id="projects"
@@ -88,7 +90,9 @@ import { socialLinks } from "../data/social";
       the landings I've crafted for them. Spoiler: they're fabulous!
     </p>
   </section>
-  {projects.map((proj) => <Project {...proj} />)}
+  <div data-section="projects">
+    {projects.map((proj) => <Project {...proj} />)}
+  </div>
   <Divider />
   <section
     id="social"
@@ -179,6 +183,31 @@ import { socialLinks } from "../data/social";
   .fade-in {
     opacity: 1 !important;
     transition: opacity 0.3s ease-in-out;
+  }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #1f2937;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+
+  .dark .nav-link::after {
+    background-color: #f3f4f6;
+  }
+
+  .nav-link.active-nav::after {
+    transform: scaleX(1);
   }
 
   .fade-target {
