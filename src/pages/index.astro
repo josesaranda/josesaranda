@@ -8,14 +8,14 @@ import Layout from "../layouts/layout.astro";
 
 <Layout>
   <section
-    class="max-w-screen-2xl mx-auto px-4 pt-32 md:px-16 lg:pt-64 py-16 lg:py-32"
+    class="fade-target max-w-screen-2xl mx-auto px-4 pt-32 md:px-16 lg:pt-64 py-16 lg:py-32"
   >
     <h1 class="text-center lg:text-left text-5xl lg:text-8xl font-serif mb-2">
       <span class="text-gray-500">I'm</span> José<br /> Sánchez Aranda
     </h1>
   </section>
   <section
-    class="max-w-screen-2xl mx-auto px-4 md:px-16 pt-0 lg:pt-32 pb-16 lg:py-32 text-center lg:text-left"
+    class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 pt-0 lg:pt-32 pb-16 lg:py-32 text-center lg:text-left"
   >
     <p
       class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
@@ -32,7 +32,7 @@ import Layout from "../layouts/layout.astro";
   </section>
   <Divider />
   <section
-    class="max-w-screen-2xl mx-auto px-4 md:px-16 lg:pt-16 py-16 lg:py-32"
+    class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 lg:pt-16 py-16 lg:py-32"
   >
     <p
       class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
@@ -48,7 +48,9 @@ import Layout from "../layouts/layout.astro";
     </p>
   </section>
   <Divider />
-  <section class="max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32">
+  <section
+    class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
+  >
     <p
       class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
     >
@@ -82,7 +84,9 @@ import Layout from "../layouts/layout.astro";
     description="Founder of NoWait startup. At NoWait, we developed our own product noesperescolas.com, a platform for managing copyshops' orders in a quick and secure way. Basically, we made sure you never had to wait in line for your copies again. Html, Css, Javascript, NodeJS, ExpressJS, EJS, MongoDB - and a lot of coffee to keep us going!"
   />
   <Divider />
-  <section class="max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32">
+  <section
+    class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
+  >
     <p
       class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
     >
@@ -132,7 +136,9 @@ import Layout from "../layouts/layout.astro";
     description="A Yay-Yay international conf for UX and Front-End Developers in Malaga, November 23-24, 2023"
   />
   <Divider />
-  <section class="max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32">
+  <section
+    class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
+  >
     <p
       class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
     >
@@ -145,7 +151,7 @@ import Layout from "../layouts/layout.astro";
     </p>
   </section>
   <div
-    class="flex flex-row flex-wrap justify-center items-center gap-8 md:gap-16 pb-20"
+    class="fade-target flex flex-row flex-wrap justify-center items-center gap-8 md:gap-16 pb-20"
   >
     <Social title="X (Twitter)" link="https://twitter.com/JoseSaranda" />
     <Social title="Linkedin" link="https://www.linkedin.com/in/josesaranda/" />
@@ -153,29 +159,44 @@ import Layout from "../layouts/layout.astro";
   </div>
 </Layout>
 <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in");
-      }
+  const isReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
 
-      if (!entry.isIntersecting) {
-        entry.target.classList.remove("fade-in");
-      }
+  if (!isReducedMotion) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+          }
+
+          if (!entry.isIntersecting) {
+            entry.target.classList.remove("fade-in");
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    document.querySelectorAll(".fade-target").forEach((el) => {
+      observer.observe(el);
     });
-  });
-
-  document.querySelectorAll("*").forEach((p) => {
-    observer.observe(p);
-  });
+  }
 </script>
 <style is:global>
   .fade-in {
-    opacity: 1;
+    opacity: 1 !important;
     transition: opacity 0.3s ease-in-out;
   }
 
-  * {
+  .fade-target {
     opacity: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-target {
+      opacity: 1;
+    }
   }
 </style>
