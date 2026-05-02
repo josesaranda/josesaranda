@@ -7,7 +7,13 @@ interface Props {
 const { title, link } = Astro.props;
 ---
 
-<a class="group" href={link} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${title} profile of José Sánchez Aranda`}>
+<a
+  class="group"
+  href={link}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={`Visit ${title} profile of José Sánchez Aranda`}
+>
   <p
     class="text-gray-800 text-2xl lg:text-4xl font-serif leading-tight mb-6 group-hover:text-blue-900 transition-all duration-300 ease-in-out"
   >

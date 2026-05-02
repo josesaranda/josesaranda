@@ -108,6 +108,14 @@ export const experiences: Experience[] = [
     description:
       "Startup that developed noesperescolas.com, a platform for managing copyshops' orders in a quick and secure way.",
     link: "https://www.uma.es/facultadmarketing/noticias/no-wait-start-creada-por-alumnos-del-grado-en-marketing-en-el-foro-ser-emprendedor/",
-    technologies: ["Html", "Css", "Javascript", "NodeJS", "ExpressJS", "EJS", "MongoDB"],
+    technologies: [
+      "Html",
+      "Css",
+      "Javascript",
+      "NodeJS",
+      "ExpressJS",
+      "EJS",
+      "MongoDB",
+    ],
   },
 ];
