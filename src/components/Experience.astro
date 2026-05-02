@@ -1,24 +1,54 @@
 ---
 interface Props {
-  title: string;
+  company: string;
+  period: string;
+  role: string;
   description: string;
+  technologies: string[];
   link: string;
 }
 
-const { title, description, link } = Astro.props;
+const { company, period, role, description, technologies, link } = Astro.props;
 ---
 
-<a class="group fade-target" href={link} target="_blank" rel="noopener noreferrer" aria-label={`Experience at ${title}`}>
+<a
+  class="group fade-target block"
+  href={link}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={`Experience at ${company}`}
+>
   <div
-    class="max-w-screen-2xl mx-auto px-4 md:px-16 pt-0 py-16 lg:pt-16 lg:py-16"
+    class="max-w-screen-2xl mx-auto px-4 md:px-16 py-10 lg:py-14 border-t border-gray-200 group-hover:border-blue-900 transition-colors duration-300"
   >
+    <div class="flex flex-col lg:flex-row lg:items-baseline lg:gap-6 mb-4">
+      <h3
+        class="text-gray-800 text-2xl lg:text-4xl font-serif leading-tight group-hover:text-blue-900 transition-colors duration-300"
+      >
+        {company}
+      </h3>
+      <span
+        class="text-gray-400 text-base lg:text-lg font-sans mt-1 lg:mt-0"
+      >
+        {period}
+      </span>
+    </div>
     <p
-      class="text-gray-500 text-3xl lg:text-4xl font-serif leading-tight mb-6 group-hover:text-blue-900 transition-all duration-300 ease-in-out"
+      class="text-gray-600 text-sm lg:text-base font-sans !leading-snug mb-4"
     >
-      {title}
+      {role}
     </p>
-    <p class="text-gray-800 text-xl lg:text-2xl font-sans leading-tight">
+    <p class="text-gray-800 text-base lg:text-lg font-sans leading-relaxed mb-5">
       {description}
     </p>
+    <ul class="flex flex-wrap gap-2">
+      {technologies.map((tech: string) => (
+        <li
+          class="text-gray-500 group-hover:text-gray-700 text-xs lg:text-sm font-sans bg-gray-100 group-hover:bg-blue-50 px-2.5 py-1 rounded transition-colors duration-300"
+        >
+          {tech}
+        </li>
+      ))}
+    </ul>
   </div>
 </a>

@@ -4,20 +4,29 @@ import Layout from "../layouts/layout.astro";
 
 <Layout>
   <section
-    class="max-w-screen-2xl mx-auto px-4 py-32 lg:py-64 text-center lg:text-left"
+    class="max-w-screen-2xl mx-auto px-4 md:px-16 pt-32 lg:pt-64 pb-16 lg:py-32 text-center lg:text-left"
   >
+    <p
+      class="text-gray-300 text-8xl lg:text-[12rem] font-serif leading-none mb-4 lg:mb-6"
+    >
+      404
+    </p>
     <p
       class="text-gray-800 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
     >
-      Everyone make mistakes but you just made a big one. The page you are
+      Everyone makes mistakes but you just made a big one. The page you are
       looking for doesn't exist.
     </p>
     <p
-      class="text-gray-500 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+      class="text-gray-500 text-2xl lg:text-5xl font-serif lg:!leading-snug italic mb-10 lg:mb-16"
     >
-      Come on back to the <a href="/" class="text-blue-500 underline"
-        >home page</a
-      > and try again.
+      Come on back to the home page and try again.
     </p>
+    <a
+      href="/"
+      class="inline-block text-gray-800 text-xl lg:text-2xl font-serif border-b-2 border-gray-800 hover:border-blue-900 hover:text-blue-900 transition-colors duration-300"
+    >
+      &larr; Back to home
+    </a>
   </section>
 </Layout>

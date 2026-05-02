@@ -1,13 +1,16 @@
 ---
 import Divider from "../components/Divider.astro";
 import Experience from "../components/Experience.astro";
+import Nav from "../components/Nav.astro";
 import Project from "../components/Project.astro";
 import Social from "../components/Social.astro";
 import Layout from "../layouts/layout.astro";
 ---
 
 <Layout>
+  <Nav />
   <section
+    id="about"
     class="fade-target max-w-screen-2xl mx-auto px-4 pt-32 md:px-16 lg:pt-64 py-16 lg:py-32"
   >
     <h1 class="text-center lg:text-left text-5xl lg:text-8xl font-serif mb-2">
@@ -24,7 +27,7 @@ import Layout from "../layouts/layout.astro";
       rumor! It's not a joke!
     </p>
     <p
-      class="text-gray-500 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+      class="text-gray-600 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
     >
       Last decades I've been working with Angular, Html, Css, Sass, Tailwind,
       JavaScript, Typescript and many other great web technologies
@@ -41,7 +44,7 @@ import Layout from "../layouts/layout.astro";
       Trying to stay ahead of the robots!
     </p>
     <p
-      class="text-gray-500 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+      class="text-gray-600 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
     >
       Also, leveling up my gaming skills. Because saving the world can wait
       until after this boss fight.
@@ -49,6 +52,7 @@ import Layout from "../layouts/layout.astro";
   </section>
   <Divider />
   <section
+    id="experience"
     class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
   >
     <p
@@ -60,31 +64,47 @@ import Layout from "../layouts/layout.astro";
   </section>
   <Experience
     link="https://knowmadmood.com"
-    title="Knowmad Mood - June 2023 / Currently"
-    description="Knowmad is a software solutions company. Here, I'm the technical lead of a FrontEnd Team, which means I get to choose the coolest technologies, design the fanciest architectures, enforce best practices like a coding superhero, and support my teammates (mostly by bringing donuts). Angular, Angular Material, Typescript, Javascript, Sass, Html, Nx, NodeJS, Ionic, Capacitor, Jest, Cypress, Testing Library - basically, if it's got a name, I've probably used it."
+    company="Knowmad Mood"
+    period="June 2023 - Present"
+    role="Frontend Tech Lead"
+    description="Knowmad is a software solutions company. Responsible for leading the Frontend Team, choosing technologies, designing architectures, enforcing best practices, and supporting teammates."
+    technologies={["Angular", "Angular Material", "Typescript", "Javascript", "Sass", "Nx", "NodeJS", "Ionic", "Capacitor", "Jest", "Cypress", "Testing Library", "OpenCode", "Gemini", "Antigravity", "Claude", "Codex", "Bun", "Docker", "Jenkins"]}
   />
   <Experience
     link="https://fortris.io"
-    title="Fortris - Oct. 2021 / June 2023"
-    description="Fortris' main product is a crypto asset management system. At Fortris, I'm the wizard behind the curtain, responsible for development, maintainability, and deployment of our single page app and BFF server app. Angular, Angular Material, Typescript, Javascript, Sass, Html, Nx, NodeJS, Express, NestJS, GraphQL, Jest, Cypress, Testing Library - basically, if it's got a name, I've probably cast a spell on it."
+    company="Fortris"
+    period="Oct 2021 - June 2023"
+    role="Senior Frontend Developer"
+    description="Crypto asset management system. Responsible for development, maintainability, and deployment of the single page app and BFF server app."
+    technologies={["Angular", "Angular Material", "Typescript", "Sass", "Nx", "NodeJS", "Express", "NestJS", "GraphQL", "Jest", "Cypress"]}
   />
   <Experience
     link="https://shapelets.io"
-    title="Shapelets - May. 2019 / Oct. 2021"
-    description="Shapelets' main product is a set of tools for Data Scientists. At Shapelets, I was the data magician, conjuring up development, maintainability, and deployment of a single page app with dazzling data visualizations (Dashboards). React, AntDesign, Mobx, Axios, Apache Echarts, Vega visualizations, Typescript, Javascript, Less, Html, Nx, Jest, Testing Library - if it sounds fancy, I've probably waved my wand at it."
+    company="Shapelets"
+    period="May 2019 - Oct 2021"
+    role="Frontend Developer"
+    description="Data science tools platform. Responsible for development and deployment of a single page app with dazzling data visualizations and dashboards."
+    technologies={["React", "AntDesign", "Mobx", "Axios", "Apache ECharts", "Vega", "Typescript", "Less", "Nx", "Jest", "Testing Library"]}
   />
   <Experience
     link="https://sombradoble.com"
-    title="Sombradoble - Sept. 2016 / Apr. 2019"
-    description="Sombradoble is a consultancy agency specialized in the scientific sector. At Sombradoble, I was the go-to tech wizard, responsible for gathering customer requirements, development, maintainability, and deployment of various single-page apps, progressive web apps, and hybrid mobile apps. Basically, if it had a screen, I was on it. Angular, Angular Material, Ionic framework, Typescript, Javascript, Sass, Html, NodeJS, Express, Loopback, MongoDB, SQLServer, Jest, Cypress - if it sounds like a spell from a fantasy novel, I've probably cast it."
+    company="Sombradoble"
+    period="Sept 2016 - Apr 2019"
+    role="Frontend Developer"
+    description="Consultancy agency specialized in the scientific sector. Responsible for gathering requirements, development, and deployment of single-page apps, progressive web apps, and hybrid mobile apps."
+    technologies={["Angular", "Angular Material", "Ionic", "Typescript", "NodeJS", "Express", "Loopback", "MongoDB", "SQLServer", "Jest", "Cypress"]}
   />
   <Experience
     link="https://www.uma.es/facultadmarketing/noticias/no-wait-start-creada-por-alumnos-del-grado-en-marketing-en-el-foro-ser-emprendedor/"
-    title="NoWait - 2015 / 2017"
-    description="Founder of NoWait startup. At NoWait, we developed our own product noesperescolas.com, a platform for managing copyshops' orders in a quick and secure way. Basically, we made sure you never had to wait in line for your copies again. Html, Css, Javascript, NodeJS, ExpressJS, EJS, MongoDB - and a lot of coffee to keep us going!"
+    company="NoWait"
+    period="2015 - 2017"
+    role="Founder"
+    description="Startup that developed noesperescolas.com, a platform for managing copyshops' orders in a quick and secure way."
+    technologies={["Html", "Css", "Javascript", "NodeJS", "ExpressJS", "EJS", "MongoDB"]}
   />
   <Divider />
   <section
+    id="projects"
     class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
   >
     <p
@@ -94,7 +114,7 @@ import Layout from "../layouts/layout.astro";
       Because, you know, sharing is caring!
     </p>
     <p
-      class="text-gray-500 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+      class="text-gray-600 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
     >
       Yay Yay Events trusted me to make their events' website sparkle. Check out
       the landings I've crafted for them. Spoiler: they're fabulous!
@@ -102,41 +122,56 @@ import Layout from "../layouts/layout.astro";
   </section>
   <Project
     link="https://weyweyweb.com"
-    title="Wey Wey Web - 2025 Edition"
+    name="Wey Wey Web"
+    edition="2025 Edition"
+    type="Conference"
     description="A Yay-Yay international conf for UX and Front-End Developers in Malaga, November 17 - 18, 2025"
   />
   <Project
     link="https://lambda.world"
-    title="Lambda World - 2025 Edition"
+    name="Lambda World"
+    edition="2025 Edition"
+    type="Conference"
     description="Experience the brilliance of functional programming at Lambda World in Cadiz, Spain. Join us from October 23-24, 2025, to connect with our (dis)functional family, dive into FP trends, and soak up the coastal charm of this must-attend event!"
   />
   <Project
     link="https://jonthebeach.com"
-    title="J On The Beach - 2025 Edition"
+    name="J On The Beach"
+    edition="2025 Edition"
+    type="Conference"
     description="A Big Data conference for developers, DevOps & Data Scientists on the beach! May 14-16, 2025 in Malaga, Spain. If you are into distributed systems, Machine Learning, Microservices, AI or DevSecOps, buy your tickets NOW!"
   />
   <Project
     link="https://2024.weyweyweb.com"
-    title="Wey Wey Web - 2024 Edition"
+    name="Wey Wey Web"
+    edition="2024 Edition"
+    type="Conference"
     description="A Yay-Yay international conf for UX and Front-End Developers in Malaga, 27-29 November, 2024"
   />
   <Project
     link="https://2024.jonthebeach.com"
-    title="J On The Beach - 2024 Edition"
+    name="J On The Beach"
+    edition="2024 Edition"
+    type="Conference"
     description="A Big Data conference for developers, DevOps & Data Scientists On The Beach! May 8-10, 2024 in Torremolinos - Malaga, Spain. If you are into Distributed Systems, Data Engineering, DevSecOps or Data Science, buy your tickets NOW!"
   />
   <Project
     link="https://2024.lambda.world"
-    title="Lambda World - 2024 Edition"
+    name="Lambda World"
+    edition="2024 Edition"
+    type="Conference"
     description="Experience the brilliance of functional programming at Lambda World in Cadiz, Spain. Join us from October 2nd to 4th, 2024, to connect with our (dis)functional family, dive into FP trends, and soak up the coastal charm of this must-attend event! Warning: excessive laughter and sudden bursts of genius may occur."
   />
   <Project
     link="https://2023.jonthebeach.com"
-    title="Wey Wey Web - 2023 Edition"
+    name="Wey Wey Web"
+    edition="2023 Edition"
+    type="Conference"
     description="A Yay-Yay international conf for UX and Front-End Developers in Malaga, November 23-24, 2023"
   />
   <Divider />
   <section
+    id="social"
     class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
   >
     <p
@@ -145,7 +180,7 @@ import Layout from "../layouts/layout.astro";
       Follow me in social media networks
     </p>
     <p
-      class="text-gray-500 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+      class="text-gray-600 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
     >
       Cause having a stalker is creepy, but having a follower is flattering!
     </p>
@@ -197,6 +232,20 @@ import Layout from "../layouts/layout.astro";
   @media (prefers-reduced-motion: reduce) {
     .fade-target {
       opacity: 1;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  [id] {
+    scroll-margin-top: 4rem;
+  }
+
+  @media (min-width: 1024px) {
+    [id] {
+      scroll-margin-top: 5rem;
     }
   }
 </style>
