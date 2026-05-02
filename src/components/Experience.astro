@@ -8,7 +8,7 @@ interface Props {
 const { title, description, link } = Astro.props;
 ---
 
-<a class="group fade-target" href={link} target="_blank">
+<a class="group fade-target" href={link} target="_blank" rel="noopener noreferrer" aria-label={`Experience at ${title}`}>
   <div
     class="max-w-screen-2xl mx-auto px-4 md:px-16 pt-0 py-16 lg:pt-16 lg:py-16"
   >
