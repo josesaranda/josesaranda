@@ -1,5 +1,3 @@
-[![Node.js CI](https://github.com/josesaranda/josesaranda/actions/workflows/main.yml/badge.svg)](https://github.com/josesaranda/josesaranda/actions/workflows/main.yml)
-
 # Welcome to My GitHub Portfolio!
 
 ## About Me
