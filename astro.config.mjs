@@ -1,7 +1,25 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 
-// https://astro.build/config
+const securityHeaders = {
+  "X-Content-Type-Options": "nosniff",
+  "X-Frame-Options": "DENY",
+  "Referrer-Policy": "strict-origin-when-cross-origin",
+  "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+  "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+};
+
 export default defineConfig({
   integrations: [tailwind()],
+  headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: Object.entries(securityHeaders).map(([key, value]) => ({
+          key,
+          value,
+        })),
+      },
+    ];
+  },
 });
