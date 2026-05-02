@@ -96,16 +96,14 @@ import { socialLinks } from "../data/social";
       Follow me in social media networks
     </p>
     <p
-      class="text-gray-600 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+      class="text-gray-600 text-2xl lg:text-5xl font-serif lg:!leading-snug italic mb-12 lg:mb-16"
     >
       Cause having a stalker is creepy, but having a follower is flattering!
     </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      {socialLinks.map((social) => <Social {...social} />)}
+    </div>
   </section>
-  <div
-    class="fade-target flex flex-row flex-wrap justify-center items-center gap-8 md:gap-16 pb-20"
-  >
-    {socialLinks.map((social) => <Social {...social} />)}
-  </div>
 </Layout>
 <script>
   const isReducedMotion = window.matchMedia(
