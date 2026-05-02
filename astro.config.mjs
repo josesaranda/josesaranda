@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 
 const securityHeaders = {
   "X-Content-Type-Options": "nosniff",
@@ -10,7 +10,9 @@ const securityHeaders = {
 };
 
 export default defineConfig({
-  integrations: [tailwind()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   headers() {
     return [
       {

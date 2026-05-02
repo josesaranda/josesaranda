@@ -5,6 +5,9 @@ import Nav from "../components/Nav.astro";
 import Project from "../components/Project.astro";
 import Social from "../components/Social.astro";
 import Layout from "../layouts/layout.astro";
+import { experiences } from "../data/experience";
+import { projects } from "../data/projects";
+import { socialLinks } from "../data/social";
 ---
 
 <Layout>
@@ -62,46 +65,7 @@ import Layout from "../layouts/layout.astro";
       tolerated my coffee addiction and bad puns. Check out my work below!
     </p>
   </section>
-  <Experience
-    link="https://knowmadmood.com"
-    company="Knowmad Mood"
-    period="June 2023 - Present"
-    role="Frontend Tech Lead"
-    description="Knowmad is a software solutions company. Responsible for leading the Frontend Team, choosing technologies, designing architectures, enforcing best practices, and supporting teammates."
-    technologies={["Angular", "Angular Material", "Typescript", "Javascript", "Sass", "Nx", "NodeJS", "Ionic", "Capacitor", "Jest", "Cypress", "Testing Library", "OpenCode", "Gemini", "Antigravity", "Claude", "Codex", "Bun", "Docker", "Jenkins"]}
-  />
-  <Experience
-    link="https://fortris.io"
-    company="Fortris"
-    period="Oct 2021 - June 2023"
-    role="Senior Frontend Developer"
-    description="Crypto asset management system. Responsible for development, maintainability, and deployment of the single page app and BFF server app."
-    technologies={["Angular", "Angular Material", "Typescript", "Sass", "Nx", "NodeJS", "Express", "NestJS", "GraphQL", "Jest", "Cypress"]}
-  />
-  <Experience
-    link="https://shapelets.io"
-    company="Shapelets"
-    period="May 2019 - Oct 2021"
-    role="Frontend Developer"
-    description="Data science tools platform. Responsible for development and deployment of a single page app with dazzling data visualizations and dashboards."
-    technologies={["React", "AntDesign", "Mobx", "Axios", "Apache ECharts", "Vega", "Typescript", "Less", "Nx", "Jest", "Testing Library"]}
-  />
-  <Experience
-    link="https://sombradoble.com"
-    company="Sombradoble"
-    period="Sept 2016 - Apr 2019"
-    role="Frontend Developer"
-    description="Consultancy agency specialized in the scientific sector. Responsible for gathering requirements, development, and deployment of single-page apps, progressive web apps, and hybrid mobile apps."
-    technologies={["Angular", "Angular Material", "Ionic", "Typescript", "NodeJS", "Express", "Loopback", "MongoDB", "SQLServer", "Jest", "Cypress"]}
-  />
-  <Experience
-    link="https://www.uma.es/facultadmarketing/noticias/no-wait-start-creada-por-alumnos-del-grado-en-marketing-en-el-foro-ser-emprendedor/"
-    company="NoWait"
-    period="2015 - 2017"
-    role="Founder"
-    description="Startup that developed noesperescolas.com, a platform for managing copyshops' orders in a quick and secure way."
-    technologies={["Html", "Css", "Javascript", "NodeJS", "ExpressJS", "EJS", "MongoDB"]}
-  />
+  {experiences.map((exp) => <Experience {...exp} />)}
   <Divider />
   <section
     id="projects"
@@ -120,55 +84,7 @@ import Layout from "../layouts/layout.astro";
       the landings I've crafted for them. Spoiler: they're fabulous!
     </p>
   </section>
-  <Project
-    link="https://weyweyweb.com"
-    name="Wey Wey Web"
-    edition="2025 Edition"
-    type="Conference"
-    description="A Yay-Yay international conf for UX and Front-End Developers in Malaga, November 17 - 18, 2025"
-  />
-  <Project
-    link="https://lambda.world"
-    name="Lambda World"
-    edition="2025 Edition"
-    type="Conference"
-    description="Experience the brilliance of functional programming at Lambda World in Cadiz, Spain. Join us from October 23-24, 2025, to connect with our (dis)functional family, dive into FP trends, and soak up the coastal charm of this must-attend event!"
-  />
-  <Project
-    link="https://jonthebeach.com"
-    name="J On The Beach"
-    edition="2025 Edition"
-    type="Conference"
-    description="A Big Data conference for developers, DevOps & Data Scientists on the beach! May 14-16, 2025 in Malaga, Spain. If you are into distributed systems, Machine Learning, Microservices, AI or DevSecOps, buy your tickets NOW!"
-  />
-  <Project
-    link="https://2024.weyweyweb.com"
-    name="Wey Wey Web"
-    edition="2024 Edition"
-    type="Conference"
-    description="A Yay-Yay international conf for UX and Front-End Developers in Malaga, 27-29 November, 2024"
-  />
-  <Project
-    link="https://2024.jonthebeach.com"
-    name="J On The Beach"
-    edition="2024 Edition"
-    type="Conference"
-    description="A Big Data conference for developers, DevOps & Data Scientists On The Beach! May 8-10, 2024 in Torremolinos - Malaga, Spain. If you are into Distributed Systems, Data Engineering, DevSecOps or Data Science, buy your tickets NOW!"
-  />
-  <Project
-    link="https://2024.lambda.world"
-    name="Lambda World"
-    edition="2024 Edition"
-    type="Conference"
-    description="Experience the brilliance of functional programming at Lambda World in Cadiz, Spain. Join us from October 2nd to 4th, 2024, to connect with our (dis)functional family, dive into FP trends, and soak up the coastal charm of this must-attend event! Warning: excessive laughter and sudden bursts of genius may occur."
-  />
-  <Project
-    link="https://2023.jonthebeach.com"
-    name="Wey Wey Web"
-    edition="2023 Edition"
-    type="Conference"
-    description="A Yay-Yay international conf for UX and Front-End Developers in Malaga, November 23-24, 2023"
-  />
+  {projects.map((proj) => <Project {...proj} />)}
   <Divider />
   <section
     id="social"
@@ -188,9 +104,7 @@ import Layout from "../layouts/layout.astro";
   <div
     class="fade-target flex flex-row flex-wrap justify-center items-center gap-8 md:gap-16 pb-20"
   >
-    <Social title="X (Twitter)" link="https://twitter.com/JoseSaranda" />
-    <Social title="Linkedin" link="https://www.linkedin.com/in/josesaranda/" />
-    <Social title="Github" link="https://github.com/josesaranda" />
+    {socialLinks.map((social) => <Social {...social} />)}
   </div>
 </Layout>
 <script>
