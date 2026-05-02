@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
+import sitemap from "@astrojs/sitemap";
 
 const securityHeaders = {
   "X-Content-Type-Options": "nosniff",
@@ -10,6 +11,8 @@ const securityHeaders = {
 };
 
 export default defineConfig({
+  site: "https://josesaranda.es",
+  integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },
