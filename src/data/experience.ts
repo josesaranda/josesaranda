@@ -44,7 +44,7 @@ export const experiences: Experience[] = [
     role: "Senior Frontend Developer",
     description:
       "Crypto asset management system. Responsible for development, maintainability, and deployment of the single page app and BFF server app.",
-    link: "https://fortris.io",
+    link: "https://www.fortris.com",
     technologies: [
       "Angular",
       "Angular Material",
