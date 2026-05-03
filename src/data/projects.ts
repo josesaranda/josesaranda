@@ -1,4 +1,5 @@
 export interface Project {
+  id: string;
   name: string;
   edition: string;
   description: string;
@@ -8,6 +9,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "wey-wey-web-2025",
     name: "Wey Wey Web",
     edition: "2025 Edition",
     type: "Conference",
@@ -16,6 +18,7 @@ export const projects: Project[] = [
     link: "https://weyweyweb.com",
   },
   {
+    id: "lambda-world-2025",
     name: "Lambda World",
     edition: "2025 Edition",
     type: "Conference",
@@ -24,6 +27,7 @@ export const projects: Project[] = [
     link: "https://lambda.world",
   },
   {
+    id: "j-on-the-beach-2025",
     name: "J On The Beach",
     edition: "2025 Edition",
     type: "Conference",
@@ -32,6 +36,7 @@ export const projects: Project[] = [
     link: "https://jonthebeach.com",
   },
   {
+    id: "wey-wey-web-2024",
     name: "Wey Wey Web",
     edition: "2024 Edition",
     type: "Conference",
@@ -40,6 +45,7 @@ export const projects: Project[] = [
     link: "https://2024.weyweyweb.com",
   },
   {
+    id: "j-on-the-beach-2024",
     name: "J On The Beach",
     edition: "2024 Edition",
     type: "Conference",
@@ -48,6 +54,7 @@ export const projects: Project[] = [
     link: "https://2024.jonthebeach.com",
   },
   {
+    id: "lambda-world-2024",
     name: "Lambda World",
     edition: "2024 Edition",
     type: "Conference",
@@ -56,6 +63,7 @@ export const projects: Project[] = [
     link: "https://2024.lambda.world",
   },
   {
+    id: "wey-wey-web-2023",
     name: "Wey Wey Web",
     edition: "2023 Edition",
     type: "Conference",

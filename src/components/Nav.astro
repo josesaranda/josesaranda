@@ -1,12 +1,6 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
-
-const items = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Social", href: "#social" },
-];
+import { navItems, GITHUB_REPO_URL } from "../data/nav";
 ---
 
 <nav
@@ -23,7 +17,7 @@ const items = [
     </a>
     <ul class="hidden md:flex items-center gap-6">
       {
-        items.map((item) => (
+        navItems.map((item) => (
           <li>
             <a
               href={item.href}
@@ -37,7 +31,7 @@ const items = [
       }
       <li>
         <a
-          href="https://github.com/josesaranda/josesaranda"
+          href={GITHUB_REPO_URL}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub repository"
@@ -87,7 +81,7 @@ const items = [
   <div id="mobile-menu" class="md:hidden hidden">
     <ul class="px-4 pb-4 font-serif text-lg">
       {
-        items.map((item) => (
+        navItems.map((item) => (
           <li class="py-2">
             <a
               href={item.href}
@@ -101,7 +95,7 @@ const items = [
       }
       <li class="py-2">
         <a
-          href="https://github.com/josesaranda/josesaranda"
+          href={GITHUB_REPO_URL}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub repository"

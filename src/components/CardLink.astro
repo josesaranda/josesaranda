@@ -1,0 +1,22 @@
+---
+interface Props {
+  link: string;
+  ariaLabel: string;
+}
+
+const { link, ariaLabel } = Astro.props;
+---
+
+<a
+  class="group fade-target block"
+  href={link}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={ariaLabel}
+>
+  <div
+    class="max-w-screen-2xl mx-auto px-4 md:px-16 py-10 lg:py-14 border-t border-gray-200 dark:border-gray-700 group-hover:border-blue-900 dark:group-hover:border-blue-400 transition-colors duration-300"
+  >
+    <slot />
+  </div>
+</a>

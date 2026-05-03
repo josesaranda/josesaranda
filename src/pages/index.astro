@@ -140,30 +140,34 @@ import { socialLinks } from "../data/social";
     });
   }
 
+  const TYPEWRITER_TEXT = "José Sánchez Aranda";
+  const TYPEWRITER_SPEED_MS = 70;
+  const TYPEWRITER_START_DELAY_MS = 600;
+  const CURSOR_HIDE_DELAY_MS = 1500;
+
   const typewriterEl = document.getElementById("typewriter");
   const cursorEl = document.getElementById("typewriter-cursor");
-  const text = "José Sánchez Aranda";
   let index = 0;
 
   function type() {
     if (!typewriterEl || !cursorEl) return;
 
     if (isReducedMotion) {
-      typewriterEl.textContent = text;
+      typewriterEl.textContent = TYPEWRITER_TEXT;
       cursorEl.remove();
       return;
     }
 
-    if (index < text.length) {
-      typewriterEl.textContent += text.charAt(index);
+    if (index < TYPEWRITER_TEXT.length) {
+      typewriterEl.textContent += TYPEWRITER_TEXT.charAt(index);
       index++;
-      setTimeout(type, 70);
+      setTimeout(type, TYPEWRITER_SPEED_MS);
     } else {
-      setTimeout(() => cursorEl.classList.add("hidden"), 1500);
+      setTimeout(() => cursorEl.classList.add("hidden"), CURSOR_HIDE_DELAY_MS);
     }
   }
 
-  setTimeout(type, 600);
+  setTimeout(type, TYPEWRITER_START_DELAY_MS);
 </script>
 <style is:global>
   @keyframes blink {

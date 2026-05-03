@@ -1,4 +1,6 @@
 ---
+import CardLink from "./CardLink.astro";
+
 interface Props {
   name: string;
   edition: string;
@@ -10,37 +12,27 @@ interface Props {
 const { name, edition, description, type, link } = Astro.props;
 ---
 
-<a
-  class="group fade-target block"
-  href={link}
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label={`Project ${name}`}
->
-  <div
-    class="max-w-screen-2xl mx-auto px-4 md:px-16 py-10 lg:py-14 border-t border-gray-200 dark:border-gray-700 group-hover:border-blue-900 dark:group-hover:border-blue-400 transition-colors duration-300"
-  >
-    <div class="flex flex-col lg:flex-row lg:items-baseline lg:gap-6 mb-4">
-      <h3
-        class="text-gray-800 dark:text-white text-2xl lg:text-4xl font-serif leading-tight group-hover:text-blue-900 dark:group-hover:text-blue-400 transition-colors duration-300"
-      >
-        {name}
-      </h3>
-      <span
-        class="text-gray-400 dark:text-gray-500 text-base lg:text-lg font-sans mt-1 lg:mt-0"
-      >
-        {edition}
-      </span>
-    </div>
+<CardLink link={link} ariaLabel={`${name}: ${description}`}>
+  <div class="flex flex-col lg:flex-row lg:items-baseline lg:gap-6 mb-4">
+    <h3
+      class="text-gray-800 dark:text-white text-2xl lg:text-4xl font-serif leading-tight group-hover:text-blue-900 dark:group-hover:text-blue-400 transition-colors duration-300"
+    >
+      {name}
+    </h3>
     <span
-      class="inline-block text-xs lg:text-sm font-sans bg-gray-100 dark:bg-gray-800 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/30 text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200 px-2.5 py-1 rounded mb-4 transition-colors duration-300"
+      class="text-gray-400 dark:text-gray-500 text-base lg:text-lg font-sans mt-1 lg:mt-0"
     >
-      {type}
+      {edition}
     </span>
-    <p
-      class="text-gray-800 dark:text-gray-200 text-base lg:text-lg font-sans leading-relaxed"
-    >
-      {description}
-    </p>
   </div>
-</a>
+  <span
+    class="inline-block text-xs lg:text-sm font-sans bg-gray-100 dark:bg-gray-800 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/30 text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200 px-2.5 py-1 rounded mb-4 transition-colors duration-300"
+  >
+    {type}
+  </span>
+  <p
+    class="text-gray-800 dark:text-gray-200 text-base lg:text-lg font-sans leading-relaxed"
+  >
+    {description}
+  </p>
+</CardLink>

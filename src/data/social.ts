@@ -5,7 +5,7 @@ export interface SocialLink {
 }
 
 export const socialLinks: SocialLink[] = [
-  { title: "X (Twitter)", link: "https://twitter.com/JoseSaranda", icon: "x" },
+  { title: "X (Twitter)", link: "https://x.com/JoseSaranda", icon: "x" },
   {
     title: "LinkedIn",
     link: "https://www.linkedin.com/in/josesaranda/",

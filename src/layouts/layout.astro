@@ -101,7 +101,7 @@ const {
   </body>
 </html>
 <script>
-  import { themeService } from "../services/theme";
+  import { toggle, watchSystemPreference } from "../services/theme";
 
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
@@ -110,8 +110,8 @@ const {
   }
 
   document.querySelectorAll(".theme-toggle").forEach((btn) => {
-    btn.addEventListener("click", () => themeService.toggle());
+    btn.addEventListener("click", () => toggle());
   });
 
-  themeService.watchSystemPreference();
+  watchSystemPreference();
 </script>

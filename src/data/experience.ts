@@ -1,4 +1,5 @@
 export interface Experience {
+  id: string;
   company: string;
   period: string;
   role: string;
@@ -9,6 +10,7 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: "knowmad-mood",
     company: "Knowmad Mood",
     period: "June 2023 - Present",
     role: "Frontend Tech Lead",
@@ -39,6 +41,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
+    id: "fortris",
     company: "Fortris",
     period: "Oct 2021 - June 2023",
     role: "Senior Frontend Developer",
@@ -60,6 +63,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
+    id: "shapelets",
     company: "Shapelets",
     period: "May 2019 - Oct 2021",
     role: "Frontend Developer",
@@ -81,6 +85,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
+    id: "sombradoble",
     company: "Sombradoble",
     period: "Sept 2016 - Apr 2019",
     role: "Frontend Developer",
@@ -102,6 +107,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
+    id: "nowait",
     company: "NoWait",
     period: "2015 - 2017",
     role: "Founder",
