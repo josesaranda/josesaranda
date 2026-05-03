@@ -69,7 +69,7 @@ export const experiences: Experience[] = [
     role: "Frontend Developer",
     description:
       "Data science tools platform. Responsible for development and deployment of a single page app with dazzling data visualizations and dashboards.",
-    link: "https://shapelets.io",
+    link: "https://www.linkedin.com/company/shapelets",
     technologies: [
       "React",
       "AntDesign",

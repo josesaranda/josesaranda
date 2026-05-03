@@ -8,13 +8,13 @@ Last decades I've been working with Angular, Html, Css, Sass, Tailwind, JavaScri
 
 ## Experience
 
-| Company                                 | Role                      | Period               | Technologies                                                                                                                           |
-| --------------------------------------- | ------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [Knowmad Mood](https://knowmadmood.com) | Frontend Tech Lead        | June 2023 - Present  | Angular, Angular Material, Typescript, Javascript, Sass, Nx, NodeJS, Ionic, Capacitor, Jest, Cypress, Testing Library, Docker, Jenkins |
-| [Fortris](https://www.fortris.com)      | Senior Frontend Developer | Oct 2021 - June 2023 | Angular, Angular Material, Typescript, Sass, Nx, NodeJS, Express, NestJS, GraphQL, Jest, Cypress                                       |
-| [Shapelets](https://shapelets.io)       | Frontend Developer        | May 2019 - Oct 2021  | React, AntDesign, Mobx, Axios, Apache ECharts, Vega, Typescript, Less, Nx, Jest, Testing Library                                       |
-| [Sombradoble](https://sombradoble.com)  | Frontend Developer        | Sept 2016 - Apr 2019 | Angular, Angular Material, Ionic, Typescript, NodeJS, Express, Loopback, MongoDB, SQLServer, Jest, Cypress                             |
-| NoWait                                  | Founder                   | 2015 - 2017          | Html, Css, Javascript, NodeJS, ExpressJS, EJS, MongoDB                                                                                 |
+| Company                                                 | Role                      | Period               | Technologies                                                                                                                           |
+| ------------------------------------------------------- | ------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| [Knowmad Mood](https://knowmadmood.com)                 | Frontend Tech Lead        | June 2023 - Present  | Angular, Angular Material, Typescript, Javascript, Sass, Nx, NodeJS, Ionic, Capacitor, Jest, Cypress, Testing Library, Docker, Jenkins |
+| [Fortris](https://www.fortris.com)                      | Senior Frontend Developer | Oct 2021 - June 2023 | Angular, Angular Material, Typescript, Sass, Nx, NodeJS, Express, NestJS, GraphQL, Jest, Cypress                                       |
+| [Shapelets](https://www.linkedin.com/company/shapelets) | Frontend Developer        | May 2019 - Oct 2021  | React, AntDesign, Mobx, Axios, Apache ECharts, Vega, Typescript, Less, Nx, Jest, Testing Library                                       |
+| [Sombradoble](https://sombradoble.com)                  | Frontend Developer        | Sept 2016 - Apr 2019 | Angular, Angular Material, Ionic, Typescript, NodeJS, Express, Loopback, MongoDB, SQLServer, Jest, Cypress                             |
+| NoWait                                                  | Founder                   | 2015 - 2017          | Html, Css, Javascript, NodeJS, ExpressJS, EJS, MongoDB                                                                                 |
 
 ## Projects
 
