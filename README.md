@@ -26,13 +26,16 @@ Last decades I've been working with Angular, Html, Css, Sass, Tailwind, JavaScri
 
 ### Conferences & Collaborations
 
-- [Wey Wey Web 2025](https://weyweyweb.com) - UX & Front-End Developers conference, Malaga
-- [Lambda World 2025](https://lambda.world) - Functional programming conference, Cadiz
-- [J On The Beach 2025](https://jonthebeach.com) - Big Data conference for developers, Malaga
+- [Wey Wey Web 2026](https://weyweyweb.com) - UX & Front-End Developers conference, Malaga
+- [Lambda World 2026](https://lambda.world) - Functional programming conference, Cadiz
+- [J On The Beach 2026](https://jonthebeach.com) - Big Data conference for developers, Malaga
+- [Wey Wey Web 2025](https://2025.weyweyweb.com) - UX & Front-End Developers conference, Malaga
+- [Lambda World 2025](https://2025.lambda.world) - Functional programming conference, Cadiz
+- [J On The Beach 2025](https://2025.jonthebeach.com) - Big Data conference for developers, Malaga
 - [Wey Wey Web 2024](https://2024.weyweyweb.com) - UX & Front-End Developers conference, Malaga
 - [J On The Beach 2024](https://2024.jonthebeach.com) - Big Data conference, Torremolinos
 - [Lambda World 2024](https://2024.lambda.world) - Functional programming conference, Cadiz
-- [Wey Wey Web 2023](https://2023.jonthebeach.com) - UX & Front-End Developers conference, Malaga
+- [Wey Wey Web 2023](https://2023.weyweyweb.com) - UX & Front-End Developers conference, Malaga
 
 ## Tech Stack
 
@@ -47,5 +50,5 @@ Last decades I've been working with Angular, Html, Css, Sass, Tailwind, JavaScri
 ## Connect
 
 - [LinkedIn](https://www.linkedin.com/in/josesaranda/)
-- [X (Twitter)](https://twitter.com/JoseSaranda)
+- [X (Twitter)](https://x.com/JoseSaranda)
 - [GitHub](https://github.com/josesaranda)
