@@ -9,13 +9,40 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "wey-wey-web-2026",
+    name: "Wey Wey Web",
+    edition: "2026 Edition",
+    type: "Conference",
+    description:
+      "A Yay-Yay international conf for UX and Front-End Developers in Malaga.",
+    link: "https://weyweyweb.com",
+  },
+  {
+    id: "lambda-world-2026",
+    name: "Lambda World",
+    edition: "2026 Edition",
+    type: "Conference",
+    description:
+      "Experience the brilliance of functional programming at Lambda World in Cadiz, Spain.",
+    link: "https://lambda.world",
+  },
+  {
+    id: "j-on-the-beach-2026",
+    name: "J On The Beach",
+    edition: "2026 Edition",
+    type: "Conference",
+    description:
+      "A Big Data conference for developers, DevOps & Data Scientists on the beach in Malaga, Spain.",
+    link: "https://jonthebeach.com",
+  },
+  {
     id: "wey-wey-web-2025",
     name: "Wey Wey Web",
     edition: "2025 Edition",
     type: "Conference",
     description:
       "A Yay-Yay international conf for UX and Front-End Developers in Malaga, November 17 - 18, 2025",
-    link: "https://weyweyweb.com",
+    link: "https://2025.weyweyweb.com",
   },
   {
     id: "lambda-world-2025",
@@ -24,7 +51,7 @@ export const projects: Project[] = [
     type: "Conference",
     description:
       "Experience the brilliance of functional programming at Lambda World in Cadiz, Spain. Join us from October 23-24, 2025, to connect with our (dis)functional family, dive into FP trends, and soak up the coastal charm of this must-attend event!",
-    link: "https://lambda.world",
+    link: "https://2025.lambda.world",
   },
   {
     id: "j-on-the-beach-2025",
@@ -33,7 +60,7 @@ export const projects: Project[] = [
     type: "Conference",
     description:
       "A Big Data conference for developers, DevOps & Data Scientists on the beach! May 14-16, 2025 in Malaga, Spain. If you are into distributed systems, Machine Learning, Microservices, AI or DevSecOps, buy your tickets NOW!",
-    link: "https://jonthebeach.com",
+    link: "https://2025.jonthebeach.com",
   },
   {
     id: "wey-wey-web-2024",

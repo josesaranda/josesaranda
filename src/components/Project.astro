@@ -12,24 +12,24 @@ interface Props {
 const { name, edition, description, type, link } = Astro.props;
 ---
 
-<CardLink link={link} ariaLabel={`${name}: ${description}`}>
-  <div class="flex flex-col lg:flex-row lg:items-baseline lg:gap-6 mb-4">
-    <h3
-      class="text-gray-800 dark:text-white text-2xl lg:text-4xl font-serif leading-tight group-hover:text-blue-900 dark:group-hover:text-blue-400 transition-colors duration-300"
-    >
-      {name}
-    </h3>
+<CardLink link={link} ariaLabel={`${name} ${edition}: ${description}`}>
+  <h3
+    class="text-gray-800 dark:text-white text-2xl lg:text-4xl font-serif leading-tight group-hover:text-blue-900 dark:group-hover:text-blue-400 transition-colors duration-300 mb-4"
+  >
+    {name}
+  </h3>
+  <div class="flex items-center gap-2 mb-4">
     <span
-      class="text-gray-400 dark:text-gray-500 text-base lg:text-lg font-sans mt-1 lg:mt-0"
+      class="font-sans text-sm lg:text-base font-semibold tracking-wide text-blue-900 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-2.5 py-0.5 rounded"
     >
       {edition}
     </span>
+    <span
+      class="text-xs lg:text-sm font-sans bg-gray-100 dark:bg-gray-800 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/30 text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200 px-2.5 py-1 rounded transition-colors duration-300"
+    >
+      {type}
+    </span>
   </div>
-  <span
-    class="inline-block text-xs lg:text-sm font-sans bg-gray-100 dark:bg-gray-800 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/30 text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200 px-2.5 py-1 rounded mb-4 transition-colors duration-300"
-  >
-    {type}
-  </span>
   <p
     class="text-gray-800 dark:text-gray-200 text-base lg:text-lg font-sans leading-relaxed"
   >
