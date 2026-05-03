@@ -13,6 +13,18 @@ const themeConfig = {
   darkClass: THEME_DARK_CLASS,
   mediaQuery: THEME_MEDIA_QUERY,
 };
+
+interface Props {
+  title?: string;
+  description?: string;
+  robots?: string;
+}
+
+const {
+  title = "José Sánchez Aranda — Frontend Engineer",
+  description = "José Sánchez Aranda, Frontend Engineer specializing in Angular, TypeScript, and modern web technologies. Explore my portfolio, experience, and projects.",
+  robots = "index, follow",
+} = Astro.props;
 ---
 
 <html lang="en">
@@ -22,17 +34,51 @@ const themeConfig = {
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
     <meta name="theme-color" content="#1e3a5f" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="José Sánchez Aranda" />
-    <meta
-      name="description"
-      content="José Sánchez Aranda webpage, a portfolio and CV"
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL("/icon-512.png", Astro.site)} />
+    <meta property="og:site_name" content="José Sánchez Aranda" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL("/icon-512.png", Astro.site)} />
+    <meta name="twitter:creator" content="@JoseSaranda" />
+
+    <!-- JSON-LD Structured Data -->
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "José Sánchez Aranda",
+        url: "https://josesaranda.es",
+        jobTitle: "Frontend Engineer",
+        sameAs: [
+          "https://www.linkedin.com/in/josesaranda/",
+          "https://x.com/JoseSaranda",
+          "https://github.com/josesaranda",
+        ],
+      })}
     />
-    <meta
-      name="keywords"
-      content="josesaranda, Software, Engineer, JavaScript, Typescript, Astro, Github"
-    />
-    <title>josesaranda - Welcome</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="dns-prefetch" href="https://www.linkedin.com" />
+    <link rel="dns-prefetch" href="https://x.com" />
+    <link rel="dns-prefetch" href="https://github.com" />
+
     <link rel="manifest" href="/manifest.json" />
     <script define:vars={themeConfig} is:inline>
       (function () {
