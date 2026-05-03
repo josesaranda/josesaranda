@@ -61,6 +61,6 @@ export const projects: Project[] = [
     type: "Conference",
     description:
       "A Yay-Yay international conf for UX and Front-End Developers in Malaga, November 23-24, 2023",
-    link: "https://2023.jonthebeach.com",
+    link: "https://2023.weyweyweb.com",
   },
 ];
