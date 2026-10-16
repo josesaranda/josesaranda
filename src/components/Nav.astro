@@ -143,6 +143,10 @@ const navItemDelays = [
           entry.target.getAttribute("id") ||
           entry.target.getAttribute("data-section");
         const href = `#${id}`;
+        if (entry.isIntersecting && window.location.hash !== href) {
+          window.history.replaceState(null, "", href);
+        }
+
         navLinks.forEach((link) => {
           if (
             entry.isIntersecting &&
