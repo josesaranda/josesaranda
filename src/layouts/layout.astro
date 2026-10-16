@@ -40,6 +40,13 @@ const {
     <meta name="robots" content={robots} />
     <title>{title}</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
@@ -94,7 +101,7 @@ const {
     </script>
   </head>
   <body
-    class="bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-100 transition-colors duration-300"
+    class="bg-white dark:bg-gray-950 text-gray-800 dark:text-gray-100 antialiased transition-colors duration-300"
   >
     <slot />
     <Footer />
