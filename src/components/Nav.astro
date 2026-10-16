@@ -5,10 +5,11 @@ import { navItems, GITHUB_REPO_URL } from "../data/nav";
 ---
 
 <nav
-  class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800"
+  id="site-nav"
+  class="fixed top-0 left-0 right-0 z-50 bg-white/75 dark:bg-gray-950/75 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-[background-color,backdrop-filter] duration-300"
 >
   <div
-    class="max-w-screen-2xl mx-auto px-4 md:px-16 py-3 flex items-center justify-between font-serif text-lg lg:text-xl"
+    class="max-w-[210mm] mx-auto px-4 md:px-16 py-3 flex items-center justify-between font-serif text-lg lg:text-xl"
   >
     <a
       href="/"
@@ -144,4 +145,25 @@ import { navItems, GITHUB_REPO_URL } from "../data/nav";
 
   sections.forEach((section) => sectionObserver.observe(section));
   extras.forEach((extra) => sectionObserver.observe(extra));
+</script>
+<style>
+  #site-nav.is-scrolled {
+    background-color: rgb(255 255 255 / 45%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  :global(.dark) #site-nav.is-scrolled {
+    background-color: rgb(3 7 18 / 45%);
+  }
+</style>
+<script>
+  const siteNav = document.getElementById("site-nav");
+
+  function updateNavOnScroll() {
+    siteNav?.classList.toggle("is-scrolled", window.scrollY > 10);
+  }
+
+  updateNavOnScroll();
+  window.addEventListener("scroll", updateNavOnScroll, { passive: true });
 </script>
