@@ -12,107 +12,111 @@ import { socialLinks } from "../data/social";
 
 <Layout>
   <Nav />
-  <section
-    id="about"
-    class="fade-target max-w-screen-2xl mx-auto px-4 pt-32 md:px-16 lg:pt-64 py-16 lg:py-32"
-  >
-    <h1 class="text-center lg:text-left text-5xl lg:text-8xl font-serif mb-2">
-      <span class="text-gray-500 dark:text-gray-400">I'm</span>
-      <span id="typewriter" aria-live="polite"></span><span
-        id="typewriter-cursor"
-        aria-hidden="true"
-        class="inline-block w-[3px] lg:w-[6px] ml-1 bg-gray-800 dark:bg-white animate-blink align-middle"
-      ></span>
-    </h1>
-  </section>
-  <section
-    class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 pt-0 lg:pt-32 pb-16 lg:py-32 text-center lg:text-left"
-  >
-    <p
-      class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
+  <main class="page-enter">
+    <section
+      id="about"
+      class="fade-target max-w-screen-2xl mx-auto px-4 pt-32 md:px-16 lg:pt-64 py-16 lg:py-32"
     >
-      A FrontEnd Engineer so seasoned, I remember when the internet was just a
-      rumor! It's not a joke!
-    </p>
-    <p
-      class="text-gray-600 dark:text-gray-400 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+      <h1 class="text-center lg:text-left text-5xl lg:text-8xl font-serif mb-2">
+        <span class="text-gray-500 dark:text-gray-400">I'm</span>
+        <span id="typewriter" aria-live="polite"></span><span
+          id="typewriter-cursor"
+          aria-hidden="true"
+          class="inline-block w-[3px] lg:w-[6px] ml-1 bg-gray-800 dark:bg-white animate-blink align-middle"
+        ></span>
+      </h1>
+    </section>
+    <section
+      class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 pt-0 lg:pt-32 pb-16 lg:py-32 text-center lg:text-left"
     >
-      Last decades I've been working with Angular, Html, Css, Sass, Tailwind,
-      JavaScript, Typescript and many other great web technologies
-    </p>
-  </section>
-  <Divider />
-  <section
-    class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 lg:pt-16 py-16 lg:py-32"
-  >
-    <h2
-      class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
+      <p
+        class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
+      >
+        A FrontEnd Engineer so seasoned, I remember when the internet was just a
+        rumor! It's not a joke!
+      </p>
+      <p
+        class="text-gray-600 dark:text-gray-400 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+      >
+        Last decades I've been working with Angular, Html, Css, Sass, Tailwind,
+        JavaScript, Typescript and many other great web technologies
+      </p>
+    </section>
+    <Divider />
+    <section
+      class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 lg:pt-16 py-16 lg:py-32"
     >
-      Currently experimenting with ChatBots, AI, and other futuristic tech.
-      Trying to stay ahead of the robots!
-    </h2>
-    <p
-      class="text-gray-600 dark:text-gray-400 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+      <h2
+        class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
+      >
+        Currently experimenting with ChatBots, AI, and other futuristic tech.
+        Trying to stay ahead of the robots!
+      </h2>
+      <p
+        class="text-gray-600 dark:text-gray-400 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+      >
+        Also, leveling up my gaming skills. Because saving the world can wait
+        until after this boss fight.
+      </p>
+    </section>
+    <Divider />
+    <section
+      id="experience"
+      class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
     >
-      Also, leveling up my gaming skills. Because saving the world can wait
-      until after this boss fight.
-    </p>
-  </section>
-  <Divider />
-  <section
-    id="experience"
-    class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
-  >
-    <h2
-      class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
-    >
-      I've worked for some amazing companies, and by amazing, I mean they
-      tolerated my coffee addiction and bad puns. Check out my work below!
-    </h2>
-  </section>
-  <div data-section="experience">
-    {experiences.map((exp) => <Experience {...exp} />)}
-  </div>
-  <Divider />
-  <section
-    id="projects"
-    class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
-  >
-    <h2
-      class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
-    >
-      Also, I'd like to mention the projects I've worked on as a collaborator.
-      Because, you know, sharing is caring!
-    </h2>
-    <p
-      class="text-gray-600 dark:text-gray-400 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
-    >
-      Yay Yay Events trusted me to make their events' website sparkle. Check out
-      the landings I've crafted for them. Spoiler: they're fabulous!
-    </p>
-  </section>
-  <div data-section="projects">
-    {projects.map((proj) => <Project {...proj} />)}
-  </div>
-  <Divider />
-  <section
-    id="social"
-    class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
-  >
-    <h2
-      class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
-    >
-      Follow me in social media networks
-    </h2>
-    <p
-      class="text-gray-600 dark:text-gray-400 text-2xl lg:text-5xl font-serif lg:!leading-snug italic mb-12 lg:mb-16"
-    >
-      Cause having a stalker is creepy, but having a follower is flattering!
-    </p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-      {socialLinks.map((social) => <Social {...social} />)}
+      <h2
+        class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
+      >
+        I've worked for some amazing companies, and by amazing, I mean they
+        tolerated my coffee addiction and bad puns. Check out my work below!
+      </h2>
+    </section>
+    <div data-section="experience">
+      {experiences.map((exp) => <Experience {...exp} />)}
     </div>
-  </section>
+    <Divider />
+    <section
+      id="projects"
+      class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
+    >
+      <h2
+        class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
+      >
+        Also, I'd like to mention the projects I've worked on as a collaborator.
+        Because, you know, sharing is caring!
+      </h2>
+      <p
+        class="text-gray-600 dark:text-gray-400 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+      >
+        Yay Yay Events trusted me to make their events' website sparkle. Check
+        out the landings I've crafted for them. Spoiler: they're fabulous!
+      </p>
+    </section>
+    <div data-section="projects">
+      {projects.map((proj) => <Project {...proj} />)}
+    </div>
+    <Divider />
+    <section
+      id="social"
+      class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
+    >
+      <h2
+        class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
+      >
+        Follow me in social media networks
+      </h2>
+      <p
+        class="text-gray-600 dark:text-gray-400 text-2xl lg:text-5xl font-serif lg:!leading-snug italic mb-12 lg:mb-16"
+      >
+        Cause having a stalker is creepy, but having a follower is flattering!
+      </p>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+      >
+        {socialLinks.map((social) => <Social {...social} />)}
+      </div>
+    </section>
+  </main>
 </Layout>
 <script>
   const isReducedMotion = window.matchMedia(
@@ -190,6 +194,24 @@ import { socialLinks } from "../data/social";
     transition: opacity 0.3s ease-in-out;
   }
 
+  .page-enter {
+    transform-origin: top center;
+    animation: page-zoom-out 1200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes page-zoom-out {
+    from {
+      opacity: 0;
+      filter: blur(24px);
+      transform: scale(1.35);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1);
+    }
+  }
+
   .nav-link {
     position: relative;
   }
@@ -221,6 +243,10 @@ import { socialLinks } from "../data/social";
   }
 
   @media (prefers-reduced-motion: reduce) {
+    .page-enter {
+      animation: none;
+    }
+
     .fade-target {
       opacity: 1;
     }
