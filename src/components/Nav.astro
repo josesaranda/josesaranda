@@ -2,25 +2,34 @@
 import GithubIcon from "./icons/GithubIcon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 import { navItems, GITHUB_REPO_URL } from "../data/nav";
+
+const navItemDelays = [
+  "[animation-delay:180ms]",
+  "[animation-delay:240ms]",
+  "[animation-delay:300ms]",
+  "[animation-delay:360ms]",
+];
 ---
 
 <nav
   id="site-nav"
-  class="fixed top-0 left-0 right-0 z-50 bg-white/75 dark:bg-gray-950/75 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-[background-color,backdrop-filter] duration-300"
+  class="fixed top-0 left-0 right-0 z-50 animate-nav-drop-in motion-reduce:animate-none bg-white/75 dark:bg-gray-950/75 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-[background-color,backdrop-filter] duration-300"
 >
   <div
     class="max-w-[210mm] mx-auto px-4 md:px-16 py-3 flex items-center justify-between font-serif text-lg lg:text-xl"
   >
     <a
       href="/"
-      class="text-gray-800 dark:text-white hover:text-blue-900 dark:hover:text-blue-400 transition-colors duration-300"
+      class="animate-nav-content-lead-in [animation-delay:120ms] motion-reduce:animate-none text-gray-800 dark:text-white hover:text-blue-900 dark:hover:text-blue-400 transition-colors duration-300"
     >
       José Sánchez Aranda
     </a>
-    <ul class="hidden md:flex items-center gap-6">
+    <ul class="nav-entry-links hidden md:flex items-center gap-6">
       {
-        navItems.map((item) => (
-          <li>
+        navItems.map((item, index) => (
+          <li
+            class={`animate-nav-content-in ${navItemDelays[index]} motion-reduce:animate-none`}
+          >
             <a
               href={item.href}
               data-nav-link={item.href}
@@ -31,7 +40,9 @@ import { navItems, GITHUB_REPO_URL } from "../data/nav";
           </li>
         ))
       }
-      <li>
+      <li
+        class="animate-nav-content-in [animation-delay:420ms] motion-reduce:animate-none"
+      >
         <a
           href={GITHUB_REPO_URL}
           target="_blank"
@@ -42,11 +53,15 @@ import { navItems, GITHUB_REPO_URL } from "../data/nav";
           <GithubIcon />
         </a>
       </li>
-      <li>
+      <li
+        class="animate-nav-content-in [animation-delay:480ms] motion-reduce:animate-none"
+      >
         <ThemeToggle />
       </li>
     </ul>
-    <div class="flex items-center gap-3 md:hidden">
+    <div
+      class="animate-nav-content-lead-in [animation-delay:120ms] motion-reduce:animate-none flex items-center gap-3 md:hidden"
+    >
       <ThemeToggle />
       <button
         id="menu-toggle"

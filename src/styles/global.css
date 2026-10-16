@@ -5,4 +5,33 @@
 @theme {
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "DM Serif Display", Georgia, serif;
+  --animate-nav-drop-in: nav-drop-in 700ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+  --animate-nav-content-in: nav-content-in 450ms
+    cubic-bezier(0.2, 0.75, 0.25, 1) both;
+  --animate-nav-content-lead-in: nav-content-in 500ms
+    cubic-bezier(0.2, 0.75, 0.25, 1) both;
+
+  @keyframes nav-drop-in {
+    from {
+      opacity: 0;
+      transform: translateY(-18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes nav-content-in {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
