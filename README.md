@@ -4,7 +4,7 @@
 
 FrontEnd Engineer so seasoned, I remember when the internet was just a rumor!
 
-Last decades I've been working with Angular, Html, Css, Sass, Tailwind, JavaScript, Typescript and many other great web technologies. Currently experimenting with ChatBots, AI, and other futuristic tech.
+Last decades I've been working with Angular, Html, Css, Sass, Tailwind, JavaScript, Typescript and many other great web technologies. Currently experimenting with Agents, AI, and other futuristic tech.
 
 ## Experience
 
