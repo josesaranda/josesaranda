@@ -59,61 +59,63 @@ import { socialLinks } from "../data/social";
         until after this boss fight.
       </p>
     </section>
-    <Divider />
     <section
       id="experience"
-      class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
+      class="section-band border-y border-gray-100 bg-gray-50 dark:border-gray-800 dark:bg-gray-900/50"
     >
-      <h2
-        class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
-      >
-        I've worked for some amazing companies, and by amazing, I mean they
-        tolerated my coffee addiction and bad puns. Check out my work below!
-      </h2>
-    </section>
-    <div data-section="experience">
+      <div class="max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32">
+        <p class="section-kicker">01 <span>/</span> Experience</p>
+        <h2
+          class="fade-target text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
+        >
+          I've worked for some amazing companies, and by amazing, I mean they
+          tolerated my coffee addiction and bad puns. Check out my work below!
+        </h2>
+      </div>
       {experiences.map((exp) => <Experience {...exp} />)}
-    </div>
-    <Divider />
+    </section>
     <section
       id="projects"
-      class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
+      class="section-band border-b border-blue-100 bg-blue-50/60 dark:border-blue-900/40 dark:bg-blue-950/20"
     >
-      <h2
-        class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
-      >
-        Also, I'd like to mention the projects I've worked on as a collaborator.
-        Because, you know, sharing is caring!
-      </h2>
-      <p
-        class="text-gray-600 dark:text-gray-400 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
-      >
-        Yay Yay Events trusted me to make their events' website sparkle. Check
-        out the landings I've crafted for them. Spoiler: they're fabulous!
-      </p>
-    </section>
-    <div data-section="projects">
+      <div class="max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32">
+        <p class="section-kicker">02 <span>/</span> Projects</p>
+        <h2
+          class="fade-target text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
+        >
+          Also, I'd like to mention the projects I've worked on as a
+          collaborator. Because, you know, sharing is caring!
+        </h2>
+        <p
+          class="fade-target text-gray-600 dark:text-gray-400 text-2xl lg:text-5xl font-serif lg:!leading-snug italic"
+        >
+          Yay Yay Events trusted me to make their events' website sparkle. Check
+          out the landings I've crafted for them. Spoiler: they're fabulous!
+        </p>
+      </div>
       {projects.map((proj) => <Project {...proj} />)}
-    </div>
-    <Divider />
+    </section>
     <section
       id="social"
-      class="fade-target max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32"
+      class="section-band border-b border-gray-100 bg-gray-50 dark:border-gray-800 dark:bg-gray-900/50"
     >
-      <h2
-        class="text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
-      >
-        Follow me in social media networks
-      </h2>
-      <p
-        class="text-gray-600 dark:text-gray-400 text-2xl lg:text-5xl font-serif lg:!leading-snug italic mb-12 lg:mb-16"
-      >
-        Cause having a stalker is creepy, but having a follower is flattering!
-      </p>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
-      >
-        {socialLinks.map((social) => <Social {...social} />)}
+      <div class="max-w-screen-2xl mx-auto px-4 md:px-16 py-16 lg:py-32">
+        <p class="section-kicker">03 <span>/</span> Connect</p>
+        <h2
+          class="fade-target text-gray-800 dark:text-gray-100 text-3xl lg:text-6xl font-sans lg:!leading-tight mb-6"
+        >
+          Follow me in social media networks
+        </h2>
+        <p
+          class="fade-target text-gray-600 dark:text-gray-400 text-2xl lg:text-5xl font-serif lg:!leading-snug italic mb-12 lg:mb-16"
+        >
+          Cause having a stalker is creepy, but having a follower is flattering!
+        </p>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+        >
+          {socialLinks.map((social) => <Social {...social} />)}
+        </div>
       </div>
     </section>
   </main>
@@ -250,6 +252,30 @@ import { socialLinks } from "../data/social";
 
   .fade-target {
     opacity: 0;
+  }
+
+  .section-band {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .section-kicker {
+    color: #1e3a5f;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .section-kicker span {
+    color: #9ca3af;
+    margin: 0 0.35rem;
+  }
+
+  .dark .section-kicker {
+    color: #93c5fd;
   }
 
   @media (prefers-reduced-motion: reduce) {
