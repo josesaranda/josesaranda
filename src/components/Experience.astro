@@ -21,7 +21,7 @@ const { company, period, role, description, technologies, link } = Astro.props;
       {company}
     </h3>
     <span
-      class="text-gray-400 dark:text-gray-500 text-base lg:text-lg font-sans mt-1 lg:mt-0"
+      class="text-gray-500 dark:text-gray-500 text-base lg:text-lg font-sans mt-1 lg:mt-0"
     >
       {period}
     </span>
@@ -39,7 +39,7 @@ const { company, period, role, description, technologies, link } = Astro.props;
   <ul class="flex flex-wrap gap-2">
     {
       technologies.map((tech: string) => (
-        <li class="text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200 text-xs lg:text-sm font-sans bg-gray-100 dark:bg-gray-800 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/30 px-2.5 py-1 rounded transition-colors duration-300">
+        <li class="text-gray-600 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200 text-xs lg:text-sm font-sans bg-gray-100 dark:bg-gray-800 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/30 px-2.5 py-1 rounded transition-colors duration-300">
           {tech}
         </li>
       ))
