@@ -136,16 +136,51 @@ const navItemDelays = [
   const sections = document.querySelectorAll("section[id]");
   const extras = document.querySelectorAll("[data-section]");
 
+  function clearHashAtTop() {
+    if (window.scrollY > 1) return false;
+
+    if (window.location.hash) {
+      const { pathname, search } = window.location;
+      window.history.replaceState(
+        window.history.state,
+        "",
+        `${pathname}${search}`,
+      );
+    }
+
+    navLinks.forEach((link) => {
+      link.classList.toggle(
+        "active-nav",
+        link.getAttribute("data-nav-link") === "#about",
+      );
+    });
+
+    return true;
+  }
+
+  window.addEventListener("scroll", clearHashAtTop, { passive: true });
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (link.getAttribute("data-nav-link") === "#about") {
+        requestAnimationFrame(clearHashAtTop);
+      }
+    });
+  });
+
   const sectionObserver = new IntersectionObserver(
     (entries) => {
+      const isAtTop = clearHashAtTop();
+
       entries.forEach((entry) => {
         const id =
           entry.target.getAttribute("id") ||
           entry.target.getAttribute("data-section");
         const href = `#${id}`;
-        if (entry.isIntersecting && window.location.hash !== href) {
+        if (!isAtTop && entry.isIntersecting && window.location.hash !== href) {
           window.history.replaceState(null, "", href);
         }
+
+        if (isAtTop) return;
 
         navLinks.forEach((link) => {
           if (
